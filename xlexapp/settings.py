@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a4ovc8i3cb3z&5mu#hs=zc2&-nb=h_8esk8jqidfou+qza$ngs
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['34.136.14.221']
 
 
 # Application definition
@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'data_xlex_prod_xlex03',
         'USER': 'postgres',
         'PASSWORD': 'rmmr713a17urpdfg56r',
-        'HOST': 'localhost',  
+        'HOST': '34.136.14.221',  
         'PORT': '5432',
     }
 }
