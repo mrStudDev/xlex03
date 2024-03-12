@@ -24,11 +24,11 @@ SECRET_KEY = 'django-insecure-a4ovc8i3cb3z&5mu#hs=zc2&-nb=h_8esk8jqidfou+qza$ngs
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = ['34.136.14.221']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['34.136.14.221']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app_juris_stj',
     'app_sumulas',
     'app_searchs',
+    'app_principios',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'app_principios.context_processors.principio_randomico',
             ],
         },
     },
@@ -80,7 +82,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -102,7 +104,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -126,9 +128,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 

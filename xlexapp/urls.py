@@ -27,6 +27,7 @@ urlpatterns = [
     path('jurisprudencias-stj/', include('app_juris_stj.urls')),
     path('sumulas/', include('app_sumulas.urls')),
     path('searchs/', include('app_searchs.urls')),
+    path('principios/', include('app_principios.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
