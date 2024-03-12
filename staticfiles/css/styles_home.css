@@ -1,0 +1,311 @@
+html {
+    height: 100%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 0.9rem;
+    font-family: 'Merriweather', serif;
+}
+.welcome-container {
+    text-align: center;
+    background: linear-gradient(to bottom right, #000a19, #000000);
+    padding: 20px;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+.hero-section  {
+    background: linear-gradient(to bottom right, #000a19, #000000);
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+.site-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    background-image: linear-gradient(to right, #3f87a6, #ebf8e1, #f69d3c);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: titleGlow 3s infinite alternate;
+    letter-spacing: 0.1em;
+}
+#site-description{
+    font-size: 13px;
+    font-family: 'Merriweather', serif;
+
+}
+/* Hero Text - ID titulo-xlex*/
+.highlighted-text, #titulo-xlex {
+    background-image: linear-gradient(to right, #3f74a6, #c9f5a8, #f69d3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Coração */
+.coracao {
+    display: inline-block; /* Para permitir que a largura e a altura sejam aplicadas */
+    background: linear-gradient(to right, #3f74a6, #c9f5a8, #f69d3c);
+    -webkit-background-clip: text; /* Necessário para preencher apenas o texto com a gradiente */
+    color: transparent; /* Torna o texto transparente, então a gradiente se mostra */
+}
+/* End Coração */
+
+
+/* Java Texto Phrase  */
+#typing-effect {
+    border-right: 2px solid;
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* End Java Texto Phrase  */
+
+/* Cards Groups */
+
+/* Configs Generics */
+#card-link:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.card-title a {
+    color: #090909; 
+    text-decoration: none; 
+}
+
+.card-title a:hover {
+    text-decoration: none;
+    color:rgb(85, 85, 251);
+}
+/* End Configs Generics */
+
+/* Card Links */
+#card-link {
+    width: 100%; 
+    min-height: 120px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+/* End Card Links */
+
+
+/* FOOTER */
+/* Footer items*/
+.footer-container {
+    width: 100%;
+    height: 100vh; /* Altura total da tela */
+    position: relative;
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: space-around; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom right, #000a19, #000000);
+    font-family: 'Merriweather', serif;
+    color: white;
+    padding: 40px;
+}
+.footer-title {
+    font-size: 80px;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+}
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+.footer-column h3 {
+    color: #ffffff;
+  
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li a {
+    color: #a8d0e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+  }
+.footer-brand-info {
+    color: #ffffff;
+    font-size: 12px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+/* End Footer items*/
+
+
+/* MEDIAS */
+
+  /* Pequenos dispositivos (smartphones grandes) */
+@media (min-width: 412px) {
+    .welcome-container {
+        padding: 25px;
+    }
+    .site-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 540px) {
+    .welcome-container {
+        padding: 40px;
+    }
+    .site-title {
+        font-size: 2.2rem;
+    }
+    #site-description{
+        font-size: 17px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 16px;
+    }
+    .description-footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-container {
+        padding: 50px;
+    }
+    .site-title {
+        font-size: 2.8rem;
+    }
+    #site-description{
+        font-size: 17px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 17px;
+    }
+    .description-footer {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .welcome-container {
+        padding: 50px;
+    }
+    .site-title {
+        font-size: 3.0rem;
+    }
+    #site-description{
+        font-size: 20px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 17px;
+    }
+    .description-footer {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .welcome-container {
+        padding: 50px;
+    }
+    .site-title {
+        font-size: 3.8rem;
+    }
+    #site-description{
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 18px;
+    }
+    .description-footer {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .welcome-container {
+        padding: 50px;
+    }
+    .site-title {
+        font-size: 4.2rem;
+    }
+    #site-description{
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 19px;
+    }
+    .description-footer {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1880px) {
+    .welcome-container {
+        padding: 60px;
+    }
+    .site-title {
+        font-size: 4.5rem;
+    }
+    #site-description{
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 20px;
+    }
+    .description-footer {
+        font-size: 22px;
+    }
+}
+ @media (min-width: 2560px) {
+    .welcome-container {
+        padding: 70px;
+    }
+    .site-title {
+        font-size: 7.0rem;
+    }
+    #site-description{
+        font-size: 27px;
+        letter-spacing: 0.1em;
+    }
+    #typing-effect {
+        font-size: 23px;
+    }
+    .description-footer {
+        font-size: 27px;
+    }
+}
