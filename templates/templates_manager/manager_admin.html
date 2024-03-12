@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block 'title' %} Manager {% endblock 'title' %} 
+
+{% block 'manager_admin' %}
+    {% if user.is_authenticated and user.is_staff %}
+        <div class="container">
+            <h1 id="title-post-h1">Manager Stage</h1>
+            <h2>Datas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Total de Visualizações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for daily_view in daily_views %}
+                    <tr>
+                        <td>{{ daily_view.date }}</td>
+                        <td>{{ daily_view.total }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br><br>
+            <h2>Acessos às Páginas</h2>
+            <p><strong>Total de visualizações: {{ total_views }}</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome da Página</th>
+                        <th>Contagem de Acessos</th>
+                        <th>Último Acesso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for page in pages %}
+                    <tr>
+                        <td>{{ page.page_name }}</td>
+                        <td>{{ page.view_count }}</td>
+                        <td>{{ page.last_accessed | date:"d de M de Y às H:i" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="3">Nenhuma página foi acessada ainda.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="container">
+        <h5 class="danger">
+            Você não tem permissão para acessar essa página!
+        </h5>
+            <a class="btn btn-danger btn-sm" href="{% url 'app_home:home-view' %}">Volte para Home</a>    
+        </div>
+    {% endif %}
+{% endblock 'manager_admin' %}

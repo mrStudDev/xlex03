@@ -1,0 +1,586 @@
+html {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    overflow-x: hidden;
+}
+
+ul li {
+    font-size: 12px;
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove padding esquerdo */
+  
+}
+  
+p {
+    font-size: 0.8em;
+    font-family: 'Merriweather', serif;
+}
+
+#title-post-h1 {
+    font-size: 20px;
+    font-family: 'Merriweather', serif; 
+}
+.a-link {
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.a-link:hover {
+    color: #1d8aff;
+}
+
+.a-link-side {
+    font-size: 15px;
+    color: #737171;
+    text-align: center;
+    text-decoration: none;
+}
+
+.a-link-side:hover {
+    color:#062dec;
+    text-decoration: none;
+}
+
+.escolha {
+    font-size: 13px;
+}
+
+
+/* Text - highlighted*/
+.highlighted-text, #highlighted-text, #titulo-xlex {
+    background-image: linear-gradient(to right, #3f74a6, #c9f5a8, #f69d3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* End Text - highlighted*/
+
+/* Coração */
+.coracao {
+    display: inline-block; /* Para permitir que a largura e a altura sejam aplicadas */
+    background: linear-gradient(to right, #3f74a6, #c9f5a8, #f69d3c);
+    -webkit-background-clip: text; /* Necessário para preencher apenas o texto com a gradiente */
+    color: transparent; /* Torna o texto transparente, então a gradiente se mostra */
+}
+/* End Coração */
+
+/* Imagens do texto rico CKEditor */
+.image-sm-content-ck {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 300px; 
+    margin: auto; 
+}
+  
+.image-md-content-ck {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    margin: auto;
+}
+  
+.image-lg-content-ck {
+    width: 100%;
+}
+/* Container para imagem e texto */
+.container-imagem-texto {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: flex-start; /* Alinha horizontalmente no início */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Classe para a imagem */
+.imagem-lateral {
+    width: 150px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Classe para o texto */
+.texto-ao-lado {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+  
+/* Cards Configs */
+#card-link:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.card-title a {
+    font-family: 'Merriweather', serif;
+    color: #090909; 
+    text-decoration: none;
+    text-decoration: solid;
+}
+
+.card-title a:hover {
+    text-decoration: none;
+    color:rgb(85, 85, 251);
+}
+
+.card-text {
+    font-family: 'Merriweather', serif;
+    color: #555;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.card-description {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.card-a-category {
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #737373;
+}
+.card-a-category:hover{
+    color:#062dec;
+}
+
+#card-link {
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+.card-img-top {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; /* Mantém a proporção das imagens */
+}
+
+#bolinha-educacao::before {
+    content: ""; /* Isso é necessário para que o pseudo-elemento seja exibido */
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background-color:#7a7a7a;
+    position: absolute; 
+    top: 15px;
+    left: 15px;
+}
+
+.card-code {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #a9a9a9;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.card-date {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+
+/* End Cards */
+
+/* SÙMULAS E JURIS */
+
+/* ENUNCIADO SÚMULAS */
+.enunciado-pc {
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
+    text-align: justify;
+}
+/*Containes Juris e Súmulas -singular */
+.content-container {
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* EMENTAS JURIS  */
+.ementa {
+    font-family: 'Merriweather', serif;
+    color: #6c6e6f;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.info-ementa h3 {
+    color: #333; 
+    border-bottom: 2px solid #666; 
+    margin-bottom: 10px; 
+    padding-bottom: 10px; 
+}
+  
+.info-ementa {
+    margin-bottom: 20px; 
+}
+
+.info-final p {
+    margin: 10px 0; 
+}
+
+/* App Juris STJ Cards */
+
+.card-title-juris {
+    font-family: Georgia, serif;
+    color: #333;
+}
+
+.card-a-title {
+    font-size: 19px;
+    color: #000000;
+    text-decoration: solid;
+}
+.card-a-title:hover {
+    color: rgb(4, 0, 255);
+}
+  
+.small-info, .ementa, p {
+    color: #666;
+}
+  
+.hr {
+    border-top: 1px solid #eee;
+}
+
+.p-link {
+    text-align: right;
+}
+  
+.small-info strong {
+    color: #333;
+}
+
+/* SIDEBAR - PRINCÍPIOS*/
+#side-hero {
+    background-color: #ffffff; /* Um fundo claro, mas você pode ajustar conforme o tema do seu site */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno para respirar */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Uma leve sombra para dar profundidade */
+    margin-bottom: 20px; /* Margem para separar da próxima seção ou elemento */
+}
+
+.sidebar-principio-randomico h5 {
+    font-family: 'Merriweather', serif;
+    margin-top: 0;
+    color: #000000;
+    font-size: 17px; /* Tamanho da fonte maior para o título */
+    margin-bottom: 10px; /* Espaçamento para separar do texto */
+}
+
+.sidebar-principio-randomico p {
+    font-family: 'Merriweather', serif;
+    color: #343a40; /* Cor escura para o texto para fácil leitura */
+    font-size: 12px; /* Tamanho da fonte para o corpo do texto */
+    line-height: 1.5; /* Espaçamento da linha para melhorar a leitura */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #565656;
+    color: white;
+}
+tr:hover {background-color: #f5f5f5;}
+
+
+
+/* Paginação */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination .step-links {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination .step-links a,
+.pagination .step-links span {
+    color: #333;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .step-links a:hover {
+    background-color: #e9e9e9;
+}
+
+.pagination .step-links span.current {
+    background-color: #2e2e2f;
+    color: white;
+    border-color: #1d8aff;
+}
+
+/* End Paginação */
+
+
+/* Footer items*/
+.footer-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom right, #000a19, #000000);
+    font-family: 'Merriweather', serif;
+    color: white;
+    padding: 40px;
+}
+
+.footer-title {
+    font-size: 80px;
+    color: #ffffff;
+  letter-spacing: 0.2em;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #a8d0e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #f1f1f1;
+}
+
+.footer-brand-info {
+    color: #ffffff;
+    font-size: 12px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.description-footer {
+    font-size: 12px;
+}
+/* End Footer items*/
+
+
+/* MEDIAS */
+
+/* Pequenos dispositivos (smartphones grandes) */
+@media (min-width: 412px) {
+    p {
+        font-size: 0.8rem;
+    }
+    ul li {
+        font-size: 13px;
+    }    
+    .description-footer {
+        font-size: 13px;
+    }
+    #title-post-h1 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 540px) {
+    p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    .description-footer {
+        font-size: 14px;
+    }
+    .enunciado-pc {
+        font-size: 13px;
+    }
+    .ementa {
+        font-size: 13px;
+    }
+    #title-post-h1 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 0.9rem;
+    }
+    ul li {
+        font-size: 14px;
+    }
+    .description-footer {
+        font-size: 15px;
+    }
+    .enunciado-pc {
+        font-size: 13px;
+    }
+    #title-post-h1 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    p {
+        font-size: 0.9rem;
+    }
+    ul li {
+        font-size: 15px;
+    }    
+    .description-footer {
+        font-size: 17px;
+    }
+    .enunciado-pc {
+        font-size: 14px;
+    }
+    .ementa {
+        font-size: 14px;
+    }
+    #title-post-h1 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1280px) {
+    p {
+        font-size: 0.9rem;
+    }
+    ul li {
+        font-size: 15px;
+    }    
+    .description-footer {
+        font-size: 20px;
+    }
+    .enunciado-pc {
+        font-size: 15px;
+    }
+    #title-post-h1 {
+        font-size: 30px;
+    }
+
+}
+
+/* meu monitor ???*/
+@media (min-width: 1440px) {
+    p {
+        font-size: 1.0rem;
+    }
+    ul li {
+        font-size: 16px;
+    }    
+    .description-footer {
+        font-size: 20px;
+    }
+    .enunciado-pc {
+        font-size: 15px;
+    }
+    .ementa {
+        font-size: 15px;
+    }
+    #title-post-h1 {
+        font-size: 30px;
+    }
+}
+
+/* meu monitor GD */
+@media (min-width: 1880px) {
+    p {
+        font-size: 1.0rem;
+    }
+    ul li {
+        font-size: 16px;
+    }    
+    .description-footer {
+        font-size: 22px;
+    }
+    .enunciado-pc {
+        font-size: 16px;
+    }
+    #title-post-h1 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 2560px) {
+    p {
+        font-size: 1.1rem;
+    }
+    ul li {
+        font-size: 17px;
+    }
+    .description-footer {
+        font-size: 27px;
+    }
+    .enunciado-pc {
+        font-size: 17px;
+    }
+    .ementa {
+        font-size: 17px;
+    }
+    #title-post-h1 {
+        font-size: 35                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               px;
+    }
+}

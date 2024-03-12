@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block 'title' %} Tribunais | Jurisprudências{% endblock 'title' %}
+
+{% block 'jurisprudencias' %}
+    <!-- Container para os cards -->
+    <div class="container mt-5">
+        <h5>Pesquisa de Jurisprudências - Tribunais</h5>
+        <small>Estamos trabalhando para completar o nosso quadro. Em breve, você poderá consultar jurisprudências do Supremo Tribunal Federal, TRF's, TRT's, TJ's...</small>
+        <hr>
+        <div class="row">
+            <!-- Card Link
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Supremo Tribunal federal</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>      
+                </div>           
+            </div>
+            -->            
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Superior Tribunal de Justiça</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+        <!--
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Superior do Trabalho</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Superior Eleitoral</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Superior Tribunal Militar</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional Federal 1a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional Federal 2a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional Federal 3a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional Federal 4a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional Federal 5a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional do Trabalho 1a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional do Trabalho 2a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional do Trabalho 3a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional do Trabalho 4a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal Regional do Trabalho 5a Região</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça SP</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça RJ</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça BA</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça MG</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça RS</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça SC</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça PR</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Tribunal de Justiça PA</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        -->
+
+        </div>
+    </div>
+{% endblock 'jurisprudencias' %}

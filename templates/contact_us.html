@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block 'contact_us' %}
+<div class="content-container">
+<h2>Contate-nos</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>    
+    <p>Agradecemos a sua mensagem! <br> Ao enviar a menssagem você será direcionado(a) para Home do Site</p>
+
+    <button class="btn btn-dark btn-sm" type="submit">Enviar Mensagem</button>
+</form>
+
+</div>
+
+{% endblock 'contact_us' %}

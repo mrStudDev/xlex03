@@ -1,28 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-{% load static %}
+<html lang="pt-br">
+  {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-      <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">  
-    -->
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <title>Xlex</title>
+    <title>{% block 'title' %}Xlex Home{% endblock 'title' %}</title>
 </head>
-<body>
-    <div class="container">
-        <h1 class="teste">
-            Xlex Educação Pesquisa Jurídica e Desenvolvimento Social
-        </h1>
+<body
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="welcome-container">
+            {% for site in object_list %}
+                <h1 class="site-title">{{ site.site_name }}</h1>
+                <div id="site-description">{{ site.site_description }}</div>
+            {% endfor %}
+            <!-- Efeito de digitação dinâmico JS -->
+            <span><span id="typing-effect" class="highlighted-text"></span></span>
+        </div>    
     </div>
-    
+
+        
+    </div>
+    <!-- Container para os cards -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card Link -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Artigos Científicos</a></h5>
+                        <p class="card-text">Explorando temas jurídicos atuais e relevantes. Show</p>
+                    </div>      
+                </div>           
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Questões da OAB</a></h5>
+                        <p class="card-text">Preparação eficaz com questões comentadas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Casos Concretos</a></h5>
+                        <p class="card-text">Estudo e resolução de casos prátricos.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Súmulas</a></h5>
+                        <p class="card-text">Acesse e entenda as decisões consolidadas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'app_home:jurisprudencias-page-list' %}" class="card-title">Pesquisa de Jurisprudências</a></h5>
+                        <p class="card-text">Pesquise sobre as decisões judiciais para o seu caso. Painel-Tribunais</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Blog-Social</a></h5>
+                        <p class="card-text">Engajamento com questões sociais e jurídicas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Modelos e Peças</a></h5>
+                        <p class="card-text">Recursos legais prontos para download.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="card-title">Princípios do Direito</a></h5></h5>
+                        <p class="card-text">Compreenda os fundamentos do Direito.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'app_home:sobre-nos' %}" class="card-title">Sobre Nós</a></h5>
+                        <p class="card-text">Conheça-nos e saiba mais sobre o Xlex</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+                <div class="card" id="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'app_home:contact-us' %}" class="card-title">Contate-nos</a></h5>
+                        <p class="card-text">Entre em contato para mais informações.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Replica cards -->
+        </div>
+    </div>
+
+<!--Footer--> 
+<footer>
+
+    <div class="footer-container">
+        <!-- Título do Footer -->
+        <h2 class="highlighted-text">XLEX, LOVE LEX!</h2>
+        {% if views_count %}
+        <p>Views: {{ views_count }}</p>
+        {% endif %}
+        <P class="description-footer"  style="color: white;">
+            Agradecemos sua visita e o interesse pelo nosso conteúdo. Convidamos você a explorar outras 
+            seções do site. Faça um tour!
+        </P>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Coluna 1</h4>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Coluna 2</h4>
+                <ul>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Coluna 3</h4>
+                <ul>
+                    <li><a href="#">Link 5</a></li>
+                    <li><a href="#">Link 6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Coluna 1</h4>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Coluna 2</h4>
+                <ul>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Coluna 3</h4>
+                <ul>
+                    <li><a href="#">Link 5</a></li>
+                    <li><a href="#">Link 6</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Informações da Marca -->
+        <div class="footer-brand-info">
+            <p class="footer-brand-info">&copy; 2023 Xlex Educação Pesquisa Jurídica e Desenvolvimento Social. Todos os direitos reservados.</p>
+            <small>By: Marcos Rodrigues</small>
+        </div>
+  
+    </div>
+    <!-- -->
+</footer>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="{% static 'js/phrase.js' %}"></script>
 </html>
