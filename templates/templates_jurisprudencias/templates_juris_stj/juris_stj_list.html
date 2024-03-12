@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} Jurisprudências STJ {% endblock 'title' %}
+
+{% block 'juris_stj_list' %}
+<div class="container mt-5">
+    <center>
+        <small>Você pode fazer uma perguisa <strong>avançada</strong>, clicando no botão abaixo!</small>
+        <br><br>
+        <a class="btn bg-dark btn-sm text-white" href="{% url 'app_searchs:advanced-searchs-view' %}">Ir para busca avancada</a>
+                      
+    </center><br>
+    <h5>Jurisprudências do Superior Tribunal de Justiça - STJ</h5>
+    <div>
+        <p>Quantidade de Publicações: <strong>{{ publicacoes_count }}</strong> </p>
+    </div>
+    <hr>
+
+    {% for juris_stj in object_list %}
+
+        <div class="card shadow-md py-3 px-3">
+            <h5 class="card-title-juris">
+                <a class="card-a-title" href="{% url 'app_juris_stj:juris-stj-single' juris_stj.pk %}">{{juris_stj.descricaoClasse}}</a>
+            </h5>
+            <div class="juris-info">
+                <small class="small-info"><strong>Id_herdado:</strong> {{juris_stj.id_herdadoSTJ}}</small>
+                - <small class="small-info"><strong>Número registro:</strong> {{juris_stj.numeroRegistro }}</small>
+                - <small class="small-info"><strong>Sigla de Classe:</strong> {{juris_stj.siglaClasse }}</small>
+                - <small class="small-info"><strong>Número Processo:</strong> {{juris_stj.numeroProcesso }}</small>
+            </div>
+            <hr>
+            <div>
+                <small class="small-info"><strong>Tipo de Decisão:</strong> {{juris_stj.tipoDeDecisao }}</small> 
+                <!--a data_formatada para exibição, no singular, a data APRESENTADA É A dataPublicacao-->   
+                <br> <small class="small-info"><strong>Data Publicação:</strong> {{juris_stj.data_formatada }}</small>
+                <!--a data_formatada para exibição, no singular, a data APRESENTADA É A dataPublicacao-->  
+                <br><p class="ementa"><strong>EMENTA:</strong> <br> {{juris_stj.ementa | slice:"700"}}...</p>
+                <p class="p-link">
+                    <a class="a-link" href="{% url 'app_juris_stj:juris-stj-single' juris_stj.pk %}">Ler jurisprudência...</a> 
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; primeira</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+                {% endif %}
+
+                <span class="current">
+                    Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">próxima</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock 'juris_stj_list' %}

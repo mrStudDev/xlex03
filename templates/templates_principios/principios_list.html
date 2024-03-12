@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block 'principios_list' %}
+<div class="container mt-5">
+    <h5>Princípios do Dirieto</h5>
+    <div>
+        <p>Princípios Publicados: <strong>{{ publicacoes_count }}</strong> </p>
+    </div>
+    <hr>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {% for principio in object_list %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body" id="bolinha-educacao">
+                        <code class="card-code">{{principio.code}}</code>
+                        <br>
+                        <p class="card-date">Pub: {{principio.date_created}}
+                        </p>
+                        <hr>
+                        <h5 class="card-title">
+                            <a class="card-a-title" href="{{ principio.get_absolute_url }}">{{ principio.principio_name | slice:":47" }}</a>
+                        </h5>
+                        <small class="card-category">Ramo do:
+                            <a class="card-a-category" href="{% url 'app_principios:principios-ramo-direito' principio.ramo_direito.slug %}">{{ principio.ramo_direito.name }}</a>
+                        </small>
+
+                        <hr>
+                        <p class="card-description">{{principio.meta_description | slice:'170'}}</p>
+                        
+                        <p class="p-link">
+                        <a class="a-link" href="{{ principio.get_absolute_url }}">Estudar...</a> 
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div><br>
+
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; primeira</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&laquo; anterior</a>
+            {% endif %}
+    
+            <span class="current">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">próxima &raquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock 'principios_list' %}

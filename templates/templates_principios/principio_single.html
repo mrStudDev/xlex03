@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block 'principio_single' %}
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-8" id="main-content">
+            <div class="news-image-container">
+                <img src="{{ object.img_destaque.url }}" class="news-image img-fluid rounded-start" alt="{{object.title}}">
+            </div>
+            <br>
+            <p>Principio: {{object.principio_name}}</p>           
+            <small>Ramo do: </small>  | <span class="badge bg-dark">{{object.ramo_direito}}</span> 
+            <small>Pub: {{object.date_created}}</small>
+             <hr>
+
+            <br><br>
+            <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.principio_name}}</h1>
+            <br>
+            <p>{{object.content | safe}}</p>
+            <br>
+            <div class="news-footer">
+                <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                <br>
+                <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+
+                <hr class="news-divider">
+                <br>
+                <small><strong>Principio: </strong>{{object.principio_name}}</small><br>
+                <small><strong>Categoria: </strong>{{object.ramo_direito}}</small><br>
+                <small><strong>Pub: </strong>{{object.date_created}}</small><br>
+                <small><strong>Views: </strong>{{object.views}}</small>
+            </div>
+        </div>
+
+        
+{% endblock 'principio_single' %}

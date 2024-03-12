@@ -1,0 +1,126 @@
+
+{% extends 'base.html' %}
+
+{% block 'title' %} Busca | Súmulas{% endblock 'title' %}
+
+{% block 'sumula_search' %}
+    
+    <div class="container mt-5">
+        <div style="border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 8px; background-color: #f9f9f9;">
+            <h4 style="color: #333; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;"><strong>Formulário Sumulas</strong></h4>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li><strong>Enunciado:</strong> Digite palavras-chave ou frases específicas relacionadas ao conteúdo súmula que deseja encontrar.</li>
+                <li><strong>Sigla:</strong> Indique a sigla do tribunal (Ex.: STF, STJ, TST, etc.) para uma busca mais direcionada.</li>
+                <li><strong>Número da Súmula:</strong> Insira o número específico da sumula se desejar encontrar uma sumula exata. (Quando combinado com sigla, ou nome do tribunal)</li>
+                <li><strong>Nome do Tribunal:</strong> Pesquise a sua Súmula or tribunal.</li>
+                <li><strong>Tema Jurídico:</strong> Pesquise por temas. Selecione todas as sumulas relacionadas.</li>
+            </ul>
+            <strong>Acervo:</strong>
+            <small>Número total de registros: {{ total_records }}</small>
+        </div>
+        <br>
+        <p>Súmulas do Supremo Tribunal Federal,  Tribunais Superiores, Tribunais Regionais, e TJ's</p>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-4">        
+                <form  action="{% url 'app_searchs:sumula-searchs-view' %}" method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Campo Enunciado -->
+                    <div class="mb-3">
+                        <p></p>
+                        <label for="enunciado" class="form-label">Enunciado:</label>
+                        <input type="text" class="form-control" id="enunciado" name="enunciado" placeholder="Buscar palavra ou termo em enunciado." value="{{ form.enunciado.value }}">
+                    </div>
+
+                    <!-- Campo Sigla Tribunal -->
+                    <div class="mb-3">
+                        <label for="sigla_tribunal" class="form-label">Sigla do Tribunal:</label>
+                        <input type="text" class="form-control" id="sigla_tribunal" name="sigla_tribunal" placeholder="(Ex.: STF, STJ, TST, etc.)" value="{{ form.sigla_tribunal.value }}">
+                    </div>
+            
+                    <!-- Campo Número da Súmula -->
+                    <div class="mb-3">
+                        <label for="numero_sumula" class="form-label">Número da Súmula:</label>
+                        <input type="text" class="form-control" id="numero_sumula" name="numero_sumula" placeholder="Digite o número da \súmula (Ex: 0123)" value="{{ form.numero_sumula.value }}">
+                    </div>
+            
+                    <!-- Campo Nome do Tribunal -->
+                    <div class="mb-3">
+                        <label for="nome_tribunal" class="form-label">Nome do Tribunal:</label>
+                        <input type="text" class="form-control" id="nome_tribunal" name="nome_tribunal" placeholder="(Ex.: Superior Tribunal Federal)" value="{{ form.nome_tribunal.value }}">
+                    </div>
+            
+                    <!-- Campo Tema Jurídico -->
+                    <div class="mb-3">
+                        <label for="tema_juridico" class="form-label">Tema Juridico:</label>
+                        <input type="text" class="form-control" id="tema_juridico" name="tema_juridico" placeholder="Nome do Ministro" value="{{ form.tema_juridico.value }}">
+                    </div>
+            
+                    <!-- Botão de envio -->
+                    <center>
+                        <button type="submit" class="btn bg-dark text-light">Enviar formulário</button>
+                    </center>
+                    
+                </form>
+                <br>
+                <div class="alert alert-warning" role="alert">
+                    Ao realizar buscas em sequência, certifique-se de que os campos não relacionados com a nova busca foram limpos, ou que estejam preenchidos com valores compatíveis com o mesmo tribunal julgador pesquisado.
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+                <h3>Resultados da busca</h3>
+                    <hr>
+                    {% if search_performed %}
+                    {% if not sum_results %}
+                        <div class="alert alert-warning">
+                            Nenhum resultado encontrado.
+                            <a href="{% url 'app_searchs:sumula-searchs-view' %}">Vorltar para o formulário de busca</a>
+                        </div>
+                    {% else %}
+                        <div class="results-header d-flex justify-content-between align-items-center">
+                            <p>Lista</p>
+                            <span style="color:green">{{ sum_results|length }} resultados por página</span>
+                        </div>
+                        <ul class="list-group">
+                            {% for result in sum_results %}
+                            <li class="list-group-item">
+                                <h5 class="card-title">
+                                    <a href="{% url 'app_sumulas:sumula-single' sumula_slug=result.slug %}"" class="card-a-title">{{ result.title }}</a>
+                                </h5>
+                                <p> <strong>{{result.numero_sumula}}</strong> - {{ result.enunciado|truncatechars:280 }}</p>
+                            </li>
+                            {% endfor %}
+                            <br>
+                            <!-- Links de paginação -->
+                            <div class="pagination">
+                                <span class="step-links">
+                                    {% if sum_results.has_previous %}
+                                        <a href="?page=1">&laquo; primeira</a>
+                                        <a href="?page={{ sum_results.previous_page_number }}">anterior</a>
+                                    {% endif %}
+                
+                                    <span class="current">
+                                        <strong>Página {{ sum_results.number }} de {{ sum_results.paginator.num_pages }}.</strong>
+                                    </span>
+                
+                                    {% if sum_results.has_next %}
+                                        <a href="?page={{ sum_results.next_page_number }}">próxima</a>
+                                        <a href="?page={{ sum_results.paginator.num_pages }}">última &raquo;</a>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </ul>
+                    {% endif %}
+                    {% endif %}
+                    
+
+            </div>
+        </div>
+
+    </div>
+{% endblock 'sumula_search' %}

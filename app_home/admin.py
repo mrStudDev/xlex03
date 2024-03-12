@@ -21,5 +21,5 @@ class ContactAdmin(admin.ModelAdmin):
         model = ContactMessagesModel
         
 admin.site.register(HomeSite, SiteAdmin)
-admin.site.register(TagSiteModel)
+admin.site.register(TagSiteModel, TagSiteAdmin)
 admin.site.register(ContactMessagesModel, ContactAdmin)

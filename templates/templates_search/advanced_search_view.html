@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %}
+
+{% block 'title' %} Busca | Jurisp. STJ{% endblock 'title' %}
+
+{% block 'advanced_results' %}
+    
+    <div class="container mt-5">
+        <div style="border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 8px; background-color: #f9f9f9;">
+            <h4 style="color: #333; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;"><strong>Formulário Avançado</strong></h4>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li><strong>Ementa:</strong> Digite palavras-chave ou frases específicas relacionadas ao conteúdo da jurisprudência que deseja encontrar.</li>
+                <li><strong>Data Inicial & Data Final:</strong> Defina um intervalo de tempo para refinar a busca por decisões em determinadas datas.</li>
+                <li><strong>Descrição da Classe:</strong> Indique a classe processual (Ex.: Habeas Corpus, Recurso Especial, etc.) para uma busca mais direcionada.</li>
+                <li><strong>Número do Processo:</strong> Insira o número específico do processo se desejar encontrar uma jurisprudência exata.</li>
+                <li><strong>Ministro Relator:</strong> Selecione o nome do Ministro Relator para filtrar as decisões proferidas por ele.</li>
+            </ul>
+            <strong>Acervo:</strong>
+            <small>Número total de registros: {{ total_records }},</small>
+            <small>data mais antiga no acervo: {{ earliest_date }},</small>
+            <small>data mais recente no acervo: {{ latest_date }}</small>
+        </div>
+        <br>
+        <p>Jurisprudências do Superior Tribunal de Justiça - STJ</p>
+        <hr>
+        
+        
+        <form  action="{% url 'app_searchs:advanced-searchs-view' %}" method="post">
+            {% csrf_token %}
+            
+            <!-- Campo Ementa -->
+            <div class="mb-3">
+                <p></p>
+                <label for="ementa" class="form-label">Ementa:</label>
+                <input type="text" class="form-control" id="ementa" name="ementa" placeholder="Buscar palavra ou termo em ementa." value="{{ form.ementa.value }}">
+            </div>
+    
+            <!-- Campo Data Formatada - Como é um período, estamos assumindo dois campos de data: data_inicial e data_final -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="data_inicial" class="form-label">Data Inicial:</label>
+                    <input type="date" class="form-control" id="data_inicial" name="data_inicial" value="{{ form.data_inicial.value }}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="data_final" class="form-label">Data Final:</label>
+                    <input type="date" class="form-control" id="data_final" name="data_final" value="{{ form.data_final.value }}">
+                </div>
+            </div>
+    
+            <!-- Campo Número do Processo -->
+            <div class="mb-3">
+                <label for="numeroProcesso" class="form-label">Número do Processo:</label>
+                <input type="text" class="form-control" id="numeroProcesso" name="numeroProcesso" placeholder="Digite o número do processo (Ex: 0123456789)" value="{{ form.numeroProcesso.value }}">
+            </div>
+    
+            <!-- Campo Descrição da Classe -->
+            <div class="mb-3">
+                <label for="descricaoClasse" class="form-label">Descrição da Classe:</label>
+                <input type="text" class="form-control" id="descricaoClasse" name="descricaoClasse" placeholder="(Ex.: Habeas Corpus, Recurso Especial, etc.)" value="{{ form.descricaoClasse.value }}">
+            </div>
+    
+            <!-- Campo Ministro Relator -->
+            <div class="mb-3">
+                <label for="ministroRelator" class="form-label">Ministro Relator:</label>
+                <input type="text" class="form-control" id="ministroRelator" name="ministroRelator" placeholder="Nome do Ministro" value="{{ form.ministroRelator.value }}">
+            </div>
+    
+            <!-- Botão de envio -->
+            <center>
+                <button type="submit" class="btn bg-dark text-light">Enviar formulário</button>
+            </center>
+            
+        </form>
+    
+    </div>
+
+</div>
+
+{% endblock 'advanced_results' %}

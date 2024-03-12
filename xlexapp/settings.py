@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_home',
     'app_manager',
+    'app_juris_stj',
+    'app_sumulas',
+    'app_searchs',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +79,6 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-
 
 """
 DATABASES = {

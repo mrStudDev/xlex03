@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block 'universal_results' %}
+
+<div class="container mt-5">
+<br>
+<h1 id="title-post-h1">Formulário de buscas</h1>
+<p>Jurisprudências do Superior Tribunal de Justiça - STJ</p>
+<hr>
+<br><small>Este campo busca por palavras ou termos em ementas.</small>
+    
+    <!-- Adicionando a parte do formulário -->
+    <form method="get" action="{% url 'app_searchs:universal-searchs-results' %}">
+        <label for="{{ form.query.id_for_label }}" class="form-label"></label>
+        <input type="text" class="form-control" id="{{ form.query.id_for_label }}" name="{{ form.query.name }}" placeholder="Digite uma palavra ou termo" value="{{ form.query.value|default:'' }}">
+        <br>
+        <center>
+            <button type="submit" class="btn bg-dark text-light">Pesquisar por jurisprudência</button>
+            <br>
+            ou <a href="{% url 'app_searchs:advanced-searchs-view' %}">Ir para pesquisa avançada</a>
+        </center>
+    </form>
+    <br>
+
+    {% if search_performed %}
+    {% if not results %}
+        <div class="alert alert-warning">
+            Nenhum resultado encontrado.
+        </div>
+    {% else %}
+    <div class="results-header d-flex justify-content-between align-items-center">
+        <h3>Resultados:</h3>
+        <span class="badge bg-primary">{{ results|length }} resultados por página</span>
+    </div>
+        <ul class="list-group mb-5">
+            {% for result in results %}
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a class="card-a-title" href="{{ result.get_absolute_url }}">{{ result.descricaoClasse | slice:"150"}}</a>
+                        </h5>
+                        <p style="margin-top: 10px;">{{ result.ementa|truncatechars:500}}</p>
+                        <p><strong>Trecho em destaque</strong></p>
+                        <p style="font-size:15px;">(...) {{ result.snippet|safe }}(...)</p>
+                        <small><strong>Espécie de decisão: </strong> {{result.tipoDeDecisao}}</small> | 
+                        <small><strong>Data da Publicação: </strong>{{result.dataPublicacao}}</small>
+                    </div> 
+                </div>
+                <br>
+            {% endfor %}
+
+            <!-- Links de paginação -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if results.has_previous %}
+                        <a href="?query={{ request.GET.query }}&page=1">&laquo; primeira</a>
+                        <a href="?query={{ request.GET.query }}&page={{ results.previous_page_number }}">anterior</a>
+                    {% endif %}
+                    <span class="current">
+                        <strong>Página {{ results.number }} de {{ results.paginator.num_pages }}.</strong>
+                    </span>
+                    {% if results.has_next %}
+                        <a href="?query={{ request.GET.query }}&page={{ results.next_page_number }}">próxima</a>
+                        <a href="?query={{ request.GET.query }}&page={{ results.paginator.num_pages }}">última &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+            
+        </ul>        
+    {% endif %}
+{% endif %}
+
+</div>
+
+
+{% endblock 'universal_results' %}

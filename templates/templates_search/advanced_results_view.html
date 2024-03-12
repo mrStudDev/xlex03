@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block 'title' %} Resultados | Jurisp. STJ{% endblock 'title' %}
+
+{% block 'advanced_results' %}
+<div class="container mt-5">
+    <h1 id="title-post-h1">Resultados da busca</h1>
+    <p>Jurisprudências do Superior Tribunal de Justiça - STJ</p>
+    <small>Xlex | Jurisprudências</small>
+    <br>
+    <hr>
+    {% if search_performed %}
+    {% if not results %}
+        <div class="alert alert-warning">
+            Nenhum resultado encontrado.
+            <a href="{% url 'app_searchs:advanced-searchs-view' %}">Vorltar para o formulário de busca</a>
+        </div>
+    {% else %}
+        <div class="results-header d-flex justify-content-between align-items-center">
+            <a class="btn bg-dark text-light" style="color:green" href="{% url 'app_searchs:advanced-searchs-view' %}">Vorltar para o formulário</a>
+            <span style="color:green">{{ results|length }} resultados por pág. 1/{{ results.paginator.num_pages }} pág.</span>
+        </div>
+        <div class="mt-4">
+            <ul class="list-group">
+
+                {% for result in results %}
+                    <div class="card shadow-md py-3 px-3">
+                        <h5 class="card-title-juris">
+                            <a class="card-a-title" href="{{ result.get_absolute_url }}">{{ result.descricaoClasse | slice:"150" }}</a>
+                        </h5>
+                        <div class="juris-info">
+                            <small class="small-info"><strong>Id_herdado:</strong> {{result.id_herdadoSTJ}}</small>
+                            - <small class="small-info"><strong>Número registro:</strong> {{result.numeroRegistro }}</small>
+                            - <small class="small-info"><strong>Sigla de Classe:</strong> {{result.siglaClasse }}</small>
+                            - <small class="small-info"><strong>Número Processo:</strong> {{result.numeroProcesso }}</small>
+                        </div>
+                        <hr>
+                        <div>
+                            <small class="small-info"><strong>Tipo de Decisão:</strong> {{result.tipoDeDecisao }}</small> 
+                            <!--a data_formatada para exibição, no singular, a data APRESENTADA É A dataPublicacao-->   
+                            <br> <small class="small-info"><strong>Data Publicação:</strong> {{result.data_formatada }}</small>
+                            <!--a data_formatada para exibição, no singular, a data APRESENTADA É A dataPublicacao-->  
+                            <br><p class="ementa"><strong>EMENTA:</strong> <br> {{result.ementa | slice:"700"}}...</p>
+                            <p class="p-link">
+                                <a class="a-link" href="{{ result.get_absolute_url }}">Ler Jurisprudência</a>
+                            </p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                <br>
+                <!-- Links de paginação -->
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if results.has_previous %}
+                            <a href="?page=1">&laquo; primeira</a>
+                            <a href="?page={{ results.previous_page_number }}">anterior</a>
+                        {% endif %}
+
+                        <span class="current">
+                            <strong>Página {{ results.number }} de {{ results.paginator.num_pages }}.</strong>
+                        </span>
+
+                        {% if results.has_next %}
+                            <a href="?page={{ results.next_page_number }}">próxima</a>
+                            <a href="?page={{ results.paginator.num_pages }}">última &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+            </ul>
+        </div>
+    {% endif %}
+    {% endif %}
+</div>
+{% endblock 'advanced_results' %}
+
