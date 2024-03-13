@@ -42,7 +42,7 @@ class PrincipiosModel(models.Model):
             self.code = self.generate_unique_code()
         # Gera um slug a partir do título se o slug não existir
         if not self.slug:
-            self.slug = slugify(self.title)
+            self.slug = slugify(self.principio_name)
         super(PrincipiosModel, self).save(*args, **kwargs)
 
 
