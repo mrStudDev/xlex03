@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block 'questions_list' %}
+<div class="container mt-5">
+    <h5>Questões</h5>
+    <div>
+        <p>Questões publicadas: <strong>{{ publicacoes_count }}</strong> </p>
+    </div>
+    <hr>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Card Banca Question-->
+        {% for question in object_list %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body" id="bolinha-educacao" style="border: none;">
+                    <code class="card-code">{{question.code}}</code>
+                    <br>
+                    <p class="card-date">Pub: {{question.date_created}}
+                    </p>
+                    <hr>
+                    <h5 class="card-title">
+                        <a class="card-a-title" href="{{ question.get_absolute_url }}">{{ question.title | slice:":47" }}</a>
+                    </h5>
+                    <small class="card-category">Banca:
+                        <a class="card-a-category" href="{% url 'app_questions:question-banca' question.banca.slug %}">{{ question.banca.name }}</a>
+                    </small><br>
+                    <small class="card-category">Disciplina:
+                        <a class="card-a-category" href="{% url 'app_questions:question-disciplina' question.disciplina.slug %}">{{ question.disciplina.name }}</a>
+                    </small><br>
+                    <small class="card-category">Ramo do:
+                        <a class="card-a-category" href="{% url 'app_questions:question-ramo' question.ramo_direito.slug %}">{{ question.ramo_direito.name }}</a>
+                    </small>
+                    <hr>
+                    <p class="card-description">{{question.meta_description |truncatewords:20}}</p>
+                    
+                    <p class="p-link">
+                    <a class="a-link" href="{{ question.get_absolute_url }}">Estudar...</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div><br>
+
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; primeira</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&laquo; anterior</a>
+            {% endif %}
+    
+            <span class="current">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">próxima &raquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock 'questions_list' %}

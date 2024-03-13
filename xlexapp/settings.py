@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'app_sumulas',
     'app_searchs',
     'app_principios',
+    'app_questions',
 ]
 
 MIDDLEWARE = [

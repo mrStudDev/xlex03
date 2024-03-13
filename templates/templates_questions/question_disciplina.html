@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}{{ disciplina.name }}{% endblock 'title' %} 
+
+{% block 'question_disciplina' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <!--Col md 8 -->
+        <div class="col-md-8"> 
+
+            <div class="col-md-12 px-0">
+                <h1>Questões | Disciplina: {{ disciplina.name }}</h1>
+                <span>
+                    Nesta página, estão listadas as questões publicadas, conforme a <strong>disciplina</strong> selecionada.
+                </span><br><br>
+            </div>
+
+            <div class="album py-5">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    <!--Bloco -->
+                    {% for question in questions %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body" id="bolinha-educacao">
+                                <code class="card-code">{{question.code}}</code>
+                                <br>
+                                <p class="card-date">Pub: {{question.date_created}}
+                                </p>
+                                <hr>
+                                <h5 class="card-title">
+                                    <a class="card-a-title" href="{{ question.get_absolute_url }}">{{ question.title | slice:":47" }}</a>
+                                </h5>
+                                <small class="card-category">Banca:
+                                    <a class="card-a-category" href="{% url 'app_questions:question-banca' question.banca.slug %}">{{ question.banca.name }}</a>
+                                </small><br>
+                                <small class="card-category">Disciplina:
+                                    <a class="card-a-category" href="{% url 'app_questions:question-disciplina' question.disciplina.slug %}">{{ question.disciplina.name }}</a>
+                                </small><br>
+                                <small class="card-category">Ramo do:
+                                    <a class="card-a-category" href="{% url 'app_questions:question-ramo' question.ramo_direito.slug %}">{{ question.ramo_direito.name }}</a>
+                                </small>
+                                <hr>
+                                <p class="card-description">{{question.meta_description | slice:'170'}}</p>
+                                <p class="p-link">
+                                <a class="a-link" href="{{ question.get_absolute_url }}">Ler Questão...</a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+{% endblock 'question_disciplina' %}

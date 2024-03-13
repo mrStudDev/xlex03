@@ -48,7 +48,7 @@ License: MIT License
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Add Articles</a></li>
-                            <li><a class="dropdown-item" href="#">Add Questões</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_questions:question-create' %}">Add Questões</a></li>
                             <li><a class="dropdown-item" href="#">Add Casos</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_sumulas:sumula-create-post' %}">Add Súmulas</a></li>
                             <li><a class="dropdown-item" href="#">Add modelo</a></li>
@@ -100,7 +100,7 @@ License: MIT License
                         <a class="nav-link" href="#">Artigos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Questões</a>
+                        <a class="nav-link" href="{% url 'app_questions:questions-list' %}">Questões</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Casos Concretos</a>
@@ -397,10 +397,9 @@ License: MIT License
 
   <!-- SIBEBAR-->
 {% if not hide_sidebar %}
-  <div class="col-md-4">
+<div class="col-md-4">
 
     <div class="position-sticky" style="top: 1rem;">
-        <br>
         <div class="p-4 mb-3 rounded" id="side-hero">
             <p>Princípios do Direito</p>
             <hr>
@@ -450,7 +449,7 @@ License: MIT License
                     <summary>Questões por Banca</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for banca in bancas %}
-                        <a href="#" class="a-link-side">{{ banca.name }}</a><br>
+                        <a href="{% url 'app_questions:question-banca' banca.slug %}" class="a-link-side">{{ banca.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -458,7 +457,7 @@ License: MIT License
                     <summary>Questões por Disciplina</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for disciplina in disciplinas %}
-                        <a href="#" class="a-link-side">{{ disciplina.name }}</a><br>
+                        <a href="{% url 'app_questions:question-disciplina' disciplina.slug %}" class="a-link-side">{{ disciplina.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -466,7 +465,7 @@ License: MIT License
                     <summary>Questões por Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
-                        <a href="#" class="a-link-side">{{ ramo_direito.name }}</a><br>
+                        <a href="{% url 'app_questions:question-ramo' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -474,7 +473,7 @@ License: MIT License
                     <summary>Questões por Tag</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tags in tagsx %}
-                        <a href="#" class="a-link-side">{{ tags.name }}</a><br>
+                        <a href="{% url 'app_questions:question-tag' tags.slug %}" class="a-link-side">{{ tags.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>

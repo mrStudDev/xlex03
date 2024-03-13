@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}{{ questions.title }}{% endblock 'title' %}  
+
+{% block 'question_single' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-8" id="main-content">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <code class="card-code">{{object.code}}</code>
+                    <h1><strong>{{object.title}}</strong></h1>
+                    <hr>          
+                        Banca: <span class="badge bg-dark">{{object.banca}}</span> <br>
+                        Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
+                        Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
+                        Última revisão: <small>{{object.last_updated}}</small> 
+                </div>
+            </div>
+            <br>
+            <br>    
+            <p>{{object.question_ask | safe}}</p>
+            <br>
+
+            <form class="escolha" id="alternativasForm"  style="font-family:Merriweather; color: rgb(76, 76, 76);">
+                {% for alternativa in object.alternativa.all %}
+                    <input id="escolha" type="radio" name="answer" value="{{ alternativa.id }}" data-correct="{{ alternativa.is_correct }}"> {{ alternativa.text }}<br>
+                {% endfor %}
+            </form>
+            <br>
+            <br>
+            <div class="resposta">
+                <h5>Já sabe a resposta certa?</h5><br>
+                <details>
+                    <summary id="checkAnswerBtn"> Revelar a resposta correta</summary>
+                    <br>
+                    {% for alternativa in object.alternativa.all %}
+                        {% if alternativa.is_correct %}
+                            <br>
+                            <p id="responseMessage"><strong></strong></p>
+                            <p><strong>A alternativa correta é: </strong></p>
+                            <p style="color: rgb(37, 172, 7);">{{ alternativa.text }}</p>
+                            <br>
+                            <div class="card-body">
+                                <code class="card-code">{{object.code}}</code>
+                                <h5 class="card-title"> <strong>Fundamentação: </strong></h5>
+                                <hr>
+                                <p>{{object.fundaments | safe}}</p> 
+                            </div>                                                       
+                            <br>
+                            <p>Agradecemos a sua resposta!</p>
+                            <br>
+                            <a class="btn bg-dark text-light btn-sm"  href="{% url 'app_questions:questions-list' %}">Ver outra questão</a><br><br>
+                            <a class="btn bg-dark text-light btn-sm"  href="{% url 'app_home:home-view' %}">Quero ir para home</a>
+                        {% endif %}
+                    {% endfor %}
+                </details>
+            </div>
+            <br>
+            <div class="thanks">
+                <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                <small style="color: rgb(154, 152, 152);"> Xlex</small>
+                <br>
+                <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+
+                <hr class="news-divider">
+
+                <small>Tags:</small>
+                {% for tag in tags %}
+                    <code style="color:gray"> |{{tag.name}}</code>
+                {% endfor %}
+
+                <br>
+                <small><strong>Questão:</strong> {{object.title}}</small> <br>
+                <small><strong>Disciplina:</strong> {{object.disciplina}}</small><br>                                                           
+                <small><strong>Ramo do:</strong> {{object.ramo_direito}}</small><br>                                                           
+                <small><strong>Banca Examinadora:</strong> {{object.banca}}</small><br>
+                <small><strong>Views:</strong> {{object.views}}</small>
+            </div>                                                             
+        </div>
+
+        
+ 
+        <script src="/static/js/revelar_answer_question.js"></script>
+{% endblock 'question_single' %}

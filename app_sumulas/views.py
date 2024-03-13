@@ -83,7 +83,6 @@ class SumulaSingularView(DetailView):
         sumulas = self.get_object()
         context['current_app'] = 'app_sumulas'
         return context
-
 class TribNameSumulaView(ListView):
     model = TribNameSumulaModel
     template_name = 'templates_sumulas/sumulas_trib_names.html'
