@@ -49,7 +49,7 @@ License: MIT License
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Add Articles</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_questions:question-create' %}">Add Questões</a></li>
-                            <li><a class="dropdown-item" href="#">Add Casos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_casos:caso-create-post' %}">Add Casos</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_sumulas:sumula-create-post' %}">Add Súmulas</a></li>
                             <li><a class="dropdown-item" href="#">Add modelo</a></li>
                             <li><a class="dropdown-item" href="#">Add Blog-Social</a></li>
@@ -103,7 +103,7 @@ License: MIT License
                         <a class="nav-link" href="{% url 'app_questions:questions-list' %}">Questões</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Casos Concretos</a>
+                        <a class="nav-link" href="{% url 'app_casos:casos-list' %}">Casos Concretos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_sumulas:sumulas-list' %}">Súmulas</a>
@@ -414,8 +414,8 @@ License: MIT License
         <div class="p-4">
             <strong>Páginas</strong>
             <ol class="list-unstyled mb-0">
-                <li><a href="#" class="a-link-side">Sobre nós</a></li>
-                <li><a href="#" class="a-link-side">Contate-nos</a></li>
+                <li><a href="{% url 'app_home:sobre-nos' %}" class="a-link-side">Sobre nós</a></li>
+                <li><a href="{% url 'app_home:contact-us' %}" class="a-link-side">Contate-nos</a></li>
             </ol>
         </div>
 
@@ -484,7 +484,7 @@ License: MIT License
                     <summary>Casos por Diciplina</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for disciplina in disciplinas %}
-                        <a href="#" class="a-link-side">{{ disciplina.name }}</a><br>
+                        <a href="{% url 'app_casos:casos-disciplinas' disciplina.slug %}" class="a-link-side">{{ disciplina.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -492,7 +492,7 @@ License: MIT License
                     <summary>Casos por Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
-                        <a href="#" class="a-link-side">{{ ramo_direito.name }}</a><br>
+                        <a href="{% url 'app_casos:casos-ramo-direito' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -500,7 +500,7 @@ License: MIT License
                     <summary>Casos por Tag</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tags in tagsx %}
-                        <a href="#" class="a-link-side">{{ tags.name }}</a><br>
+                        <a href="{% url 'app_casos:casos-tags' tags.slug %}" class="a-link-side">{{ tags.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>

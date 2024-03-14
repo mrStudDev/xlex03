@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}{{casos.title}}{% endblock 'title' %}
+
+{% block 'casos_single' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-8" id="main-content">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <code class="card-code">{{object.code}}</code>
+                    <small>Caso Concreto</small>
+                    <hr>
+                    <h1 id="title-post-h1"><strong>{{object.title}}</strong></h1>          
+                    Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
+                    Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
+                    Atualizado em: <small>{{object.last_updated}}</small> 
+                    {% if user.is_authenticated and user.is_staff %}
+                        <div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                          <span>
+                            <a href="{% url 'app_casos:caso-update-post' slug=object.slug %}">Update</a>
+                            | | <a href="{% url 'app_casos:caso-delete-post' slug=object.slug %}" style="color:red;">delete</a>
+                          </span>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <br>
+            
+            <h3>Caso concreto:</h3>   
+            <p>{{object.pergunta_caso | safe}}</p>
+            <br>
+            <details>
+                <summary><strong>Revelar resposta</strong></summary>
+                <br>
+                <div class="card-body">
+                    <code class="card-code">{{object.code}}</code>
+                    <h5 class="card-title"> <strong>Resposta: </strong></h5>
+                    <h6>{{object.title}}</h6>
+                    <hr>
+                    <p>{{object.resposta_caso | safe}}</p>
+                </div>
+                <br>                           
+                <div class="card-body">                    
+
+                    <h5 class="card-title"> <strong>Fundamentos: </strong></h5>
+                    <hr>
+                    <p>{{object.fundamentacao | safe}}</p> 
+                </div>                                            
+            </details>
+
+            <div class="resposta">
+
+            </div>
+            <br>
+            <div class="thanks">
+                <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                <small style="color: rgb(154, 152, 152);"> Xlex</small>
+                <br>
+                <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+
+                <hr class="news-divider">
+
+                <small>Tags:</small>
+                {% for tag in tags %}
+                    <code style="color:gray"> |{{tag.name}}</code>
+                {% endfor %}
+
+                <br>
+                <small><strong>Caso Concreto:</strong> {{object.title}}</small> <br>
+                <small><strong>Disciplina:</strong> {{object.disciplina}}</small><br>                                                           
+                <small><strong>Ramo do:</strong> {{object.ramo_direito}}</small><br>
+                <small><strong>Publicado em:</strong> {{object.date_created}}</small><br>
+                <small><strong>Atualizado em:</strong> {{object.last_updated}}</small><br>
+                <small><strong>Views:</strong> {{object.views}}</small>
+            </div>                                                             
+        </div>
+
+        
+{% endblock 'casos_single' %}

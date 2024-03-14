@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block 'title' %}Casos Update{% endblock 'title' %}
+
+{% block 'caso_updade' %}
+<div class="container">
+    <div class="row g-5">
+        <!--Col md 8 -->
+        <div class="col-md-8"> 
+            <div class="album py-5">
+                <div class="card-create-quiz">
+                    <div class="card-header">
+                        <h1>Update Caso Concreto:</h1>
+                    </div>
+                    {% if user.is_authenticated and user.is_staff %}
+                    <hr>
+                    <br>
+
+                    <div class="container">
+                        <form method="Post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.media }}
+                            {{ form.as_p }}
+                            <button class="btn btn-primary">Updade Caso Concreto</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!--Fechamento das divs ocorre na base HTML-->
+{% endblock 'caso_updade' %}
