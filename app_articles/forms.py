@@ -7,7 +7,7 @@ class CreateArticleForm(forms.ModelForm):
         fields = [
             'title', 
             'author', 
-            'img_destaque',
+            'summary',
             'category', 
             'content', 
             'meta_description', 
@@ -21,7 +21,7 @@ class CreateArticleForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
-        self.fields['img_destaque'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Imagem Destaque'})
+        self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Sumário'})
         self.fields['category'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Categoria'})
         self.fields['content'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Texto Rico'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição'})
@@ -39,7 +39,7 @@ class UpdateArticleForm(forms.ModelForm):
         model = ArticlesModel
         fields = [
             'title', 
-            'img_destaque',
+            'summary',
             'category', 
             'content', 
             'meta_description', 
@@ -51,7 +51,7 @@ class UpdateArticleForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
-        self.fields['img_destaque'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Imagem Destaque'})
+        self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Summary'})
         self.fields['category'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Categoria'})
         self.fields['content'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Texto Rico'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição'})

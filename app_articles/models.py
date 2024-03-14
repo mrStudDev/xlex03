@@ -32,7 +32,8 @@ class TagArticlesModel(models.Model):
 class ArticlesModel(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
-    img_destaque = models.ImageField(upload_to='images/', null=True, blank=True)
+    summary = models.TextField(blank=True, null=True)
+    key_words = models.CharField(max_length=255, default="Artigos")
     category = models.ForeignKey(CategoryArticlesModel, null=True, blank=True, on_delete=models.SET_NULL)
     content = models.TextField(blank=True, null=True)
     meta_description = models.TextField(max_length=250)
