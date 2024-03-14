@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'app_questions',
     'app_casos',
     'app_modelos',
+    'app_articles',
 ]
 
 MIDDLEWARE = [

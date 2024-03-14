@@ -26,10 +26,10 @@
                         </h5>
                         <small class="card-category">Diciplina:
                             <a class="card-a-category" href="{% url 'app_casos:casos-disciplinas' caso.disciplina.slug %}">{{ caso.disciplina.name }}</a>
-                        </small>
+                        </small><br>
                         <small class="card-category">Ramo do:
                             <a class="card-a-category" href="{% url 'app_casos:casos-ramo-direito' caso.ramo_direito.slug %}">{{ caso.ramo_direito.name }}</a>
-                        </small>
+                        </small><br>
                         <small class="card-category">Tags:
                             {% for tag in caso.tags.all %}
                                 <a class="card-a-category" href="{% url 'app_casos:casos-tags' tag.slug %}">{{ tag.name }}</a>

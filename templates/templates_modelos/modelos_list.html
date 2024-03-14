@@ -32,7 +32,7 @@
                                         {% endfor %}
                                     </small><br>
                                     <hr>
-                                    <p class="card-text">{{ modelo.meta_description | slice:":150" }}</p>
+                                    <p class="card-description">{{ modelo.meta_description | slice:":150" }}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a class="a-link" href="{% url 'app_modelos:modelo-single' modelo.slug %}">Modelo</a>

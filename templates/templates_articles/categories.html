@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block 'title' %}{{ category.name }}{% endblock 'title' %} 
+
+{% block 'categories_articles' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-8" id="main-content"> 
+            <div class="col-md-12 px-0">
+                <h1 id="title-post-h1">Artigos | Categoria: {{ category.name }}</h1>
+                <span>
+                    Nesta página, estão listadas os últimos artigos publicados, conforme a categoria selecionada.
+                </span><br><br>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+
+                {% for article in articles %}
+                <div class="col">
+                    <div class="card h-100">
+
+                        {% if article.img_destaque %}
+                            <img src="{{ article.img_destaque.url }}" class="card-img-top" alt="{{ article.title }}">
+                        {% endif %}
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h5 class="card-title">
+                                <a href="{% url 'app_articles:article-single' article.slug %}">
+                                    {{ article.title | slice:":26"  }}
+                                </a>
+                            </h5>
+
+                            <p class="text-muted mt-auto">
+                                <a href="{% url 'app_articles:categories-articles' article.category.slug %}" class="card-a-category">
+                                    {{ article.category.name }}
+                                </a> 
+                                | {{ article.date_created|date:"d M Y" }}
+                            </p>
+
+                            <p class="card-text">
+                                {{ article.meta_description | slice:":77" }}
+                            </p>
+
+
+                            {% if article.slug %}
+                                <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
+                            {% endif %}
+
+                            {% if article.slug %}
+                                {% if user.is_authenticated and user.is_staff %}
+                                    <div>
+                                        <span>
+                                            <a href="{% url 'app_articles:article-update-post' article.slug %}">Update</a>
+                                            | | <a href="{% url 'app_articles:article-delete-post' article.slug %}" style="color:red">delete</a>
+                                          </span>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+
+
+
+{% endblock 'categories_articles' %}

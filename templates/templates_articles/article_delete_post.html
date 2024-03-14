@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block 'article_delete' %}
+
+    {% if user.is_authenticated and user.is_staff %}
+        <div class="container">
+            <div class="row g-5">
+                <!--Col md 8 -->
+                <div class="col-md-8"> 
+                    <div class="album py-5">
+                        <div class="card-create-quiz">
+                            <div class="card-header">
+                                <h1>Delete Article:</h1>
+                            </div>
+                            {% if user.is_authenticated and user.is_staff %}
+                            <hr>
+                            <br>
+
+                            <div class="container">
+                                <h5>Tem certeza de que quer deletar esse Artigo?????</h5>
+                                <br>
+                                <h2 style="color:red">{{ object.title }}</h2> 
+                                <br>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <a href="{% url 'app_articles:articles-list' %}" class="btn btn-secondary">Cancel</a>
+                                </form>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            <!--Fechamento das divs ocorre na base HTML-->
+    {% else %}
+        <div class="container">
+            <h3 class="danger">
+                Você não tem permissão para acessar essa página!
+            </h3>
+            <a class="btn btn-danger btn-sm" href="{% url 'app_articles:articles-list' %}">Página de artigos</a>    
+        </div>
+
+    {% endif %}
+{% endblock 'article_delete' %}
