@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }} {% endblock %}
+
+{% block 'modelo_singular' %}
+<br>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="card shadow-sm">
+                        <div class="card-body symbol-section">
+                            <br>
+                            <code class="card-code">{{object.code}}</code>
+                            <hr>
+                            <h1><strong>{{object.title}}</strong></h1>                    
+                            <p>Ramo: {{object.ramo_direito}}</p>
+                            <p>Tipo: {{object.tipo_doc}}</p>                       
+                            <p>Publicado em: {{object.date_created}}</p>
+                            <p>Atualizado em: <strong>{{object.last_updated}}</strong></p>
+
+                            <small>Faça o download do modelo: </small>                            
+                            {% if object.document %}
+                            <a class="btn btn-sm btn-dark" href="{{ object.document.url }}" download>Baixar documento editável</a>
+                            {% endif %}
+
+                            {% if user.is_authenticated and user.is_staff %}
+                            <div>
+                            <span>
+                                <a href="{% url 'app_modelos:modelo-update' slug=object.slug %}">Update</a>
+                                | | <a href="{% url 'app_modelos:modelo-delete' slug=object.slug %}" style="color:red">delete</a>
+                            </span>
+                            </div>
+
+                            {% endif %}
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br><br>     
+                    <p>{{object.content | safe}}</p>
+                    <br>
+                    <div class="news-footer">
+                        <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                        <small style="color: rgb(154, 152, 152);">{{ object.author.first_name }} {{ object.author.last_name }}</small>
+                        <br>
+                        <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+                    </div>
+
+                    <hr class="news-divider">
+
+                    <small><strong>Tags:</strong></small>
+                    {% for tag in tags %}
+                        <code style="color:gray">{{tag.name}}</code>
+                    {% endfor %}
+
+                    <br>
+                    <small><strong>Modelo: </strong>{{object.title}}</small> <br>
+                    <small><strong>Publicado em: </strong>{{object.date_created}}</small><br>
+                    <small><strong>Ramo: </strong>{{object.ramo_direito}}</small><br>
+                    <small><strong>Views: </strong>{{object.views}}</small><br>
+                    <small>Faça o download do modelo: </small>
+                    {% if object.document %}
+                    <a class="btn btn-sm btn-dark" href="{{ object.document.url }}" download>Baixar documento editável</a>
+                    {% endif %}                                                                   
+                </div>
+            </div>
+
+{% endblock 'modelo_singular' %}

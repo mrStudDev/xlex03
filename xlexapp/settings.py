@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'app_principios',
     'app_questions',
     'app_casos',
+    'app_modelos',
 ]
 
 MIDDLEWARE = [
@@ -106,6 +107,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation

@@ -51,7 +51,7 @@ License: MIT License
                             <li><a class="dropdown-item" href="{% url 'app_questions:question-create' %}">Add Questões</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_casos:caso-create-post' %}">Add Casos</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_sumulas:sumula-create-post' %}">Add Súmulas</a></li>
-                            <li><a class="dropdown-item" href="#">Add modelo</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_modelos:modelo-create' %}">Add modelo</a></li>
                             <li><a class="dropdown-item" href="#">Add Blog-Social</a></li>
                         </ul>
                     </li>
@@ -109,7 +109,7 @@ License: MIT License
                         <a class="nav-link" href="{% url 'app_sumulas:sumulas-list' %}">Súmulas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Modelos</a>
+                        <a class="nav-link" href="{% url 'app_modelos:modelos-list' %}">Modelos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_principios:principios-list' %}">Principios</a>
@@ -511,7 +511,7 @@ License: MIT License
                     <summary>Modelos por Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
-                        <a href="#" class="a-link-side">{{ ramo_direito.name }}</a><br>
+                        <a href="{% url 'app_modelos:modelos-ramo-direito' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -520,7 +520,7 @@ License: MIT License
                     <ol class="list-unstyled mb-0">  
                         {% for tipo in tipos %}
                         <!-- Corrigido para usar 'tipo.name' -->
-                        <a href="#" class="a-link-side">{{ tipo.name }}</a><br>
+                        <a href="{% url 'app_modelos:modelos-tipo-doc' tipo.slug %}" class="a-link-side">{{ tipo.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -528,7 +528,7 @@ License: MIT License
                     <summary>Modelos por Tag</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tag in tagsx %}
-                        <a class="card-a-category" href="#">{{ tag.name }}</a><br>
+                        <a class="card-a-category" href="{% url 'app_modelos:modelos-tag-doc' tag.slug %}">{{ tag.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>

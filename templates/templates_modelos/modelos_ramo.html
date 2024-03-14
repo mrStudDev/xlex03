@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block 'title' %} {{ramo_direito.name}} {% endblock 'title' %}
+
+{% block 'modelos_ramo' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <!--Col md 8 -->
+        <div class="col-md-8"> 
+
+            <div class="col-md-12 px-0">
+                <h1>Modelos | Ramo do: {{ ramo_direito.name }}</h1>
+                <p>
+                    Nesta página, estão listados os modelos conforme o <strong>ramo do direito</strong> selecionado.
+                </p>
+            </div>
+
+            <div class="album py-5">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    <!--Bloco -->
+                    {% for modelo in modelos %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body" id="bolinha-educacao">
+                                <code class="card-code">{{modelo.code}}</code>
+                                <br>
+                                <p class="card-date">Pub: {{modelo.date_created}}
+                                </p>
+                                <hr>
+                                <h5 class="card-title">
+                                    <a class="card-a-title" href="{{ modelo.get_absolute_url }}">{{ modelo.title | slice:":47" }}</a>
+                                </h5>
+                                <small class="card-category">Ramo do:
+                                    <a class="card-a-category" href="{% url 'app_modelos:modelos-ramo-direito' modelo.ramo_direito.slug %}">{{ modelo.ramo_direito.name }}</a>
+                                </small><br>
+                                <small class="card-category">Tipo:
+                                    <a class="card-a-category" href="{% url 'app_modelos:modelos-tipo-doc' modelo.tipo_doc.slug %}">{{ modelo.tipo_doc.name }}</a>
+                                </small><br>
+                                <small class="card-category">Tags:
+                                    {% for tag in modelo.tags.all %}
+                                        <a class="card-a-category" href="{% url 'app_modelos:modelos-tag-doc' tag.slug %}">{{ tag.name }}</a>
+                                    {% endfor %}
+                                </small>
+                                <hr>
+                                <p class="card-description">{{modelo.meta_description | slice:'170'}}</p>
+                                <p class="p-link">
+                                <a class="a-link" href="{{ modelo.get_absolute_url }}">Estudar...</a> 
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% if is_paginated %}
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; primeira</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">&laquo; anterior</a>
+                        {% endif %}
+                
+                        <span class="current">
+                            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                        </span>
+                
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">próxima &raquo;</a>
+                            <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+{% endblock 'modelos_ramo' %}
