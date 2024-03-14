@@ -10,6 +10,10 @@ from django.http import JsonResponse
 from django.utils.text import slugify
 from typing import Any
 from django.urls import reverse
+from django.http import HttpRequest, HttpResponse
+from django.utils import timezone
+from app_manager .models import PageView
+
 
 from django.views.generic import (
     ListView,
@@ -41,9 +45,21 @@ class DocumentListView(ListView):
     
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
+        context["publicacoes_count"] = DocumentsModel.objects.all().count()
         context["hide_sidebar"] = True
         return context
 
+    def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
+        page, created = PageView.objects.get_or_create(
+            page_name="Modelos Docs Page",
+            defaults={'last_accessed': timezone.now()}
+        )
+        if not created:
+            page.view_count += 1
+            page.last_accessed = timezone.now()
+            page.save()
+            
+        return super().get(request, *args, **kwargs)
 
 class DocumentSingleView(DetailView):
     model = DocumentsModel
@@ -54,8 +70,18 @@ class DocumentSingleView(DetailView):
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()
-        # Contagem das Visualizações
-        self.object.update_views() 
+        doc_name = self.object.title
+        self.object.update_views()
+        
+        page, created = PageView.objects.get_or_create(
+            page_name=f"Modelo Doc. Post: {doc_name}",
+            defaults={'last_accessed': timezone.now()}
+        )
+        if not created:
+            page.view_count += 1
+            page.last_accessed = timezone.now()
+            page.save()
+            
         context = self.get_context_data(object=self.object)
         return self.render_to_response(context)
 
@@ -75,22 +101,37 @@ class RamoDocumentView(ListView):
     model = DocumentsModel
     template_name = 'templates_modelos/modelos_ramo.html'
     context_object_name = 'modelos'
+    paginate_by = 12
     
     def get_queryset(self):
-        ramo_slug = self.kwargs['ramo_slug']
-        ramo_direito = get_object_or_404(RamoDireitoDocModel, slug=ramo_slug)
-        return DocumentsModel.objects.filter(ramo_direito=ramo_direito)
+        self.ramo_direito = RamoDireitoDocModel.objects.get(slug=self.kwargs['ramo_slug'])
+        return DocumentsModel.objects.filter(ramo_direito=self.ramo_direito)
 
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        ramo_slug = self.kwargs['ramo_slug']
-        context["ramo_direito"] = get_object_or_404(RamoDireitoDocModel, slug=ramo_slug)
-        context['ramos'] = RamoDireitoDocModel.objects.all()
-        context['tagsx'] = TagDocumentsModel.objects.all()
-        context['tipos'] = TipoDocumentModel.objects.all()
-        context['current_app'] = 'app_modelos'
+        context.update({
+            'ramo_direito': self.ramo_direito,
+            'ramos': RamoDireitoDocModel.objects.all(),
+            'tagsx': TagDocumentsModel.objects.all(),
+            'tipos': TipoDocumentModel.objects.all(),
+            'current_app': 'app_modelos',
+        })
         return context
+
+    def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
+    
+        page, created = PageView.objects.get_or_create(
+            page_name=f"Modelos: Ramos do Direito - {self.kwargs.get('ramo_slug', 'Unknown')}",
+            defaults={'last_accessed': timezone.now()}
+        )
+        if not created:
+            page.view_count += 1
+            page.last_accessed = timezone.now()
+            page.save()
+
+        return super().get(request, *args, **kwargs)
+     
 
 class TipoDocumentView(ListView):
     model = DocumentsModel
@@ -98,19 +139,33 @@ class TipoDocumentView(ListView):
     context_object_name = 'modelos'
     
     def get_queryset(self):
-        tipo_slug = self.kwargs['tipo_slug']
-        tipo_doc = get_object_or_404(TipoDocumentModel, slug=tipo_slug)
-        return DocumentsModel.objects.filter(tipo_doc=tipo_doc)
+        self.tipo_doc = TipoDocumentModel.objects.get(slug=self.kwargs['tipo_slug'])
+        return DocumentsModel.objects.filter(tipo_doc=self.tipo_doc)
     
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        tipo_slug = self.kwargs['tipo_slug']
-        context["tipo_doc"] = get_object_or_404(TipoDocumentModel, slug=tipo_slug)
-        context['tipos'] = TipoDocumentModel.objects.all()
-        context['tagsx'] = TagDocumentsModel.objects.all()
-        context['ramos'] = RamoDireitoDocModel.objects.all()
-        context['current_app'] = 'app_modelos'
+        context.update({
+            'tipo_doc': self.tipo_doc,
+            'tipos': TipoDocumentModel.objects.all(),
+            'tags': TagDocumentsModel.objects.all(),
+            'tagsx': TagDocumentsModel.objects.all(),
+            'ramos': RamoDireitoDocModel.objects.all(),
+            'current_app': 'app_modelos',
+        })
         return context
+
+    def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
+    
+        page, created = PageView.objects.get_or_create(
+            page_name=f"Modelos: Tipo de Doc - {self.kwargs.get('tipo_slug', 'Unknown')}",
+            defaults={'last_accessed': timezone.now()}
+        )
+        if not created:
+            page.view_count += 1
+            page.last_accessed = timezone.now()
+            page.save()
+
+        return super().get(request, *args, **kwargs)
 
 
 class TagDocumentView(ListView):
@@ -119,23 +174,34 @@ class TagDocumentView(ListView):
     context_object_name = 'modelos'
     
     def get_queryset(self):
-        tag_slug = self.kwargs['tag_slug']
-        tags = get_object_or_404(TagDocumentsModel, slug=tag_slug)
-        return DocumentsModel.objects.filter(tags=tags)
-    
+        self.tags = get_object_or_404(TagDocumentsModel, slug=self.kwargs['tag_slug'])
+        return DocumentsModel.objects.filter(tags=self.tags)
+        
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        tag_slug = self.kwargs['tag_slug']
-        context["tags"] = get_object_or_404(TagDocumentsModel, slug=tag_slug)
-        context['tagsx'] = TagDocumentsModel.objects.all()
-        context['tipos'] = TipoDocumentModel.objects.all()
-        context['ramos'] = RamoDireitoDocModel.objects.all()
-        context['current_app'] = 'app_modelos'
+        context.update({
+            'tags': self.tags,
+            'tagsx': TagDocumentsModel.objects.all(),
+            'tipos': TipoDocumentModel.objects.all(),
+            'ramos': RamoDireitoDocModel.objects.all(),
+            'current_app': 'app_modelos',
+        })
         return context
     
-    
-# Classes - Formulários Create - Update - Delete
+    def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
+        page, created = PageView.objects.get_or_create(
+            page_name=f"Modelos: Tags - {self.kwargs.get('tag_slug', 'Unknown')}",
+            defaults={'last_accessed': timezone.now()}
+        )
+        if not created:
+            page.view_count += 1
+            page.last_accessed = timezone.now()
+            page.save()
 
+        return super().get(request, *args, **kwargs)
+
+
+# Classes - Formulários Create - Update - Delete
 class CreateDocumentView(CreateView):
     model = DocumentsModel
     template_name = 'templates_modelos/modelo_create.html'

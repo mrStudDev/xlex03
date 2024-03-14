@@ -40,6 +40,7 @@ class CasoConcretoView(ListView):
     template_name = 'templates_casos/casos_list.html'
     ordering = ['-date_created']
     paginate_by = 12
+    context_object_name = 'casos'
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
