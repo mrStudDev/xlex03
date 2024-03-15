@@ -28,25 +28,26 @@
                                 <p class="card-date">Pub: {{caso.date_created}}
                                 </p>
                                 <hr>
-                                <h5 class="card-title">
-                                    <a class="card-a-title" href="{{ caso.get_absolute_url }}">{{ caso.title | slice:":47" }}</a>
-                                </h5>
+                                <span class="card-title">
+                                    <a href="{{ caso.get_absolute_url }}">{{ caso.title | slice:":47" }}</a>
+                                </span><br>
                                 <small class="card-category">Disciplina:
                                     <a class="card-a-category" href="{% url 'app_casos:casos-disciplinas' caso.disciplina.slug %}">{{ caso.disciplina.name }}</a>
                                 </small><br>
                                 <small class="card-category">Ramo do:
                                     <a class="card-a-category" href="{% url 'app_casos:casos-ramo-direito' caso.ramo_direito.slug %}">{{ caso.ramo_direito.name }}</a>
                                 </small><br>
-                                <small class="card-category">Tags:
-                                    {% for tag in caso.tags.all %}
-                                        <a class="card-a-category" href="{% url 'app_casos:casos-tags' tag.slug %}">{{ tag.name }}</a>
-                                    {% endfor %}
-                                </small>
                                 <hr>
                                 <p class="card-description">{{caso.meta_description | slice:'170'}}</p>
-                                <p class="p-link">
-                                <a class="a-link" href="{{ caso.get_absolute_url }}">Estudar...</a> 
-                                </p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="a-link" href="{{ caso.get_absolute_url }}">Estudar...</a> 
+                                    </div>
+                                    <small class="text-muted">Xlex</small>
+                                </div>
+                                
+
                                 {% if user.is_authenticated and user.is_staff %}
                                 <div>
                                   <span>

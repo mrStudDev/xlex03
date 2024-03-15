@@ -28,26 +28,23 @@
                                 <p class="card-date">Pub: {{modelo.date_created}}
                                 </p>
                                 <hr>
-                                <h5 class="card-title">
-                                    <a class="card-a-title" href="{{ modelo.get_absolute_url }}">{{ modelo.title | slice:":47" }}</a>
-                                </h5>
+                                <span class="card-title">
+                                    <a href="{{ modelo.get_absolute_url }}">{{ modelo.title | slice:":47" }}</a>
+                                </span><br>
                                 <small class="card-category">Ramo do:
                                     <a class="card-a-category" href="{% url 'app_modelos:modelos-ramo-direito' modelo.ramo_direito.slug %}">{{ modelo.ramo_direito.name }}</a>
-                                </small>
+                                </small><br>
                                 <small class="card-category">Tipo:
                                     <a class="card-a-category" href="{% url 'app_modelos:modelos-tipo-doc' modelo.tipo_doc.slug %}">{{ modelo.tipo_doc.name }}</a>
                                 </small>
-                                <small class="card-category">Tags:
-                                    {% for tag in modelo.tags.all %}
-                                        <a class="card-a-category" href="{% url 'app_modelos:modelos-tag-doc' tag.slug %}">{{ tag.name }}</a>
-                                    {% endfor %}
-                                </small>
                                 <hr>
                                 <p class="card-description">{{modelo.meta_description | slice:'170'}}</p>
-                                <p class="p-link">
-                                <a class="a-link" href="{{ modelo.get_absolute_url }}">Estudar...</a> 
-                                </p>
-
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="a-link" href="{{ modelo.get_absolute_url }}">Estudar...</a> 
+                                    </div>
+                                    <small class="text-muted">Xlex</small>
+                                </div>   
                             </div>
                         </div>
                     </div>

@@ -27,10 +27,10 @@
                             {{sumula.nome_tribunal}}
                         </small>
                         <hr>
-                        <h5 class="card-title">
-                            <a class="card-a-title" href="{% url 'app_sumulas:sumula-single' sumula.slug %}">{{ sumula.title | slice:":47" }}</a>
-                        </h5>
-                        <p class="card-description">{{sumula.enunciado | slice:'170'}}</p>
+                        <span class="card-title">
+                            <a href="{% url 'app_sumulas:sumula-single' sumula.slug %}">{{ sumula.title | slice:":47" }}</a>
+                        </span><br><br>
+                        <p class="card-description">{{sumula.enunciado | slice:'250'}}</p>
                         <p class="p-link">
                             <a class="a-link" href="{% url 'app_sumulas:sumula-single' sumula.slug %}">Ler súmula</a> 
                         </p>

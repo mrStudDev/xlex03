@@ -8,6 +8,7 @@ class CreateArticleForm(forms.ModelForm):
             'title', 
             'author', 
             'summary',
+            'key_words',
             'category', 
             'content', 
             'meta_description', 
@@ -19,14 +20,15 @@ class CreateArticleForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
+        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Titulo do Artigo'})
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
         self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Sumário'})
+        self.fields['key_words'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Palavras Chave do Artigo'})
         self.fields['category'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Categoria'})
-        self.fields['content'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Texto Rico'})
-        self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição'})
+        self.fields['content'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Rico'})
+        self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição SEO'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
-        self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord'})
+        self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord SEO'})
         # Lógica condicional para o campo is_published
         if isinstance(self.fields['is_published'].widget, forms.CheckboxInput):
             self.fields['is_published'].widget.attrs.update({'class': 'form-check-input'})
@@ -40,6 +42,7 @@ class UpdateArticleForm(forms.ModelForm):
         fields = [
             'title', 
             'summary',
+            'key_words',
             'category', 
             'content', 
             'meta_description', 
@@ -50,11 +53,12 @@ class UpdateArticleForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
-        self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Summary'})
+        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Titulo do Artigo'})
+        self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Sumário'})
+        self.fields['key_words'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Palavras Chave do Artigo'})
         self.fields['category'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Categoria'})
-        self.fields['content'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Texto Rico'})
-        self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição'})
+        self.fields['content'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Rico'})
+        self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição SEO'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
-        self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord'})
+        self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord SEO'})
 

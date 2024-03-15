@@ -98,6 +98,7 @@ p {
 .image-lg-content-ck {
     width: 100%;
 }
+
 /* Container para imagem e texto */
 .container-imagem-texto {
     display: flex;
@@ -133,6 +134,7 @@ p {
     color: #090909; 
     text-decoration: none;
     text-decoration: solid;
+    text-align: left;
 }
 
 .card-title a:hover {

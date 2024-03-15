@@ -10,13 +10,11 @@
                 <img src="{{ object.img_destaque.url }}" class="news-image img-fluid rounded-start" alt="{{object.title}}">
             </div>
             <br>
-            <p>Principio: {{object.principio_name}}</p>           
+            <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.principio_name}}</h1>          
             <small>Ramo do: </small>  | <span class="badge bg-dark">{{object.ramo_direito}}</span> 
             <small>Pub: {{object.date_created}}</small>
+            <small>Principio: {{object.principio_name}}</small> 
              <hr>
-
-            <br><br>
-            <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.principio_name}}</h1>
             <br>
             <p>{{object.content | safe}}</p>
             <br>

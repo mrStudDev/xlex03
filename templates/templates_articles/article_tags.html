@@ -15,49 +15,47 @@
             </div>
 
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
-
                 {% for article in articles %}
                     <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body" id="bolinha-educacao" style="border: none;">
+                                <code class="card-code">{{article.code}}</code>
+                                <br>
+                                <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
+                                </p>
+                                <hr>  
+                                <span class="card-title">
+                                    <a href="{% url 'app_articles:article-single' article.slug %}">
+                                        {{ article.title | slice:":26"  }}
+                                    </a>
+                                </span><br>
 
-                        <div class="card h-100">
-                            {% if article.img_destaque %}
-                                <img src="{{ article.img_destaque.url }}" class="card-img-top" alt="{{ article.title }}">
-                            {% endif %}
+                                <small class="card-category">Categoria:
+                                    <a href="{% url 'app_articles:categories-articles' article.category.slug %}" class="card-a-category">
+                                        {{ article.category.name }}
+                                    </a>
+                                </small>
+                                <br> <br> 
 
-                            <div class="card-body d-flex flex-column">
-
-                           <h5 class="card-title">
-                                <a href="{% url 'app_articles:article-single' article.slug %}">
-                                    {{ article.title | slice:":26"  }}
-                                </a>
-                            </h5>
-
-                            <p class="text-muted mt-auto">
-                                <a href="{% url 'app_articles:categories-articles' article.category.slug %}" class="card-a-category">
-                                    {{ article.category.name }}
-                                </a> 
-                                | {{ article.date_created|date:"d M Y" }}
-                            </p>
-
-                            <p class="card-text">
-                                {{ article.meta_description | slice:":77" }}
-                            </p>
+                                <p class="card-description">
+                                    {{ article.meta_description | slice:":250" }}
+                                </p>
 
 
-                            {% if article.slug %}
-                                <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
-                            {% endif %}
-
-                            {% if article.slug %}
-                                {% if user.is_authenticated and user.is_staff %}
-                                    <div>
-                                        <span>
-                                        <a href="{% url 'app_articles:article-update-post' article.slug %}">Update</a>
-                                        | | <a href="{% url 'app_articles:article-delete-post' article.slug %}" style="color:red">delete</a>
-                                        </span>
-                                    </div>
+                                {% if article.slug %}
+                                    <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
                                 {% endif %}
-                            {% endif %}
+
+                                {% if article.slug %}
+                                    {% if user.is_authenticated and user.is_staff %}
+                                        <div>
+                                            <span>
+                                            <a href="{% url 'app_articles:article-update-post' article.slug %}">Update</a>
+                                            | | <a href="{% url 'app_articles:article-delete-post' article.slug %}" style="color:red">delete</a>
+                                            </span>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>

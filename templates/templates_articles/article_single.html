@@ -7,13 +7,13 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-md-8">
-                <div>
-                    <img src="{{ object.img_destaque.url }}" class="news-image img-fluid rounded-start" alt="{{object.title}}">
-                </div>
                 <br>
-                <p>Artigo: {{ object.title}}</p>           
-                <small>Categoria</small>  | <span class="badge bg-dark">{{object.category}}</span> 
-                <small>Pub: {{object.date_created}}</small>
+                <h1 id="title-post-h1" style="text-transform: uppercase;">{{ object.title}}</h1>          
+                <small>Categoria</small>  | <span class="badge bg-dark">{{object.category}}</span>
+                <br>
+                <small>Pub: {{object.date_created}}</small>                
+                <small>Artigo: {{ object.title}}</small>
+
                 <hr>
 
                 {% if user.is_authenticated and user.is_staff %}
@@ -24,7 +24,6 @@
                 {% endif %}
 
                 <br><br>
-                <h1 id="title-post-h1" style="text-transform: uppercase;">{{ object.title}}</h1>
                 <br>
                 <p>{{ object.content | safe }}</p>
                 <br>
