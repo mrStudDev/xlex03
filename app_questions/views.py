@@ -179,7 +179,7 @@ class RamoDireitoQuestionView(ListView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
         context.update({
-            'ramo_direito': self.ramo_direito,
+            'context': self.ramo_direito,
             'ramo': RamoDireitoQuestionModel.objects.all(),
             'ramos': RamoDireitoQuestionModel.objects.all(),
             'bancas': BancaQuestionModel.objects.all(),
@@ -208,8 +208,7 @@ class TagQuestionView(ListView):
     context_object_name = 'questions'
 
     def get_queryset(self):
-        #self.tag = get_object_or_404(TagQuestionModel, slug=self.kwargs['tagQuestion_slug'])
-        self.tag = TagQuestionModel.objects.get(slug=self.kwargs['tagQuestion_slug'])
+        self.tag = get_object_or_404(TagQuestionModel, slug=self.kwargs['tagQuestion_slug'])
         return XlexQuestionModel.objects.filter(tags=self.tag)
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
@@ -224,18 +223,6 @@ class TagQuestionView(ListView):
             'current_app': 'app_questions',
         })
         return context
-    
-    def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
-        page, created = PageView.objects.get_or_create(
-            page_name=f"Questions: Tags - {self.kwargs.get('tag', 'Unknown')}",
-            defaults={'last_accessed': timezone.now()}
-        )
-        if not created:
-            page.view_count += 1
-            page.last_accessed = timezone.now()
-            page.save()
-
-        return super().get(request, *args, **kwargs) 
 
 
 # Autenticação Staff
@@ -276,7 +263,6 @@ class CreateXlexQuestionView(StaffRequiredMixin, View):
 # Create Answer
 @method_decorator(csrf_exempt, name='dispatch')
 class CreateAnswerView(StaffRequiredMixin, View):
-    
     def get(self, request, questao_x_id):
         form = CreateXlexAnswerForm(initial={'question': questao_x_id})
         question = XlexQuestionModel.objects.get(id=questao_x_id)
@@ -284,7 +270,7 @@ class CreateAnswerView(StaffRequiredMixin, View):
 
         # Recupere as alternativas associadas a esta questão
         recent_answers = AlternativasModel.objects.filter(question=question)
-        return render(request, 'templates_questions/question_answer_create.html', {'form': form, 'questao_x_id': questao_x_id, 'question_ask': question_ask, 'recent_answers': recent_answers, 'hide_sidebar': True})
+        return render(request, 'templates_questions/question_answer_create.html', {'form': form, 'questao_x_id': questao_x_id, 'question_ask': question_ask, 'recent_answers': recent_answers})
 
     def post(self, request, questao_x_id):
         form = CreateXlexAnswerForm(request.POST)

@@ -2,15 +2,15 @@
 
 {% block 'create_answer' %}
 {% if user.is_authenticated and user.is_staff %}
-
+<div class="container-fluid">
     <br>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card-create-quiz">       
-                    <h2>
-                        Criar Answer/alternativa for Xlex Question
-                    </h2><hr>
+                <div class="card-create-quiz">
+                    <div class="card-header">
+                        Criar Answer for Xlex Question        
+                    </div>
                     <div class="card-body">
                         <form method="post">
                             {% csrf_token %}
@@ -18,7 +18,7 @@
                                 <label for="{{ form.questao_x.id_for_label }}" class="form-label">Questão</label>
                                 <p>{{ form.question}}</p>
                             </div>
-                            <input type="hidden" id="id_questao_x" value="{{ questao_x_id }}" />
+                            <input id="id_questao_x" type="hidden" value="{{ questao_x_id }}" />
                             <h2>Texto da questão</h2>
                             <div id="question_x-text" style="color:gray; font-size: 17px">
                                 <label class="form-label">Pergunta:</label>

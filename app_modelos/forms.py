@@ -10,7 +10,7 @@ class CreateDocucumentForm(forms.ModelForm):
             'author',
             'ramo_direito',
             'tipo_doc',
-            'content',
+            'content_doc',
             'meta_description',
             'keyword',
             'tags',
@@ -23,7 +23,7 @@ class CreateDocucumentForm(forms.ModelForm):
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
         self.fields['ramo_direito'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Ramo Direito'})
         self.fields['tipo_doc'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tipo Doc'})
-        self.fields['content'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Document'})
+        self.fields['content_doc'].widget.attrs.update({'id': 'editor-modelos', 'class': 'form-control', 'placeholder': 'Texto Document'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Descrição'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Keyword'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
@@ -44,7 +44,7 @@ class UpdateDocumentForm(forms.ModelForm):
             'author',
             'ramo_direito',
             'tipo_doc',
-            'content',
+            'content_doc',
             'meta_description',
             'keyword',
             'tags',
@@ -57,7 +57,7 @@ class UpdateDocumentForm(forms.ModelForm):
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
         self.fields['ramo_direito'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Ramo Direito'})
         self.fields['tipo_doc'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tipo Doc'})
-        self.fields['content'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Document'})
+        self.fields['content_doc'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Document'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Descrição'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Keyword'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})

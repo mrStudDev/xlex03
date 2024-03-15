@@ -16,7 +16,7 @@ app_name = 'app_questions'
 
 urlpatterns = [
     path('', XlexQuestionView.as_view() ,name='questions-list'),
-    path('post/<slug:slug>/', QuestionSingularView.as_view() ,name='question-single'),
+    path('post/<int:id>/<slug:slug>/', QuestionSingularView.as_view() ,name='question-single'),
     path('banca/<slug:banca_slug>/', BancaQuestionView.as_view(), name='question-banca'),
     path('disciplina/<slug:disciplina_slug>/', DiciplinaQuestionView.as_view(), name='question-disciplina'),
     path('ramo-direito/<slug:ramo_slug>/', RamoDireitoQuestionView.as_view(), name='question-ramo'),

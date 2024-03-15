@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'xlex_db_local_version_c1',
+        'NAME': 'xlex_data_desenvolviemto_xlex03',
         'USER': 'postgres',
         'PASSWORD': 'mr1703',
         'HOST': 'localhost',

@@ -28,6 +28,10 @@ from .models import (
     RamoDireitoModel,
 )
 
+from .forms import (
+    CreatePrincipioForm
+)
+
 class PrincipiosListView(ListView):
     model = PrincipiosModel
     template_name = 'templates_principios/principios_list.html'
@@ -113,3 +117,21 @@ class RamoDireitoListView(ListView):
             page.save()
 
         return super().get(request, *args, **kwargs)
+
+
+
+# Class Create
+class PrincipioCreateView(CreateView):
+    model = PrincipiosModel
+    template_name = 'templates_principios/principios_create.html'
+    form_class = CreatePrincipioForm
+    success_url = reverse_lazy('app_principios:principio-single')
+    
+    def form_valid(self, form):
+        form.instance.slug = slugify(form.instance.principio_name)
+        response = super(PrincipioCreateView, self).form_valid(form)
+        return response
+    
+    def get_success_url(self):
+        return reverse('app_principios:principio-single', kwargs={'slug': self.object.slug})
+    

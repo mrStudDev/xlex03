@@ -106,7 +106,7 @@ class XlexQuestionModel(models.Model):
     
 
     def get_absolute_url(self):
-        return reverse('app_questions:question-single', kwargs={'slug': self.slug})
+        return reverse('app_questions:question-single', kwargs={'id': self.id, 'slug': self.slug})
     
     
     def update_views(self, *args, **kwargs):

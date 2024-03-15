@@ -1,9 +1,7 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
-{% block 'title' %} Create Modelo{% endblock 'title' %}
 
-{% block 'modelo_create' %}
-<br>
+{% block 'principios_create' %}
 <div class="container">
     <div class="row g-5">
         <!--Col md 8 -->
@@ -11,34 +9,36 @@
             <div class="album py-5">
                 <div class="card-create-quiz">
                     <div class="card-header">
-                         <h1>Create Modelo Doc:</h1>
-                    </div>                       
+                        <h1>Create Principio do Direito:</h1>
+                    </div>
                     {% if user.is_authenticated and user.is_staff %}
                     <hr>
                     <br>
+
                     <div class="container">
                         <form method="Post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form.media }}
                     
-                            <!-- Renderiza todos os campos exceto 'content_doc' -->
+                            <!-- Renderiza todos os campos exceto 'content_principio' -->
                             {% for field in form.visible_fields %}
-                                {% if field.name != 'content_doc' %}
+                                {% if field.name != 'content_principio' %}
                                     <p>{{ field.label_tag }} {{ field }}</p>
                                 {% endif %}
                             {% endfor %}
                     
                             <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
-                            <div id="editor-modelos">{{ form.content_doc.value|safe }}</div>
+                            <div id="editor-principios">{{ form.content_principio.value|safe }}</div>
                             <!-- Campo Oculto para Enviar o Conteúdo -->
-                            <input type="hidden" name="content_doc" id="content_doc">
+                            <input type="hidden" name="content_principio" id="content_principio">
                     
-                            <button class="btn btn-success">Add Modelo Doc</button>
+                            <button class="btn btn-success">Add Casos Post</button>
                         </form>
                     </div>
                     {% endif %}
                 </div>
             </div>
         </div>
-    <!--Fechamento das divs ocorre na base HTML-->
-{% endblock 'modelo_create' %}
+        <!--Fechamento das divs ocorre na base HTML-->
+
+{% endblock 'principios_create' %}

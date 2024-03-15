@@ -19,7 +19,7 @@ class RamoDireitoModel(models.Model):
 class PrincipiosModel(models.Model):
     principio_name = models.CharField(max_length=255)
     ramo_direito = models.ForeignKey(RamoDireitoModel, null=True, blank=True, on_delete=models.SET_NULL)
-    content = models.TextField(blank=True, null=True)
+    content_principio = models.TextField(blank=True, null=True, default="Principio")
     meta_description = models.TextField(max_length=250)
     keyword = models.CharField(max_length=255)
     date_created = models.DateTimeField(auto_now_add=True)

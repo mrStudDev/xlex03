@@ -4,6 +4,7 @@ from . views import (
     PrincipiosListView,
     PrincipiosSingleView,
     RamoDireitoListView,
+    PrincipioCreateView
 )
 
 app_name = 'app_principios'
@@ -12,4 +13,5 @@ urlpatterns = [
     path('', PrincipiosListView.as_view(), name='principios-list'),
     path('principio-single/<slug:slug>/', PrincipiosSingleView.as_view(), name='principio-single'),
     path('principio-ramos/<slug:ramo_slug>/', RamoDireitoListView.as_view(), name='principios-ramo-direito'),
+    path('principio-create/', PrincipioCreateView.as_view(), name='principios-create'),
 ]

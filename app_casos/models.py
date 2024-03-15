@@ -46,7 +46,7 @@ class CasoConcretoModel(models.Model):
     date_created = models.DateTimeField(auto_now=False, auto_now_add=True)  # Corrigido para DateTimeField
     pergunta_caso = models.TextField()
     resposta_caso = models.TextField()
-    fundamentacao = models.TextField(blank=True, null=True)
+    fundamentacao = models.TextField(blank=True, null=True, default='Fundamentação')
     meta_description = models.TextField(max_length=255)  # Corrigido para TextField
     keyword = models.CharField(blank=True)
     tags = models.ManyToManyField('TagCasoModel', blank=True)

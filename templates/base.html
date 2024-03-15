@@ -52,7 +52,8 @@ License: MIT License
                             <li><a class="dropdown-item" href="{% url 'app_questions:question-create' %}">Add Questões</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_casos:caso-create-post' %}">Add Casos</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_sumulas:sumula-create-post' %}">Add Súmulas</a></li>
-                            <li><a class="dropdown-item" href="{% url 'app_modelos:modelo-create' %}">Add modelo</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_modelos:modelo-create' %}">Add Modelo</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_principios:principios-create' %}">Add Principio</a></li>
                             <li><a class="dropdown-item" href="#">Add Blog-Social</a></li>
                         </ul>
                     </li>
@@ -390,6 +391,10 @@ License: MIT License
     
     {% endblock 'principios_ramo' %}
 
+    {% block 'principios_create' %}
+    
+    {% endblock 'principios_create' %}
+
     <!-- App Manager -->
     {% block 'manager_admin' %}
 
@@ -409,7 +414,7 @@ License: MIT License
             <div class="sidebar-principio-randomico">
                 <h5 class="sidebar-principio-randomico">{{ principio_randomico.principio_name }}</h5>
                 <p>{{ principio_randomico.meta_description }}</p>
-                <a class="a-link" href="{% url 'app_principios:principio-single' slug=principio_randomico.slug %}">Ler mais</a>
+                <a class="a-link" href="#">Ler mais</a>
             </div>
         </div>
 
@@ -663,7 +668,7 @@ License: MIT License
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -671,6 +676,8 @@ License: MIT License
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script src="{% static 'js/copy_ementa.js' %}"></script>
 <script src="{% static 'js/copy_enunciado.js' %}"></script>

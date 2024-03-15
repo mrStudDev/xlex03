@@ -23,15 +23,15 @@
                     
                             <!-- Renderiza todos os campos exceto 'content' -->
                             {% for field in form.visible_fields %}
-                                {% if field.name != 'content' %}
+                                {% if field.name != 'content_doc' %}
                                     <p>{{ field.label_tag }} {{ field }}</p>
                                 {% endif %}
                             {% endfor %}
                     
                             <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
-                            <div id="editor">{{ form.content.value|safe }}</div>
+                            <div id="editor-content-doc">{{ form.content_doc.value|safe }}</div>
                             <!-- Campo Oculto para Enviar o Conteúdo -->
-                            <input type="hidden" name="content" id="content">
+                            <input type="hidden" name="content_doc" id="content_doc">
                     
                             <button class="btn btn-primary">Update Modelo Doc</button>
                         </form>

@@ -28,7 +28,7 @@ urlpatterns = [
     path('sumulas/', include('app_sumulas.urls')),
     path('searchs/', include('app_searchs.urls')),
     path('principios/', include('app_principios.urls')),
-    path('questoes/', include('app_questions.urls')),
+    path('questions/', include('app_questions.urls')),
     path('casos/', include('app_casos.urls')),
     path('modelos/', include('app_modelos.urls')),
     path('artigos/', include('app_articles.urls')),
