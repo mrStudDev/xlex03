@@ -15,7 +15,7 @@ class CreateXlexQuestionForm(forms.ModelForm):
         self.fields['disciplina'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Disciplina'})
         self.fields['ramo_direito'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Ramo Direito'})
         self.fields['question_ask'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Questão'})
-        self.fields['fundaments'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Fundamentação'})
+        self.fields['fundaments'].widget.attrs.update({'id': 'editor-fundaments', 'class': 'form-control', 'placeholder': 'Fundamentação'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Descrição'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Key Word'})

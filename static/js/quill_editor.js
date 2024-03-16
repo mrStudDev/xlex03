@@ -1,40 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicialização do Quill
+    var quillContent = document.querySelector('#editor-content') ? new Quill('#editor-content', { theme: 'snow' }) : null;
+    var quillFundamentacao = document.querySelector('#editor-fundamentacao') ? new Quill('#editor-fundamentacao', { theme: 'snow' }) : null;
+    var quillContent_doc = document.querySelector('#editor-content-doc') ? new Quill('#editor-content-doc', { theme: 'snow' }) : null;
+    var quillFundaments = document.querySelector('#editor-fundaments') ? new Quill('#editor-fundaments', { theme: 'snow' }) : null;
+    var quillComentario = document.querySelector('#editor-comentario') ? new Quill('#editor-comentario', { theme: 'snow' }) : null;
+    var quillContent_principio = document.querySelector('#editor-content-principio') ? new Quill('#editor-content-principio', { theme: 'snow' }) : null;
 
-// App_Articles
-var quill = new Quill('#editor', {
-    theme: 'snow'
-});
-var form = document.querySelector('form');
-form.onsubmit = function () {
-    var contentField = document.querySelector('input[name="content"]');
-    contentField.value = quill.root.innerHTML;
-};
+    // Seleciona formulários específicos se existirem na página
+    var formArticles = document.querySelector('form');
+    var formCasos = document.querySelector('#formCasos');
+    var formModelos = document.querySelector('#formModelos');
+    var formQuestions = document.querySelector('#formQuestions');
+    var formSumulas = document.querySelector('#formSumulas');
+    var formPrincipios = document.querySelector('#formPrincipios');
 
-// App_Casos
-var quillFundamentacao = new Quill('#editor-casos', {
-    theme: 'snow'
-});
-var form = document.querySelector('form');
-form.onsubmit = function () {
-    var fundamentacaoField = document.querySelector('input[name="fundamentacao"]');
-    fundamentacaoField.value = quillFundamentacao.root.innerHTML;
-};
+    // Função para atualizar o campo oculto e submeter o formulário
+    var updateAndSubmit = function (form, quillInstance, inputName) {
+        if (form && quillInstance) {
+            form.onsubmit = function (event) {
+                var hiddenInput = form.querySelector('input[name="' + inputName + '"]');
+                if (hiddenInput) {
+                    hiddenInput.value = quillInstance.root.innerHTML;
+                }
+            };
+        }
+    };
 
-// App_Modelos
-var quillContent_doc = new Quill('#editor-modelos', {
-    theme: 'snow'
+    // Aplica a lógica aos formulários correspondentes
+    updateAndSubmit(formArticles, quillContent, "content");
+    updateAndSubmit(formCasos, quillFundamentacao, "fundamentacao");
+    updateAndSubmit(formModelos, quillContent_doc, "content_doc");
+    updateAndSubmit(formQuestions, quillFundaments, "fundaments");
+    updateAndSubmit(formSumulas, quillComentario, "comentario");
+    updateAndSubmit(formPrincipios, quillContent_principio, "content_principio");
 });
-var form = document.querySelector('form');
-form.onsubmit = function () {
-    var content_docField = document.querySelector('input[name="content_doc"]');
-    content_docField.value = quillContent_doc.root.innerHTML;
-};
-
-// App_Modelos
-var quillContent_principio = new Quill('#editor-principios', {
-    theme: 'snow'
-});
-var form = document.querySelector('form');
-form.onsubmit = function () {
-    var content_principioField = document.querySelector('input[name="content_principio"]');
-    content_principioField.value = quillContent_principio.root.innerHTML;
-};

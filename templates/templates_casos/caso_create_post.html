@@ -3,42 +3,41 @@
 {% block 'title' %}Caso Create{% endblock 'title' %}
 
 {% block 'caso_create' %}
+<br>
 <div class="container">
     <div class="row g-5">
         <!--Col md 8 -->
         <div class="col-md-8"> 
-            <div class="album py-5">
-                <div class="card-create-quiz">
-                    <div class="card-header">
-                        <h1>Create Caso Concreto:</h1>
-                    </div>
-                    {% if user.is_authenticated and user.is_staff %}
-                    <hr>
-                    <br>
-
-                    <div class="container">
-                        <form method="Post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form.media }}
-                    
-                            <!-- Renderiza todos os campos exceto 'formatacao' -->
-                            {% for field in form.visible_fields %}
-                                {% if field.name != 'fundamentacao' %}
-                                    <p>{{ field.label_tag }} {{ field }}</p>
-                                {% endif %}
-                            {% endfor %}
-                    
-                            <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
-                            <div id="editor-casos">{{ form.fundamentacao.value|safe }}</div>
-                            <!-- Campo Oculto para Enviar o Conteúdo -->
-                            <input type="hidden" name="fundamentacao" id="fundamentacao">
-                    
-                            <button class="btn btn-success">Add Casos Post</button>
-                        </form>
-                    </div>
-                    {% endif %}
-                </div>
+            <div class="card-header">
+                <h4>Create Caso Concreto:</h4>
             </div>
+            {% if user.is_authenticated and user.is_staff %}
+            <hr>
+            <br>
+
+            <div class="container">
+                <form method="Post" enctype="multipart/form-data" id="formCasos">
+                    {% csrf_token %}
+                    {{ form.media }}
+            
+                    <!-- Renderiza todos os campos exceto 'formatacao' -->
+                    {% for field in form.visible_fields %}
+                        {% if field.name != 'fundamentacao' %}
+                            <p>{{ field.label_tag }} {{ field }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <h5>Fundamentação</h5>
+                    <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
+                    <div id="editor-fundamentacao">{{ form.fundamentacao.value|safe }}</div>
+                    <!-- Campo Oculto para Enviar o Conteúdo -->
+                    <input type="hidden" name="fundamentacao" id="hiddenFundamentacao">
+
+                    <br><br>
+            
+                    <button class="btn btn-success">Add Casos Post</button>
+                </form>
+            </div>
+            {% endif %}
         </div>
         <!--Fechamento das divs ocorre na base HTML-->
 {% endblock 'caso_create' %}

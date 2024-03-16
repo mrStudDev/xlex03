@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block 'title' %} Delete Princípio {% endblock 'title' %}
+
+{% block 'principios_delete' %}
+<br>
+<div class="container">
+    <div class="row g-5">
+        <!--Col md 8 -->
+        <div class="col-md-8"> 
+            <div class="card-header">
+                <h4>Delete Modelo Doc:</h4>
+            </div>
+            {% if user.is_authenticated and user.is_staff %}
+            <hr>
+            <br>
+
+            <div class="container">
+                <h5>Tem certeza de que quer deletar esse Princípio?????</h5>
+                <br>
+                <h2 style="color:red">{{ object.principio_name }}</h2> 
+                <br>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="{% url 'app_principios:principios-list' %}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+<!--Fechamento das divs ocorre na base HTML-->
+{% endblock 'principios_delete' %}

@@ -3,42 +3,40 @@
 {% block 'create_article' %}
 
     {% if user.is_authenticated and user.is_staff %}
+    <br>
         <div class="container">
             <div class="row g-5">
                 <!--Col md 8 -->
                 <div class="col-md-8"> 
-                    <div class="album py-5">
-                        <div class="card-create-quiz">
-                            <div class="card-header">
-                                <h1>Create Article Post:</h1>
-                            </div>                       
-                            {% if user.is_authenticated and user.is_staff %}
-                            <hr>
-                            <br>
-                            <div class="container">
-                                <form method="Post" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    {{ form.media }}
-                            
-                                    <!-- Renderiza todos os campos exceto 'content' -->
-                                    {% for field in form.visible_fields %}
-                                        {% if field.name != 'content' %}
-                                            <p>{{ field.label_tag }} {{ field }}</p>
-                                        {% endif %}
-                                    {% endfor %}
-                            
-                                    <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
-                                    <div id="editor">{{ form.content.value|safe }}</div>
-                                    <!-- Campo Oculto para Enviar o Conteúdo -->
-                                    <input type="hidden" name="content" id="content">
-                            
-                                    <button class="btn btn-success">Add Article Post</button>
-                                </form>
-                            </div>
-                            {% endif %}
-                        </div>
+                    <div class="card-header">
+                        <h4>Create Article Post:</h4>
+                    </div>                       
+                    {% if user.is_authenticated and user.is_staff %}
+                    <hr>
+                    <br>
+                    <div class="container">
+                        <form method="Post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.media }}
+                    
+                            <!-- Renderiza todos os campos exceto 'content' -->
+                            {% for field in form.visible_fields %}
+                                {% if field.name != 'content' %}
+                                    <p>{{ field.label_tag }} {{ field }}</p>
+                                {% endif %}
+                            {% endfor %}
+                    
+                            <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
+                            <div id="editor-content">{{ form.content.value|safe }}</div>
+                            <!-- Campo Oculto para Enviar o Conteúdo -->
+                            <input type="hidden" name="content" id="hiddenContent">
+                    
+                            <button class="btn btn-success">Add Article Post</button>
+                        </form>
                     </div>
+                    {% endif %}
                 </div>
+
             <!--Fechamento das divs ocorre na base HTML-->
     {% else %}
     <div class="container">

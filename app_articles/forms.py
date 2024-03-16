@@ -25,7 +25,7 @@ class CreateArticleForm(forms.ModelForm):
         self.fields['summary'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Sumário'})
         self.fields['key_words'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Palavras Chave do Artigo'})
         self.fields['category'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Categoria'})
-        self.fields['content'].widget.attrs.update({'id': 'editor', 'class': 'form-control', 'placeholder': 'Texto Rico'})
+        self.fields['content'].widget.attrs.update({'id': 'editor-content', 'class': 'form-control', 'placeholder': 'Texto Rico'})
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição SEO'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord SEO'})

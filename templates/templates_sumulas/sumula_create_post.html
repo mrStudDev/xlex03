@@ -3,38 +3,47 @@
 {% block 'title' %} Create Súmula {% endblock 'title' %} 
 
 {% block 'sumula_create' %}
+<br>
 <div class="container">
     <div class="row g-5">
         <!--Col md 8 -->
         <div class="col-md-8"> 
-            <div class="album py-5">
-                <div class="card-create-quiz">
-                    <div class="card-header">
-                        <h1>Create Sumula:</h1>
-                    </div>
-                    {% if user.is_authenticated and user.is_staff %}
-                    <hr>
-                    <br>
-
-                    <div class="container">
-                        <form method="Post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form.media }}
-                            {{ form.as_p }}
-                            <button class="btn btn-success">Add Súmula</button>
-                        </form>
-                    </div>
-                    {% else %}
-                    <div class="container">
-                    <h5 class="danger">
-                        Você não tem permissão para acessar essa página!
-                    </h5>
-                        <a class="btn btn-danger btn-sm" href="{% url 'app_sumulas:sumulas-list' %}">Volte para Lista de súmulas</a>    
-                    </div>
-                    {% endif %}
-                </div>
+            <div class="card-header">
+                <h4>Create Sumula:</h4>
             </div>
+            {% if user.is_authenticated and user.is_staff %}
+            <hr>
+            <br>
+            <div class="container">
+                <form method="Post" enctype="multipart/form-data" id="formSumulas">
+                    {% csrf_token %}
+                    {{ form.media }}
+            
+                    <!-- Renderiza todos os campos exceto 'formatacao' -->
+                    {% for field in form.visible_fields %}
+                        {% if field.name != 'comentario' %}
+                            <p>{{ field.label_tag }} {{ field }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <h5>Comentário</h5>
+                    <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
+                    <div id="editor-comentario">{{ form.comentario.value|safe }}</div>
+                    <!-- Campo Oculto para Enviar o Conteúdo -->
+                    <input type="hidden" name="comentario" id="hiddenComentario">
+                    <br><br>
+            
+                    <button type="submit" class="btn bg-primary text-light">Add Súmula</button>
+                </form>
+            </div>
+            {% else %}
+            <div class="container">
+            <h5 class="danger">
+                Você não tem permissão para acessar essa página!
+            </h5>
+                <a class="btn btn-danger btn-sm" href="{% url 'app_sumulas:sumulas-list' %}">Volte para Lista de súmulas</a>    
+            </div>
+            {% endif %}
         </div>
-        <!--Fechamento das divs ocorre na base HTML-->
+    <!--Fechamento das divs ocorre na base HTML-->
 
 {% endblock 'sumula_create' %}

@@ -29,7 +29,8 @@ from .models import (
 )
 
 from .forms import (
-    CreatePrincipioForm
+    CreatePrincipioForm,
+    UpdatePrincipioForm,
 )
 
 class PrincipiosListView(ListView):
@@ -134,4 +135,14 @@ class PrincipioCreateView(CreateView):
     
     def get_success_url(self):
         return reverse('app_principios:principio-single', kwargs={'slug': self.object.slug})
+
+class UpdatePrincipioView(UpdateView):
+    model = PrincipiosModel
+    form_class = UpdatePrincipioForm
+    template_name = 'templates_principios/principio_update.html'
+    success_url = reverse_lazy('app_principios:principios-list')
     
+class DeletePrincipioView(DeleteView):
+    model = PrincipiosModel
+    template_name = 'templates_principios/principio_delete.html'
+    success_url = reverse_lazy('app_principios:principios-list')

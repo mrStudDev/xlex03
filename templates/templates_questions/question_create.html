@@ -1,34 +1,42 @@
 {% extends 'base.html' %}
 
 {% block 'create_xquestion' %}
+<br>
 <div class="container">
     <div class="row g-5">
         <!--Col md 8 -->
-        <div class="col-md-12"> 
-            <div class="album py-5">
-                <div class="card-create-quiz">
-                    <div class="card-header">
-                        <h4>Criar Xlex Question</h4>
-                    </div>
-                    {% if user.is_authenticated and user.is_staff %}
-                    <hr>
-                    <br>
-                    <div class="container">
-                        <div class="card-body">
-                            <form method="post">
-                                {% csrf_token %}
-                                {{form.as_p}}
-                                {{ form.media|safe }} <br>
-                            
-                                <p>Ao finalizar a Questão você será redirecionado para adicionar as alternativas para esta questão ID</p>
-                                <button type="submit" class="btn bg-primary text-light" id="createXlexQuestionBtn">Criar Xlex Question</button>
-                            </form>
-                        </div>
-                    </div>
-                    {% endif %}
+        <div class="col-md-8"> 
+            <div class="card-header">
+                <h4>Criar Xlex Question</h4>
+            </div>
+            {% if user.is_authenticated and user.is_staff %}
+            <hr>
+            <br>
+            <div class="container">
+                <div class="card-body">
+                    <form method="Post" enctype="multipart/form-data" id="formQuestions">
+                        {% csrf_token %}
+                        {{ form.media }}
+                
+                        <!-- Renderiza todos os campos exceto 'formatacao' -->
+                        {% for field in form.visible_fields %}
+                            {% if field.name != 'fundaments' %}
+                                <p>{{ field.label_tag }} {{ field }}</p>
+                            {% endif %}
+                        {% endfor %}
+                
+                        <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
+                        <div id="editor-fundaments">{{ form.fundaments.value|safe }}</div>
+                        <!-- Campo Oculto para Enviar o Conteúdo -->
+                        <input type="hidden" name="fundaments" id="hiddenFundaments">
+                
+                        <p>Ao finalizar a Questão você será redirecionado para adicionar as alternativas para esta questão ID</p>
+                        <button type="submit" class="btn bg-success text-light" id="createXlexQuestionBtn">Criar Xlex Question</button>
+                    </form>
                 </div>
             </div>
+            {% endif %}
         </div>
-    <!--Fechamento das divs ocorre na base HTML-->
 
+    <!--Fechamento das divs ocorre na base HTML-->
 {% endblock 'create_xquestion' %}

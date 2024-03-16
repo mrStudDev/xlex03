@@ -26,7 +26,7 @@ class CreateSumulaForm(forms.ModelForm):
         self.fields['tema_juridico'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tema Jurídico'})       
         self.fields['turma'].widget.attrs.update({'class': 'form-control', 'placeholder': 'turma'})
         self.fields['enunciado'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Enunciado'})
-        self.fields['comentario'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Comentario'}) 
+        self.fields['comentario'].widget.attrs.update({'id': 'editor-comentario', 'class': 'form-control', 'placeholder': 'Comentario'}) 
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord'})
         # Lógica condicional para o campo is_published
