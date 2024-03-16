@@ -7,28 +7,21 @@
 <div class="container">
     <div class="row g-5">
         <div class="col-md-8" id="main-content">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <code class="card-code">{{object.code}}</code>
-                    <small>Caso Concreto</small>
-                    <hr>
-                    <h1 id="title-post-h1"><strong>{{object.title}}</strong></h1>          
-                    Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
-                    Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
-                    Atualizado em: <small>{{object.last_updated}}</small> 
-                    {% if user.is_authenticated and user.is_staff %}
-                        <div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-                          <span>
-                            <a href="{% url 'app_casos:caso-update-post' slug=object.slug %}">Update</a>
-                            | | <a href="{% url 'app_casos:caso-delete-post' slug=object.slug %}" style="color:red;">delete</a>
-                          </span>
-                        </div>
-                    {% endif %}
+            <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.title}}</h1>     
+            Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
+            Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
+            Atualizado em: <small>{{object.last_updated}}</small> 
+            {% if user.is_authenticated and user.is_staff %}
+                <div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                    <span>
+                    <a href="{% url 'app_casos:caso-update-post' slug=object.slug %}">Update</a>
+                    | | <a href="{% url 'app_casos:caso-delete-post' slug=object.slug %}" style="color:red;">delete</a>
+                    </span>
                 </div>
-            </div>
+            {% endif %}
+            <hr>
             <br>
-            
-            <h3>Caso concreto:</h3>   
+            <h5>{{object.title}}</h5>
             <p>{{object.pergunta_caso | safe}}</p>
             <br>
             <details>

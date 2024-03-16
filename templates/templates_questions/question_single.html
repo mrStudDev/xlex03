@@ -7,19 +7,14 @@
 <div class="container">
     <div class="row g-5">
         <div class="col-md-8" id="main-content">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <code class="card-code">{{object.code}}</code>
-                    <h1><strong>{{object.title}}</strong></h1>
-                    <hr>          
-                        Banca: <span class="badge bg-dark">{{object.banca}}</span> <br>
-                        Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
-                        Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
-                        Última revisão: <small>{{object.last_updated}}</small> 
-                </div>
-            </div>
+            <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.title}}</h1>
+            Banca: <span class="badge bg-dark">{{object.banca}}</span> <br>
+            Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
+            Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
+            Última revisão: <small>{{object.last_updated}}</small> 
+            <hr>   
             <br>
-            <br>    
+            <h5>{{object.title}}</h5>
             <p>{{object.question_ask | safe}}</p>
             <br>
 

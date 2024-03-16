@@ -416,13 +416,13 @@ License: MIT License
 
     <div class="position-sticky" style="top: 1rem;">
         <div class="p-4 mb-3 rounded" id="side-hero">
-            <p>Princípios do Direito</p>
+            <p>&#x1F4DC; Princípios do Direito</p>
             <hr>
             <!-- Sidebar -->
             <div class="sidebar-principio-randomico">
                 <h5 class="sidebar-principio-randomico">{{ principio_randomico.principio_name }}</h5>
                 <p>{{ principio_randomico.meta_description }}</p>
-                <a class="a-link" href="#">Ler mais</a>
+                <a class="a-link" href="{% url 'app_principios:principio-single' slug=principio_randomico.slug %}">Ler mais</a>
             </div>
         </div>
 
@@ -622,47 +622,48 @@ License: MIT License
         </P>
         <div class="footer-columns">
             <div class="footer-column">
-                <h4>Coluna 1</h4>
+                <h5>Formulários</h5>
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li><a href="{% url 'app_searchs:advanced-searchs-view' %}">Jurisprudência STJ</a></li>
+                    <li><a href="{% url 'app_searchs:sumula-searchs-view' %}">Súmulas</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Coluna 2</h4>
+                <h5>Casa</h5>
                 <ul>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
+                    <li><a href="{% url 'app_home:sobre-nos' %}">Sobre nós</a></li>
+                    <li><a href="{% url 'app_home:contact-us' %}">Contate-nos</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Coluna 3</h4>
+                <h5>R.Sociais</h5>
                 <ul>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
+                    <li><a style="color:gray"  href="#">Youtube</a></li>
+                    <li><a style="color:gray"  href="#">Instagran</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-columns">
             <div class="footer-column">
-                <h4>Coluna 1</h4>
+                <h5>Acadêmico</h5>
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li><a href="{% url 'app_questions:questions-list' %}">Questões</a></li>
+                    <li><a href="{% url 'app_casos:casos-list' %}">Casos Conscretos</a></li>
+                    <li><a href="{% url 'app_principios:principios-list' %}">Princípios</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Coluna 2</h4>
+                <h5>Documentos</h5>
                 <ul>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
+                    <li><a href="{% url 'app_modelos:modelos-list' %}">Modelos</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Coluna 3</h4>
+                <h5>Grupo Xlex</h5>
                 <ul>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
+                    <li><a style="color:gray" href="#">Xlex Edu</a></li>
+                    <li><a style="color:gray"  href="#">Xlex Store</a></li>
+                    <li><a style="color:gray"  href="#">Xlex online</a></li>
                 </ul>
             </div>
         </div>

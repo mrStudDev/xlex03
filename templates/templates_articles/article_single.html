@@ -13,7 +13,6 @@
                 <br>
                 <small>Pub: {{object.date_created}}</small>                
                 <small>Artigo: {{ object.title}}</small>
-
                 <hr>
 
                 {% if user.is_authenticated and user.is_staff %}
@@ -22,9 +21,8 @@
                         |  | <a href="{% url 'app_articles:article-delete-post' slug=object.slug %}" style="color:red">Delete</a>
                     </span>
                 {% endif %}
-
                 <br>
-                <br>
+                <h5>{{object.title}}</h5> 
                 <p>{{ object.content | safe }}</p>
                 <br>
 
