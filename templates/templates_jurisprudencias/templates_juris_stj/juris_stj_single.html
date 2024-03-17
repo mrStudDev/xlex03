@@ -17,7 +17,7 @@
         <p>Órgao Julgador: {{object.nomeOrgaoJulgador }}</p>
         <p>Data Decisão: {{object.dataDecisao }}</p>        
         <p>Data Publicação: {{object.dataPublicacao }}</p>
-        <p>&#x1F9D1;&#x200D;&#x2696;&#xFE0F; Ministro Relator: {{object.ministroRelator }}</p>
+        <p>Ministro Relator: {{object.ministroRelator }}</p>
     </div>
     <div>
         <i class="fas fa-balance-scale"></i>
@@ -49,7 +49,6 @@
         <p class="ementa"><strong>Tema: </strong><br>{{object.tema }}</p>
         <p class="ementa"><strong>Referências Legislativas: </strong><br>{{object.referenciasLegislativas }}</p>
         <p class="ementa"><strong>Acórdãos Similares: </strong><br>{{object.acordaosSimilares }}</p>
-        <hr>
     </div>
     <br>
     <center>
@@ -61,15 +60,12 @@
         <a class="btn bg-dark text-light btn-sm" href="{% url 'app_searchs:advanced-searchs-view' %}">Formulário de busca</a>        
     </center>
     <br>
+    <hr>
     <span>
-        <center>
-            <p>Views: {{object.views}}</p>
-        <p>Fonte: Dados Abertos - Superior Tribunal de Justiça - STJ</p>            
-        </center>
-
-        <small>{{object.meta_description}}</small>
-         - <small>{{object.keyword}}</small>
-         - <small>{{object.title}}</small>
+        <small>Fonte: Dados Abertos - Superior Tribunal de Justiça - STJ</small><br>       
+        <small>Chave: {{object.title}}</small><br>
+        <small>&#x1F9D1;&#x200D;&#x2696;&#xFE0F; Ministro Relator: {{object.ministroRelator }}</small><br>
+        <small>Views: {{object.views}}</small><br>
     </span>
 
 </div>
