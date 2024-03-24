@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block 'title' %} Update Social Article {% endblock 'title' %}
+
+{% block 'updateSocial_article' %}
+
+    {% if user.is_authenticated and user.is_staff %}
+    <br>
+        <div class="container">
+            <div class="row g-5">
+                <!--Col md 8 -->
+                <div class="col-md-8"> 
+                    <div class="card-header">
+                        <h4>Update Article Social Post:</h4>
+                    </div>
+                    {% if user.is_authenticated and user.is_staff %}
+                    <hr>
+                    <br>
+                    <div class="container">
+                        <form method="Post" enctype="multipart/form-data" id="formEduSocial">
+                            {% csrf_token %}
+                            {{ form.media }}
+                    
+                            <!-- Renderiza todos os campos exceto 'content' -->
+                            {% for field in form.visible_fields %}
+                                {% if field.name != 'content_social' %}
+                                    <p>{{ field.label_tag }} {{ field }}</p>
+                                {% endif %}
+                            {% endfor %}
+                    
+                            <h3>Escrever Artigo Social</h3>
+                            <!-- Aqui vai o Quill Editor, já com o id 'editor' configurado no widget do form -->
+                            <div id="editor-content-social">{{ form.content_social.value|safe }}</div>
+                            <!-- Campo Oculto para Enviar o Conteúdo -->
+                            <input type="hidden" name="content_social" id="hiddenContent_social">
+                            <br>
+                            <button class="btn btn-primary">Update Article Social Post</button>
+                        </form>
+                        <hr>
+                    </div>
+                    {% endif %}
+                </div>
+            <!--Fechamento das divs ocorre na base HTML-->
+    {% else %}
+    <div class="container">
+    <h3 class="danger">
+        Você não tem permissão para acessar essa página!
+    </h3>
+        <a class="btn btn-danger btn-sm" href="{% url 'app_home:home-view' %}">Vá para home do site</a>     
+    </div>
+    {% endif %}
+
+{% endblock 'updateSocial_article' %}

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var quillFundaments = document.querySelector('#editor-fundaments') ? new Quill('#editor-fundaments', { theme: 'snow' }) : null;
     var quillComentario = document.querySelector('#editor-comentario') ? new Quill('#editor-comentario', { theme: 'snow' }) : null;
     var quillContent_principio = document.querySelector('#editor-content-principio') ? new Quill('#editor-content-principio', { theme: 'snow' }) : null;
+    var quilContent_social = document.querySelector('#editor-content-social') ? new Quill('#editor-content-social', { theme: 'snow' }) : null;
 
     // Seleciona formulários específicos se existirem na página
     var formArticles = document.querySelector('form');
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var formQuestions = document.querySelector('#formQuestions');
     var formSumulas = document.querySelector('#formSumulas');
     var formPrincipios = document.querySelector('#formPrincipios');
+    var formEduSocial = document.querySelector('#formEduSocial');
 
     // Função para atualizar o campo oculto e submeter o formulário
     var updateAndSubmit = function (form, quillInstance, inputName) {
@@ -34,4 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
     updateAndSubmit(formQuestions, quillFundaments, "fundaments");
     updateAndSubmit(formSumulas, quillComentario, "comentario");
     updateAndSubmit(formPrincipios, quillContent_principio, "content_principio");
+    updateAndSubmit(formEduSocial, quilContent_social, "content_social");
 });

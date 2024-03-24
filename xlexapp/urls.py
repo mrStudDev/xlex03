@@ -32,6 +32,7 @@ urlpatterns = [
     path('casos/', include('app_casos.urls')),
     path('modelos/', include('app_modelos.urls')),
     path('artigos/', include('app_articles.urls')),
+    path('educacao-social/', include('app_edu_social.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'app_casos',
     'app_modelos',
     'app_articles',
+    'app_edu_social',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
 
 """
 DATABASES = {

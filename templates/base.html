@@ -54,7 +54,7 @@ License: MIT License
                             <li><a class="dropdown-item" href="{% url 'app_sumulas:sumula-create-post' %}">Add Súmulas</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_modelos:modelo-create' %}">Add Modelo</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_principios:principios-create' %}">Add Principio</a></li>
-                            <li><a class="dropdown-item" href="#">Add Blog-Social</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_edu_social:article-social-create' %}">Add Edu-Social</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -116,9 +116,6 @@ License: MIT License
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_principios:principios-list' %}">Principios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Social</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Jurisprudências
@@ -127,6 +124,9 @@ License: MIT License
                             <li><a class="dropdown-item" href="{% url 'app_home:jurisprudencias-page-list' %}">Painel Tribunais</a></li>
                             <li><a class="dropdown-item" href="{% url 'app_juris_stj:juris-stj-list' %}">Superior Trib. Justiça</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app_edu_social:articles-social-list' %}">Edu-Social</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_home:contact-us' %}">Contato</a>
@@ -407,6 +407,35 @@ License: MIT License
     {% block 'manager_admin' %}
 
     {% endblock 'manager_admin' %}
+
+    <!-- App Educação Social -->
+    {% block 'create_Socialarticle' %}
+
+    {% endblock 'create_Socialarticle' %}
+
+    {% block 'article_Socialdelete' %}
+
+    {% endblock 'article_Socialdelete' %}
+
+    {% block 'article_Socialsingle' %}
+
+    {% endblock 'article_Socialsingle' %}
+
+    {% block 'articles_Socialtags' %}
+
+    {% endblock 'articles_Socialtags' %}
+
+    {% block 'updateSocial_article' %}
+
+    {% endblock 'updateSocial_article' %}
+
+    {% block 'articlesSocial_list' %}
+
+    {% endblock 'articlesSocial_list' %}
+
+    {% block 'categories_SocialArticles' %}
+
+    {% endblock 'categories_SocialArticles' %}
 
   <!-- /=/=/=/=/=/=/=/=/=/=/=/==//=/=/=/=/=-->
 
@@ -694,5 +723,7 @@ License: MIT License
 <script src="{% static 'js/revelar_answer_question.js' %}"></script>
 <script src="{% static 'js/create_answer.js' %}"></script>
 <script src="{% static 'js/quill_editor.js' %}"></script>
+<script src="{% static 'js/mansure.js' %}"></script>
+<script src="{% static 'js/copy_modelo_doc.js' %}"></script>
 </body>
 </html>

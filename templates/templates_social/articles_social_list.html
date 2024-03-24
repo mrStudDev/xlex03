@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block 'title' %}Edu. Social{% endblock 'title' %}  
+
+{% block 'articlesSocial_list' %}
+
+    <div class="container mt-5">
+        <h5>Espaço Social</h5>
+        <div>
+            <p>Publicações: <strong>{{ publicacoes_count }}</strong> </p>
+        </div>        
+        <hr>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            {% for social in object_list %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body" id="bolinha-educacao" style="border: none;">
+                        <code class="card-code">{{social.code}}</code>
+                        <br>
+                        <p class="card-date">Pub: {{ social.date_created|date:"d M Y" }}
+                        </p>
+                        <hr>                        
+
+                        <span class="card-title"><a href="{% url 'app_edu_social:article-social-single' social.slug %}">
+                            {{ social.title | slice:":26"  }}
+                        </a></span><br>
+                        {% if social.slug %}
+                            <small class="card-category">Categoria:
+                                <a class="card-a-category" href="{% url 'app_edu_social:categories-social-articles' social.category.slug %}">{{ social.category.name }}</a>
+                            </small>
+                        {% endif%}
+                        <br><br>
+                        <p class="card-description">{{ social.meta_description | slice:":250" }}</p>
+
+                            {% if social.slug %}
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{% url 'app_edu_social:article-social-single' social.slug %}" class="a-link">Leia mais</a>
+                                    </div>
+                                    <small class="text-muted">Xlex</small>
+                                </div>
+                            {% endif %}
+
+                            {% if social.slug %}
+                                {% if user.is_authenticated and user.is_staff %}
+                                    <div>
+                                        <span>
+                                        <a href="{% url 'app_edu_social:article-social-update' social.slug %}">Update</a>
+                                        | | <a href="{% url 'app_edu_social:article-social-delete' social.slug %}" style="color:red">delete</a>
+                                        </span>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; primeira</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">&laquo; anterior</a>
+                    {% endif %}
+            
+                    <span class="current">
+                        Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                    </span>
+            
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">Próxima &raquo;</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+    </div>
+{% endblock 'articlesSocial_list' %}

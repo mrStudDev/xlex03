@@ -27,6 +27,9 @@ class CategoryAdmin(admin.ModelAdmin):
 class TagArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     
+    class Meta:
+        model = TagArticlesModel
+    
 
 admin.site.register(ArticlesModel, ArticleAdmin)
 admin.site.register(CategoryArticlesModel, CategoryAdmin)

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block 'title' %} {{ articles.title }} {% endblock 'title' %} 
+
+{% block 'article_Socialsingle' %}
+<br>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                <br>
+                <h1 id="title-post-h1" style="text-transform: uppercase;">{{ object.title}}</h1>          
+                <small>Categoria</small>  | <span class="badge bg-dark">{{object.category}}</span>
+                <br>
+                <small>Pub: {{object.date_created}}</small>                
+                <small>Artigo: {{ object.title}}</small>
+                <hr>
+
+                {% if user.is_authenticated and user.is_staff %}
+                    <span>
+                        <a href="{% url 'app_edu_social:article-social-update' slug=object.slug %}" style="color:blue">Updade</a>
+                        |  | <a href="{% url 'app_edu_social:article-social-delete' slug=object.slug %}" style="color:red">Delete</a>
+                    </span>
+                {% endif %}
+                <br>
+                <h5>{{object.title}}</h5> 
+                <p>{{ object.content_social | safe }}</p>
+                <br>
+
+                <div class="news-footer">
+                    <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                    <small style="color: rgb(154, 152, 152);">{{ object.author.first_name }} {{ object.author.last_name }}</small>
+                    <br>
+                    <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+
+                    <hr>
+
+                    <small><strong>Tags:</strong></small>
+                    {% for tag in tags %}
+                        <code style="color:gray"> |{{tag.name}}</code>
+                    {% endfor %}
+
+                    <br>
+                    <small><strong>Artigo: </strong>{{object.title}}</small><br>
+                    <small><strong>Categoria: </strong>{{object.category}}</small><br>
+                    <small><strong>Pub: </strong>{{object.date_created}}</small><br>
+                    <small><strong>Views: </strong>{{object.views}}</small>
+
+                </div>
+            </div>
+
+{% endblock 'article_Socialsingle' %}

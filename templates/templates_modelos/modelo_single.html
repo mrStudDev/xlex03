@@ -14,10 +14,6 @@
                     <small>Publicado em: {{object.date_created}}</small>
                     <small>Atualizado em: <strong>{{object.last_updated}}</strong></small>
                     <br>
-                    <small>Faça o download do modelo: </small>                            
-                    {% if object.document %}
-                    <a class="btn btn-sm btn-dark" href="{{ object.document.url }}" download>Baixar documento editável</a>
-                    {% endif %}
 
                     {% if user.is_authenticated and user.is_staff %}
                         <div>
@@ -49,11 +45,7 @@
                     <small><strong>Modelo: </strong>{{object.title}}</small> <br>
                     <small><strong>Publicado em: </strong>{{object.date_created}}</small><br>
                     <small><strong>Ramo: </strong>{{object.ramo_direito}}</small><br>
-                    <small><strong>Views: </strong>{{object.views}}</small><br>
-                    <small>Faça o download do modelo: </small>
-                    {% if object.document %}
-                    <a class="btn btn-sm btn-dark" href="{{ object.document.url }}" download>Baixar documento editável</a>
-                    {% endif %}                                                                   
+                    <small><strong>Views: </strong>{{object.views}}</small><br>                                                            
                 </div>
             </div>
 
