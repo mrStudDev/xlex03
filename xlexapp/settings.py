@@ -27,8 +27,13 @@ SECRET_KEY = 'django-insecure-a4ovc8i3cb3z&5mu#hs=zc2&-nb=h_8esk8jqidfou+qza$ngs
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.135.189.234']
 #ALLOWED_HOSTS = []
+
+#ALLOWED_HOSTS = ['34.135.189.234']
+
+# Allowed Produção Real ====================================
+ALLOWED_HOSTS = ['34.132.155.69']
+# ==========================================================
 
 # Application definition
 
@@ -98,7 +103,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -109,7 +114,24 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
 
+# Data Base Produção Real ============================================
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'data_xlex_prod_real_xlex03',
+        'USER': 'postgres',
+        'PASSWORD': 'rmmr713a17ur45m10pdfg56r',
+        'HOST': 'localhost',  
+        'PORT': '5432',
+    }
+}
+
+
+# End -  Data Base Produção Real ==========================================
 
 
 # Password validation
