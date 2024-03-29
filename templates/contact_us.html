@@ -1,22 +1,29 @@
 {% extends "base.html" %}
 
+{% block 'title' %}Contate-nos{% endblock 'title' %}
+
 {% block 'contact_us' %}
 
 <div class="content-container">
     <h2>Contate-nos</h2>
+    {% if success %}
+    <br>
+    <div class="alert alert-success" role="alert">
+    Sua mensagem foi enviada com sucesso! Agradecemos pelo contato. <br>
+    Retornaremos assim que possível. .MR
+    </div>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <br>
         <p>Certifique-se de que todos os campos foram preenchidos. Responderemos assim que possível.</p>
-        <button id="sendButton" class="btn btn-dark btn-sm" type="submit">Enviar Mensagem</button>
+        <button class="btn btn-dark btn-sm" type="submit">Enviar Mensagem</button>
     </form>
-    <br><br>
+    <br>
     <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
     <small style="color: rgb(154, 152, 152);"><i>Xlex Love Lex</i></small>
-    <div id="confirmationMessage" class="alert alert-success" role="alert" style="display:none;">
-        Obrigado pela sua mensagem! Você será redirecionado(a) para a home em breve.
-    </div>
+
 
 </div>
 

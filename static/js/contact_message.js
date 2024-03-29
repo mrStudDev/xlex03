@@ -1,13 +1,29 @@
 
 document.getElementById('sendButton').addEventListener('click', function (e) {
-    e.preventDefault(); // Ainda útil se você estiver enviando um formulário via AJAX, por exemplo.
+    e.preventDefault(); // Previne a submissão normal do formulário
 
-    // Mostra a mensagem de confirmação.
-    document.getElementById('confirmationMessage').style.display = 'block';
+    var formData = new FormData(document.querySelector('form'));
 
-    // Redireciona após um curto intervalo.
-    setTimeout(function () {
-        window.location.href = '../';
-    }, 4000); // Ajuste conforme necessário.
+    fetch('/contato/', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+        },
+    })
+        .then(response => response.json()) // Converte a resposta em JSON
+        .then(data => {
+            if (data.success) {
+                // Mostra a mensagem de confirmação
+                document.getElementById('confirmationMessage').style.display = 'block';
+
+                // Redireciona após um curto intervalo
+                setTimeout(function () {
+                    window.location.href = '../';
+                }, 4000);
+            } else {
+                alert('Houve um erro ao enviar a mensagem. Por favor, tente novamente.');
+            }
+        })
 });
 

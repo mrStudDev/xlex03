@@ -8,7 +8,7 @@ from .models import HomeSite
 from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.utils import timezone
 from django.views.generic import TemplateView
 
@@ -64,8 +64,8 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()  # Salva a mensagem no banco de dados
-            return redirect(reverse('app_home:home-view'))  # Redireciona para uma URL de sucesso
-    else:
+            return render(request, 'contact_us.html', {'form': ContactForm(), 'success': True, 'hide_sidebar': True,})
+    else: # Redireciona para uma URL de sucesso
         form = ContactForm()
     return render(request, 'contact_us.html', {'form': form, 'hide_sidebar': True,})
 
