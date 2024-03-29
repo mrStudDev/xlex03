@@ -32,7 +32,7 @@ DEBUG = False
 #ALLOWED_HOSTS = ['34.135.189.234']
 
 # Allowed Produção Real ====================================
-ALLOWED_HOSTS = ['34.132.155.69']
+ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br']
 # ==========================================================
 
 # Application definition
