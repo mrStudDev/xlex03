@@ -20,20 +20,27 @@
         {% for sumula in object_list %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <div class="card-body" id="bolinha-educacao">
-                        <code class="card-code"><strong>{{sumula.sigla_tribunal}}</strong></code>
-                        <br>
-                        <small class="card-sm-category"> 
-                            {{sumula.nome_tribunal}}
-                        </small>
-                        <hr>
-                        <span class="card-title">
-                            <a href="{% url 'app_sumulas:sumula-single' sumula.slug %}">{{ sumula.title | slice:":47" }}</a>
-                        </span><br><br>
-                        <p class="card-description">{{sumula.enunciado | slice:'250'}}</p>
-                        <p class="p-link">
-                            <a class="a-link" href="{% url 'app_sumulas:sumula-single' sumula.slug %}">Ler súmula</a> 
-                        </p>
+                    <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                        <div style="flex-grow: 1;">
+                            <code class="card-code"><strong>{{sumula.sigla_tribunal}}</strong></code>
+                            <br>
+                            <small class="card-sm-category"> 
+                                {{sumula.nome_tribunal}}
+                            </small>
+                            <hr>
+                            <span class="card-title">
+                                <a href="{% url 'app_sumulas:sumula-single' sumula.slug %}">{{ sumula.title | slice:":47" }}</a>
+                            </span><br><br>
+                            <p class="card-description">{{sumula.enunciado | slice:'200'}}</p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="a-link" href="{% url 'app_sumulas:sumula-single' sumula.slug %}">Ler súmula</a> 
+                                </div>
+                                <small class="text-muted">Xlex</small>
+                            </div>
+                        </div>
                         {% if user.is_authenticated and user.is_staff %}
                         <div>
                           <span>

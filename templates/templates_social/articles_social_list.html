@@ -16,43 +16,46 @@
             {% for social in object_list %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <div class="card-body" id="bolinha-educacao" style="border: none;">
-                        <code class="card-code">{{social.code}}</code>
-                        <br>
-                        <p class="card-date">Pub: {{ social.date_created|date:"d M Y" }}
-                        </p>
-                        <hr>                        
+                    <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                        <div style="flex-grow: 1;">
+                            <code class="card-code">{{social.code}}</code>
+                            <br>
+                            <p class="card-date">Pub: {{ social.date_created|date:"d M Y" }}
+                            </p>
+                            <hr>                        
 
-                        <span class="card-title"><a href="{% url 'app_edu_social:article-social-single' social.slug %}">
-                            {{ social.title | slice:":26"  }}
-                        </a></span><br>
-                        {% if social.slug %}
-                            <small class="card-category">Categoria:
-                                <a class="card-a-category" href="{% url 'app_edu_social:categories-social-articles' social.category.slug %}">{{ social.category.name }}</a>
-                            </small>
-                        {% endif%}
-                        <br><br>
-                        <p class="card-description">{{ social.meta_description | slice:":250" }}</p>
-
+                            <span class="card-title"><a href="{% url 'app_edu_social:article-social-single' social.slug %}">
+                                {{ social.title | slice:":26"  }}
+                            </a></span><br>
                             {% if social.slug %}
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="{% url 'app_edu_social:article-social-single' social.slug %}" class="a-link">Leia mais</a>
-                                    </div>
-                                    <small class="text-muted">Xlex</small>
+                                <small class="card-category">Categoria:
+                                    <a class="card-a-category" href="{% url 'app_edu_social:categories-social-articles' social.category.slug %}">{{ social.category.name }}</a>
+                                </small>
+                            {% endif%}
+                            <br><br>
+                            <p class="card-description">{{ social.meta_description | slice:":200" }}</p>
+                        </div>
+                        {% if social.slug %}
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="{% url 'app_edu_social:article-social-single' social.slug %}" class="a-link">Leia mais</a>
+                                </div>
+                                <small class="text-muted">Xlex</small>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if social.slug %}
+                            {% if user.is_authenticated and user.is_staff %}
+                                <div>
+                                    <span>
+                                    <a href="{% url 'app_edu_social:article-social-update' social.slug %}">Update</a>
+                                    | | <a href="{% url 'app_edu_social:article-social-delete' social.slug %}" style="color:red">delete</a>
+                                    </span>
                                 </div>
                             {% endif %}
-
-                            {% if social.slug %}
-                                {% if user.is_authenticated and user.is_staff %}
-                                    <div>
-                                        <span>
-                                        <a href="{% url 'app_edu_social:article-social-update' social.slug %}">Update</a>
-                                        | | <a href="{% url 'app_edu_social:article-social-delete' social.slug %}" style="color:red">delete</a>
-                                        </span>
-                                    </div>
-                                {% endif %}
-                            {% endif %}
+                        {% endif %}
                         </div>
                     </div>
                 </div>

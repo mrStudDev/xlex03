@@ -5,40 +5,39 @@
 {% block 'articles_list' %}
 
     <div class="container mt-5">
-        <h5>Artigos </h5>
+        <h5>Artigos</h5>
         <div>
-            <p>Artigos Publicados: <strong>{{ publicacoes_count }}</strong> </p>
+            <p>Publicações: <strong>{{ publicacoes_count }}</strong> </p>
         </div>        
         <hr>
-
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-
             {% for article in object_list %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <div class="card-body" id="bolinha-educacao" style="border: none;">
-                        <code class="card-code">{{article.code}}</code>
-                        <br>
-                        <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
-                        </p>
-                        <hr>                        
-
-                        <span class="card-title"><a href="{% url 'app_articles:article-single' article.slug %}">
-                            {{ article.title | slice:":26"  }}
-                        </a></span><br>
-
-                            <small class="card-category">Categoria:
-                                <a class="card-a-category" href="{% url 'app_articles:categories-articles' article.category.slug %}">{{ article.category.name }}</a>
-                            </small><br><br>
-                            <p class="card-description">{{ article.meta_description | slice:":250" }}</p>
-
+                    <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                        <div style="flex-grow: 1;">
+                            <code class="card-code">{{article.code}}</code>
+                            <br>
+                            <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
+                            </p>
+                            <hr>                        
+                            <span class="card-title"><a href="{% url 'app_articles:article-single' article.slug %}">
+                                {{ article.title | slice:":47"  }}
+                            </a></span><br>
+                                <small class="card-category">Categoria:
+                                    <a class="card-a-category" href="{% url 'app_articles:categories-articles' article.category.slug %}">{{ article.category.name }}</a>
+                                </small><br><br>
+                                <p class="card-description">{{ article.meta_description | slice:":200" }}</p>
+                            </div>
                             {% if article.slug %}
+                            <div class="mt-auto">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
                                     </div>
                                     <small class="text-muted">Xlex</small>
                                 </div>
+                            </div>
                             {% endif %}
 
                             {% if article.slug %}

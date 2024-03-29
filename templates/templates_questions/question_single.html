@@ -7,6 +7,7 @@
 <div class="container">
     <div class="row g-5">
         <div class="col-md-8" id="main-content">
+            <br>
             <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.title}}</h1>
             Banca: <span class="badge bg-dark">{{object.banca}}</span> <br>
             Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
@@ -20,16 +21,15 @@
 
             <form class="escolha" id="alternativasForm"  style="font-family:Merriweather; color: rgb(76, 76, 76);">
                 {% for alternativa in object.alternativa.all %}
-                    <input id="escolha" type="radio" name="answer" value="{{ alternativa.id }}" data-correct="{{ alternativa.is_correct }}"> {{ alternativa.text }}<br>
+                    <input id="escolha" type="radio" name="answer" value="{{ alternativa.id }}" data-correct="{{ alternativa.is_correct }}"> {{ alternativa.text }}<br><br>
                 {% endfor %}
             </form>
             <br>
             <br>
             <div class="resposta">
-                <h5>Já sabe a resposta certa?</h5><br>
+                <span>Já sabe qual alternativa é a correta?</span><br><br>
                 <details>
-                    <summary id="checkAnswerBtn"> Revelar a resposta correta</summary>
-                    <br>
+                    <summary id="checkAnswerBtn" style="font-size:18px;">Ver Resposta 💡</summary>
                     {% for alternativa in object.alternativa.all %}
                         {% if alternativa.is_correct %}
                             <br>
@@ -37,9 +37,8 @@
                             <p><strong>A alternativa correta é: </strong></p>
                             <p style="color: rgb(37, 172, 7);">{{ alternativa.text }}</p>
                             <br>
-                            <div class="card-body">
-                                <code class="card-code">{{object.code}}</code>
-                                <h5 class="card-title"> <strong>Fundamentação: </strong></h5>
+                            <div>
+                                <h6 class="card-title">Fundamentação</h6>
                                 <hr>
                                 <p>{{object.fundaments | safe }}</p> 
                             </div>                                                       
@@ -47,20 +46,12 @@
                             <p>Agradecemos a sua resposta!</p>
                             <br>
                             <a class="btn bg-dark text-light btn-sm"  href="{% url 'app_questions:questions-list' %}">Ver outra questão</a><br><br>
-                            <a class="btn bg-dark text-light btn-sm"  href="{% url 'app_home:home-view' %}">Quero ir para home</a>
                         {% endif %}
                     {% endfor %}
                 </details>
             </div>
-            <br>
+            <br><br>
             <div class="thanks">
-                <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
-                <small style="color: rgb(154, 152, 152);"> Xlex</small>
-                <br>
-                <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
-
-                <hr class="news-divider">
-
                 <small>Tags:</small>
                 {% for tag in tags %}
                     <code style="color:gray"> |{{tag.name}}</code>
@@ -71,8 +62,30 @@
                 <small><strong>Disciplina:</strong> {{object.disciplina}}</small><br>                                                           
                 <small><strong>Ramo do:</strong> {{object.ramo_direito}}</small><br>                                                           
                 <small><strong>Banca Examinadora:</strong> {{object.banca}}</small><br>
-                <small><strong>Views:</strong> {{object.views}}</small>
-            </div>                                                             
+                <small><strong>Views:</strong> {{object.views}}</small><br>
+                <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+                <small style="color: rgb(154, 152, 152);"> Xlex</small><br>
+                <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
+                <br>
+            </div>
+            <hr>
+            <h5>⚖️ Leia também</h5>
+            <div class="links-externos">
+                <a href="#" target="_blank" rel="noopener noreferrer">Surgimento do Constitucionalismo</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Constitucionalismo Social</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Resolução Ambiental CONAMA</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">História do Direito Ambiental</a>
+            </div>
+
+            <h5>🔗 Links ùteis</h5>            
+            <div class="links-externos">
+
+                <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener noreferrer">Código Civil - Lei 10.406/2002</a>
+                <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener noreferrer">Código Penal - DL 2.848/1940</a>
+                <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Constituição Federal - CF/1988</a>
+                <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener noreferrer">Código de Processo Civil - Lei 13.105/2015</a>
+                <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm" target="_blank" rel="noopener noreferrer">Código de Processo Penal - DL 3.689/1941</a>
+            </div>                
         </div>
 
         

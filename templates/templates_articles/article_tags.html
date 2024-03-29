@@ -18,32 +18,42 @@
                 {% for article in articles %}
                     <div class="col">
                         <div class="card shadow-sm">
-                            <div class="card-body" id="bolinha-educacao" style="border: none;">
-                                <code class="card-code">{{article.code}}</code>
-                                <br>
-                                <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
-                                </p>
-                                <hr>  
-                                <span class="card-title">
-                                    <a href="{% url 'app_articles:article-single' article.slug %}">
-                                        {{ article.title | slice:":26"  }}
-                                    </a>
-                                </span><br>
+                            <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                                <div style="flex-grow: 1;">
+                                    <code class="card-code">{{article.code}}</code>
+                                    <br>
+                                    <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
+                                    </p>
+                                    <hr>  
+                                    <span class="card-title">
+                                        <a href="{% url 'app_articles:article-single' article.slug %}">
+                                            {{ article.title | slice:":47"  }}
+                                        </a>
+                                    </span><br>
 
-                                <small class="card-category">Categoria:
-                                    <a href="{% url 'app_articles:categories-articles' article.category.slug %}" class="card-a-category">
-                                        {{ article.category.name }}
-                                    </a>
-                                </small>
-                                <br> <br> 
+                                    <small class="card-category">Categoria:
+                                        <a href="{% url 'app_articles:categories-articles' article.category.slug %}" class="card-a-category">
+                                            {{ article.category.name }}
+                                        </a>
+                                    </small>
+                                    <br> <br> 
 
-                                <p class="card-description">
-                                    {{ article.meta_description | slice:":250" }}
-                                </p>
+                                    <p class="card-description">
+                                        {{ article.meta_description | slice:":170" }}
+                                    </p>
+                                </div>
 
 
                                 {% if article.slug %}
-                                    <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="{% url 'app_articles:article-single' article.slug %}" class="a-link">Leia mais</a>
+                                        </div>
+                                        <small class="text-muted">Xlex</small>
+                                    </div>
+                                </div>
+                                    
                                 {% endif %}
 
                                 {% if article.slug %}

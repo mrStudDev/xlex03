@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
 {% block 'contact_us' %}
-<div class="content-container">
-<h2>Contate-nos</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <br>    
-    <p>Agradecemos a sua mensagem! <br> Ao enviar a menssagem você será direcionado(a) para Home do Site</p>
 
-    <button class="btn btn-dark btn-sm" type="submit">Enviar Mensagem</button>
-</form>
+<div class="content-container">
+    <h2>Contate-nos</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <p>Certifique-se de que todos os campos foram preenchidos. Responderemos assim que possível.</p>
+        <button id="sendButton" class="btn btn-dark btn-sm" type="submit">Enviar Mensagem</button>
+    </form>
+    <br><br>
+    <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+    <small style="color: rgb(154, 152, 152);"><i>Xlex Love Lex</i></small>
+    <div id="confirmationMessage" class="alert alert-success" role="alert" style="display:none;">
+        Obrigado pela sua mensagem! Você será redirecionado(a) para a home em breve.
+    </div>
 
 </div>
 

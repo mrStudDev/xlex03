@@ -207,9 +207,9 @@ License: MIT License
 
     {% endblock 'question_disciplina' %}
 
-    {% block 'ramo_direito' %}
+    {% block 'ramo_Dodireito' %}
 
-    {% endblock 'ramo_direito' %}
+    {% endblock 'ramo_Dodireito' %}
 
     {% block 'question_tag' %}
 
@@ -456,7 +456,7 @@ License: MIT License
         </div>
 
         <div class="p-4">
-            <strong>Páginas</strong>
+            <span>Páginas</span>
             <ol class="list-unstyled mb-0">
                 <li><a href="{% url 'app_home:sobre-nos' %}" class="a-link-side">Sobre nós</a></li>
                 <li><a href="{% url 'app_home:contact-us' %}" class="a-link-side">Contate-nos</a></li>
@@ -464,13 +464,13 @@ License: MIT License
         </div>
 
         <div class="p-4">
-            <strong>Filtrar:</strong>
+            <span>Filtros</span>
 
             {% if current_app == 'app_home' %}
             <!-- Nada aqui por enquanto-->
 
             {% elif current_app == 'app_articles' %}
-                <details><summary>Artigos por Categoria</summary>
+                <details><summary>Categorias</summary>
                     <ol class="list-unstyled mb-0">                 
                         {% for category in categories %}
                         <code style="color:gray;"></code>                   
@@ -478,7 +478,7 @@ License: MIT License
                         {% endfor %}
                     </ol>                    
                 </details><br>
-                <details><summary>Artigos por Tags</summary>
+                <details><summary>Tags</summary>
                     <ol class="list-unstyled mb-0">                 
                         {% for tag in tagsx %}
                         <code style="color:gray;"></code>                   
@@ -490,7 +490,7 @@ License: MIT License
 
             {% if current_app == 'app_questions' %}
                 <details>
-                    <summary>Questões por Banca</summary>
+                    <summary>Bancas</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for banca in bancas %}
                         <a href="{% url 'app_questions:question-banca' banca.slug %}" class="a-link-side">{{ banca.name }}</a><br>
@@ -498,7 +498,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Questões por Disciplina</summary>
+                    <summary>Disciplinas</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for disciplina in disciplinas %}
                         <a href="{% url 'app_questions:question-disciplina' disciplina.slug %}" class="a-link-side">{{ disciplina.name }}</a><br>
@@ -506,7 +506,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Questões por Ramo do Dto</summary>
+                    <summary>Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
                         <a href="{% url 'app_questions:question-ramo' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
@@ -514,7 +514,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Questões por Tag</summary>
+                    <summary>Tags</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tags in tagsx %}
                         <a href="{% url 'app_questions:question-tag' tags.slug %}" class="a-link-side">{{ tags.name }}</a><br>
@@ -525,7 +525,7 @@ License: MIT License
     
             {% if current_app == 'app_casos' %}
                 <details>
-                    <summary>Casos por Diciplina</summary>
+                    <summary>Disciplinas</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for disciplina in disciplinas %}
                         <a href="{% url 'app_casos:casos-disciplinas' disciplina.slug %}" class="a-link-side">{{ disciplina.name }}</a><br>
@@ -533,7 +533,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Casos por Ramo do Dto</summary>
+                    <summary>Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
                         <a href="{% url 'app_casos:casos-ramo-direito' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
@@ -541,7 +541,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Casos por Tag</summary>
+                    <summary>Tags</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tags in tagsx %}
                         <a href="{% url 'app_casos:casos-tags' tags.slug %}" class="a-link-side">{{ tags.name }}</a><br>
@@ -552,7 +552,7 @@ License: MIT License
 
             {% if current_app == 'app_modelos' %}
                 <details>
-                    <summary>Modelos por Ramo do Dto</summary>
+                    <summary>Ramo do Dto</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for ramo_direito in ramos %}
                         <a href="{% url 'app_modelos:modelos-ramo-direito' ramo_direito.slug %}" class="a-link-side">{{ ramo_direito.name }}</a><br>
@@ -560,7 +560,7 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Modelos por Tipo</summary>
+                    <summary>Tipos</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tipo in tipos %}
                         <!-- Corrigido para usar 'tipo.name' -->
@@ -569,30 +569,30 @@ License: MIT License
                     </ol>
                 </details><br>
                 <details>
-                    <summary>Modelos por Tag</summary>
+                    <summary>Tags</summary>
                     <ol class="list-unstyled mb-0">  
                         {% for tag in tagsx %}
-                        <a class="card-a-category" href="{% url 'app_modelos:modelos-tag-doc' tag.slug %}">{{ tag.name }}</a><br>
+                        <a class="a-link-side" href="{% url 'app_modelos:modelos-tag-doc' tag.slug %}">{{ tag.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
             {% endif %}
 
-            {% if current_app == 'app_blog_social' %}
+            {% if current_app == 'app_edu_social' %}
                 <details>
                 <summary>Blog-Categorias</summary>
                 <ol class="list-unstyled mb-0">  
                     {% for category in categories %}
                     <!-- Corrigido para usar 'tipo.name' -->
-                    <a href="#" class="a-link-side">{{ category.name }}</a><br>
+                    <a href="{% url 'app_edu_social:categories-social-articles' category.slug %}" class="a-link-side">{{ category.name }}</a><br>
                     {% endfor %}
                 </ol>
                 </details><br>
                 <details>
                     <summary>Blog-Tags</summary>
                     <ol class="list-unstyled mb-0">  
-                        {% for tags in tagsx %}
-                        <a class="card-a-category" href="#">{{ tags.name }}</a><br>
+                        {% for tag in tagsx %}
+                        <a class="a-link-side" href="{% url 'app_edu_social:tags-social-articles' tag.slug %}">{{ tag.name }}</a><br>
                         {% endfor %}
                     </ol>
                 </details><br>
@@ -610,9 +610,10 @@ License: MIT License
                 </details><br>
             {% endif %}
 
+
         </div>
         <div class="p-4">
-            <strong>Redes Sociais Xlex</strong>
+            <span>Redes Sociais Xlex</span>
             <ol class="list-unstyled">
             <li><a href="#" class="a-link-side">Instagran</a></li>
             <li><a href="#" class="a-link-side">Youtube</a></li>
@@ -620,7 +621,7 @@ License: MIT License
             </ol>
         </div>
         <div class="p-4">
-            <strong>Conta</strong>
+            <span>Conta</span>
             <ol class="list-unstyled">
             <li><a href="#" class="a-link-side">Perfil</a></li>
             <li><a href="#" class="a-link-side">Login</a></li>
@@ -645,57 +646,10 @@ License: MIT License
         {% if views_count %}
         <p>Views: {{ views_count }}</p>
         {% endif %}
-        <P class="description-footer" style="color: white;">
+        <h6 style="color: white;">
             Agradecemos sua visita e o interesse pelo nosso conteúdo. Convidamos você a explorar outras 
             seções do site. Faça um tour!
-        </P>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h5>Formulários</h5>
-                <ul>
-                    <li><a href="{% url 'app_searchs:advanced-searchs-view' %}">Jurisprudência STJ</a></li>
-                    <li><a href="{% url 'app_searchs:sumula-searchs-view' %}">Súmulas</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Casa</h5>
-                <ul>
-                    <li><a href="{% url 'app_home:sobre-nos' %}">Sobre nós</a></li>
-                    <li><a href="{% url 'app_home:contact-us' %}">Contate-nos</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>R.Sociais</h5>
-                <ul>
-                    <li><a style="color:gray"  href="#">Youtube</a></li>
-                    <li><a style="color:gray"  href="#">Instagran</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h5>Acadêmico</h5>
-                <ul>
-                    <li><a href="{% url 'app_questions:questions-list' %}">Questões</a></li>
-                    <li><a href="{% url 'app_casos:casos-list' %}">Casos Conscretos</a></li>
-                    <li><a href="{% url 'app_principios:principios-list' %}">Princípios</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Documentos</h5>
-                <ul>
-                    <li><a href="{% url 'app_modelos:modelos-list' %}">Modelos</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Grupo Xlex</h5>
-                <ul>
-                    <li><a style="color:gray" href="#">Xlex Edu</a></li>
-                    <li><a style="color:gray"  href="#">Xlex Store</a></li>
-                    <li><a style="color:gray"  href="#">Xlex online</a></li>
-                </ul>
-            </div>
-        </div>
+        </h6>
       <br>
       <!-- Informações da Marca -->
       <div class="footer-brand-info">
@@ -725,5 +679,6 @@ License: MIT License
 <script src="{% static 'js/quill_editor.js' %}"></script>
 <script src="{% static 'js/mansure.js' %}"></script>
 <script src="{% static 'js/copy_modelo_doc.js' %}"></script>
+<script src="{% static 'js/contact_message.js' %}"></script>
 </body>
 </html>

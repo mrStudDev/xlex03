@@ -88,7 +88,7 @@
                 <div class="card" id="card-link">
                     <div class="card-body">
                         <h5 class="card-title"><a href="{% url 'app_modelos:modelos-list' %}" class="card-title">&#x1F4CB; Modelos e Peças</a></h5>
-                        <p class="card-text">Recursos legais prontos para download.</p>
+                        <p class="card-text">Recursos legais prontos para servir de base.</p>
                     </div>
                 </div>
             </div>
@@ -132,57 +132,10 @@
         {% if views_count %}
         <p>Views: {{ views_count }}</p>
         {% endif %}
-        <P class="description-footer"  style="color: white;">
+        <h6 style="color: white;">
             Agradecemos sua visita e o interesse pelo nosso conteúdo. Convidamos você a explorar outras 
             seções do site. Faça um tour!
-        </P>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h5>Formulários</h5>
-                <ul>
-                    <li><a href="{% url 'app_searchs:advanced-searchs-view' %}">Jurisprudência STJ</a></li>
-                    <li><a href="{% url 'app_searchs:sumula-searchs-view' %}">Súmulas</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Casa</h5>
-                <ul>
-                    <li><a href="{% url 'app_home:sobre-nos' %}">Sobre nós</a></li>
-                    <li><a href="{% url 'app_home:contact-us' %}">Contate-nos</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>R.Sociais</h5>
-                <ul>
-                    <li><a style="color:gray"  href="#">Youtube</a></li>
-                    <li><a style="color:gray"  href="#">Instagran</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h5>Acadêmico</h5>
-                <ul>
-                    <li><a href="{% url 'app_questions:questions-list' %}">Questões</a></li>
-                    <li><a href="{% url 'app_casos:casos-list' %}">Casos Conscretos</a></li>
-                    <li><a href="{% url 'app_principios:principios-list' %}">Princípios</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Documentos</h5>
-                <ul>
-                    <li><a href="{% url 'app_modelos:modelos-list' %}">Modelos</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Grupo Xlex</h5>
-                <ul>
-                    <li><a style="color:gray" href="#">Xlex Edu</a></li>
-                    <li><a style="color:gray"  href="#">Xlex Store</a></li>
-                    <li><a style="color:gray"  href="#">Xlex online</a></li>
-                </ul>
-            </div>
-        </div>
+        </h6>
         <br>
         
         <!-- Informações da Marca -->

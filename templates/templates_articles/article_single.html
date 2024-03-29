@@ -27,13 +27,10 @@
                 <br>
 
                 <div class="news-footer">
-                    <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
-                    <small style="color: rgb(154, 152, 152);">{{ object.author.first_name }} {{ object.author.last_name }}</small>
                     <br>
                     <span style="color: rgb(79, 79, 79);">Obrigado pela leitura!</span>
-
-                    <hr>
-
+                    <br><small style="color: rgb(154, 152, 152);">{{ object.author.first_name }} {{ object.author.last_name }}</small><br><br>
+                    <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span><br>
                     <small><strong>Tags:</strong></small>
                     {% for tag in tags %}
                         <code style="color:gray"> |{{tag.name}}</code>
@@ -43,8 +40,25 @@
                     <small><strong>Artigo: </strong>{{object.title}}</small><br>
                     <small><strong>Categoria: </strong>{{object.category}}</small><br>
                     <small><strong>Pub: </strong>{{object.date_created}}</small><br>
-                    <small><strong>Views: </strong>{{object.views}}</small>
-
+                    <small><strong>Views: </strong>{{object.views}}</small><br>
+                </div>
+                <hr>
+                <h5>⚖️ Leia também</h5>
+                <div class="links-externos">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Surgimento do Constitucionalismo</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Constitucionalismo Social</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Resolução Ambiental CONAMA</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">História do Direito Ambiental</a>
+                </div>
+    
+                <h5>🔗 Links ùteis</h5>            
+                <div class="links-externos">
+    
+                    <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener noreferrer">Código Civil - Lei 10.406/2002</a>
+                    <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener noreferrer">Código Penal - DL 2.848/1940</a>
+                    <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Constituição Federal - CF/1988</a>
+                    <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener noreferrer">Código de Processo Civil - Lei 13.105/2015</a>
+                    <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm" target="_blank" rel="noopener noreferrer">Código de Processo Penal - DL 3.689/1941</a>
                 </div>
             </div>
 

@@ -179,7 +179,7 @@ class RamoDireitoQuestionView(ListView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
         context.update({
-            'context': self.ramo_direito,
+            'ramo_direito': self.ramo_direito,
             'ramo': RamoDireitoQuestionModel.objects.all(),
             'ramos': RamoDireitoQuestionModel.objects.all(),
             'bancas': BancaQuestionModel.objects.all(),

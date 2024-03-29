@@ -19,35 +19,37 @@
                 {% for social in social %}
                 <div class="col">
                     <div class="card shadow-sm">
-                        <div class="card-body" id="bolinha-educacao" style="border: none;">
-                            <code class="card-code">{{social.code}}</code>
-                            <br>
-                            <p class="card-date">Pub: {{ social.date_created|date:"d M Y" }}
-                            </p>
-                            <hr>  
-                            <span class="card-title">
-                                <a href="{% url 'app_edu_social:article-social-single' social.slug %}">
-                                    {{ social.title | slice:":26"  }}
-                                </a>
-                            </span><br>
-                            <small class="card-category">Categoria:
-                                <a href="{% url 'app_edu_social:categories-social-articles' social.category.slug %}" class="card-a-category">
-                                    {{ social.category.name }}
-                                </a> 
-                            </small>
-                            <br> <br> 
-                            <p class="card-description">
-                                {{ social.meta_description | slice:":250" }}
-                            </p>
-                            {% if social.slug %}
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="{% url 'app_edu_social:article-social-single' social.slug %}" class="a-link">Leia mais</a>
-                                </div>
-                                <small class="text-muted">Xlex</small>
+                        <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                            <div style="flex-grow: 1;">
+                                <code class="card-code">{{social.code}}</code>
+                                <br>
+                                <p class="card-date">Pub: {{ social.date_created|date:"d M Y" }}
+                                </p>
+                                <hr>  
+                                <span class="card-title">
+                                    <a href="{% url 'app_edu_social:article-social-single' social.slug %}">
+                                        {{ social.title | slice:":47"  }}
+                                    </a>
+                                </span><br>
+                                <small class="card-category">Categoria:
+                                    <a href="{% url 'app_edu_social:categories-social-articles' social.category.slug %}" class="card-a-category">
+                                        {{ social.category.name }}
+                                    </a> 
+                                </small>
+                                <br> <br> 
+                                <p class="card-description">
+                                    {{ social.meta_description | slice:":200" }}
+                                </p>
                             </div>
-                                
+                            {% if social.slug %}
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{% url 'app_edu_social:article-social-single' social.slug %}" class="a-link">Leia mais</a>
+                                    </div>
+                                    <small class="text-muted">Xlex</small>
+                                </div>
+                            </div>                 
                             {% endif %}
 
                             {% if article.slug %}
@@ -66,7 +68,4 @@
                 {% endfor %}
                 </div>
             </div>
-
-
-
 {% endblock 'categories_SocialArticles' %}

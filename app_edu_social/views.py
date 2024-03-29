@@ -128,7 +128,7 @@ class TagArticlesSocialView(ListView):
 
     def get_queryset(self):
         self.tag = get_object_or_404(TagSocialModel, slug=self.kwargs['tagArticle_slug'])
-        return ArticlesModel.objects.filter(tags=self.tag)
+        return ArticlesSocialModel.objects.filter(tags=self.tag)
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)

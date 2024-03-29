@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-a4ovc8i3cb3z&5mu#hs=zc2&-nb=h_8esk8jqidfou+qza$ngs
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.136.14.221']
+ALLOWED_HOSTS = ['34.135.189.234']
 #ALLOWED_HOSTS = []
 
 # Application definition
@@ -87,8 +87,8 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-
 """
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -110,6 +110,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 
 

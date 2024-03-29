@@ -6,7 +6,7 @@
     <div class="content-container">
         <!-- Bloco 1: Informações gerais -->
         <div class="info-general">
-            <h2><strong>{{ object.title }}</strong></h2>
+            <h4 class="upper-destaque" style="text-transform: uppercase;">{{ object.title }}</h4>
             <p>Número da Súmula: <strong>{{ object.numero_sumula }}</strong></p>
             <p>Sigla Tribunal: <strong>{{ object.sigla_tribunal }}</strong></p>
             <p>Tribunal: <strong>{{ object.nome_tribunal }}</strong></p>
@@ -26,23 +26,19 @@
         <!-- Bloco 2: Enunciado -->
         <div class="info-ementa">
             <h3>ENUNCIADO:</h3>
-            <p  id="copiarEnunciado" class="enunciado-pc"><strong>( {{ object.sigla_tribunal }} nº: {{object.numero_sumula }} ) - </strong>{{object.enunciado }}</p>
+            <p  id="copiarEnunciado"><strong>( {{ object.sigla_tribunal }} nº: {{object.numero_sumula }} ) - </strong>{{object.enunciado }}</p>
             <br>
             <button id="button-copiar" onclick="copiarEnunciado()" class="btn bg-dark text-light btn-sm">Copiar Enunciado &#10004;</button>
             <br><br>
             <div id="message" style="color: rgb(109, 203, 15); font-size: 17;"></div>
             <hr>
             <h5>COMENTÀRIO</h5>
-            <p  class="enunciado-pc">{{object.comentario | safe}}</p>
+            <p>{{object.comentario | safe}}</p>
         </div>
 
         <!-- Bloco 3: Informações finais -->
         <br>
         <center>
-            <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
-            <small style="color: rgb(154, 152, 152);">Xlex</small>
-            <br>
-            <a class="btn bg-dark text-light btn-sm" href="{% url 'app_sumulas:sumulas-list' %}">Voltar para lista</a><br><br>
             <a class="btn bg-dark text-light btn-sm" href="{% url 'app_searchs:sumula-searchs-view' %}">Formulário de busca</a>        
         </center>
         <br>
@@ -54,8 +50,9 @@
             <small><strong>Título: </strong>{{object.title }}</small><br>
             <small><strong>Súmula do: </strong>{{object.nome_tribunal }}</small><br>
             <small><strong>Data Postagem: </strong>{{ object.date_created }}</small><br>
-            <small><strong>Views: </strong>{{object.views}}</small>
-
+            <small><strong>Views: </strong>{{object.views}}</small><br>
+            <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
+            <small style="color: rgb(154, 152, 152);"><i>Xlex Love Lex</i></small>
         </div>
     </div>
 

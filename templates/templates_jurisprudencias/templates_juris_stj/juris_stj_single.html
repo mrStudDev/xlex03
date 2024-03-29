@@ -7,7 +7,7 @@
 <div class="content-container">
     <!-- Bloco 1: Informações gerais -->
     <div class="info-general">
-        <h4>Dados gerais da Jurisprudência:</h4>
+        <h4 class="upper-destaque" style="text-transform: uppercase;">Dados gerais da Jurisprudência:</h4>
         <hr>
         <p>Descrição da Classe: {{object.descricaoClasse }}</p>            
         <p>Tipo de Decisão: <strong>{{object.tipoDeDecisao }}</strong></p>
@@ -26,11 +26,11 @@
     <!-- Bloco 2: Ementa -->
     <div class="info-ementa">
         <h3>EMENTA:</h3>
-        <p id="copiarEmenta" class="ementa">{{object.ementa }} <br><br> <small>{{object.tipoDeDecisao }} - Relator: {{object.ministroRelator }} - {{object.nomeOrgaoJulgador }} nº: {{object.numeroProcesso }} - {{object.dataPublicacao }}</small> </p>
+        <p id="copiarEmenta">{{object.ementa }} <br><br> <small>{{object.tipoDeDecisao }} - Relator: {{object.ministroRelator }} - {{object.nomeOrgaoJulgador }} nº: {{object.numeroProcesso }} - {{object.dataPublicacao }}</small> </p>
         <button id="button-copiar" onclick="copiarEmenta()" class="btn bg-dark text-light btn-sm">Copiar Ementa &#10004;</button>
         <br><br>
         <div class="message">
-            <div class="card-body">
+            <div>
                 <div id="message" style="color:rgb(42, 173, 22);font-size:17; text-decoration: solid;"></div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 
     <!-- Bloco 3: Informações finais -->
     <div class="info-final">
-        <p class="ementa"><strong>Decisão: </strong><br>{{object.decisao }}</p>
+        <p><strong>Decisão: </strong><br>{{object.decisao }}</p>
         <p class="ementa"><strong>Jurisp. Citada: </strong><br>{{object.jurisprudenciaCitada }}</p>
         <p class="ementa"><strong>Notas: </strong><br>{{object.notas }}</p>
         <p class="ementa"><strong>Info. Complementares: </strong><br>{{object.informacoesComplementares }}</p>
@@ -52,20 +52,17 @@
     </div>
     <br>
     <center>
-        
-        <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>                           
-        <small style="color: rgb(154, 152, 152);">Xlex</small>
-        <br>
-        <a class="btn bg-dark text-light btn-sm" href="{% url 'app_juris_stj:juris-stj-list' %}">Voltar para lista</a><br><br>
         <a class="btn bg-dark text-light btn-sm" href="{% url 'app_searchs:advanced-searchs-view' %}">Formulário de busca</a>        
     </center>
     <br>
     <hr>
     <span>
-        <small>Fonte: Dados Abertos - Superior Tribunal de Justiça - STJ</small><br>       
-        <small>Chave: {{object.title}}</small><br>
-        <small>&#x1F9D1;&#x200D;&#x2696;&#xFE0F; Ministro Relator: {{object.ministroRelator }}</small><br>
+        <small>Fonte: Dados Abertos - <strong>Superior Tribunal de Justiça - STJ</strong></small><br>       
+        <small>Chave-x: <strong>{{object.title}}</strong></small><br>
+        <small>Ministro Relator: <strong>{{object.ministroRelator }}</strong></small><br>
         <small>Views: {{object.views}}</small><br>
+        <span class="coracao">&#9829; &#9829; &#9829; &#9829; &#9829;</span>
+        <small style="color: rgb(154, 152, 152);"><i>Xlex Love Lex</i></small>
     </span>
 
 </div>
