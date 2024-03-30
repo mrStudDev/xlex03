@@ -35,7 +35,7 @@ DEBUG = False
 
 
 # Allowed Produção Real ====================================
-ALLOWED_HOSTS = ['34.68.241.126']
+ALLOWED_HOSTS = ['34.41.57.48']
 # ==========================================================
 
 # Application definition
