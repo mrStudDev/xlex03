@@ -35,7 +35,7 @@ DEBUG = False
 
 
 # Allowed Produção Real ====================================
-ALLOWED_HOSTS = ['34.29.98.132']
+ALLOWED_HOSTS = ['34.68.241.126']
 # ==========================================================
 
 # Application definition
@@ -90,6 +90,45 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'xlexapp.wsgi.application'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/home/marcosscfloripa/xlex03/logs/django_error.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+    'handlers': {
+    'file': {
+        'level': 'DEBUG',
+        'class': 'logging.FileHandler',
+        'filename': '/home/marcosscfloripa/xlex03/logs/django_error.log',
+    },
+    'console': {
+        'level': 'DEBUG',
+        'class': 'logging.StreamHandler',
+    },
+},
+'loggers': {
+    'django': {
+        'handlers': ['file', 'console'],
+        'level': 'DEBUG',
+        'propagate': True,
+    },
+},
+
+}
+
 
 
 # Database
