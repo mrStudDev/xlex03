@@ -30,12 +30,12 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-ALLOWED_HOSTS = ['34.135.189.234']
+#ALLOWED_HOSTS = ['34.135.189.234']
 # ==========================================================
 
 
 # Allowed Produção Real ====================================
-#ALLOWED_HOSTS = ['34.68.241.126']
+ALLOWED_HOSTS = ['34.68.241.126']
 # ==========================================================
 
 # Application definition
@@ -98,6 +98,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 """
+# Database localhost
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -109,7 +110,8 @@ DATABASES = {
     }
 }
 """
-
+"""
+# Database instancia teste
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -120,12 +122,19 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+"""
 
 # Data Base Produção Real ============================================
-
-
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'data_xlex_prod_real_xlex03',
+        'USER': 'postgres',
+        'PASSWORD': 'rmmr713a17ur45m10pdfg56r',
+        'HOST': 'localhost',  
+        'PORT': '5432',
+    }
+}
 
 # End -  Data Base Produção Real ==========================================
 
