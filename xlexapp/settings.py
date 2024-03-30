@@ -30,12 +30,12 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-#ALLOWED_HOSTS = ['34.135.189.234']
+ALLOWED_HOSTS = ['34.135.189.234']
 # ==========================================================
 
 
 # Allowed Produção Real ====================================
-ALLOWED_HOSTS = ['34.68.241.126']
+#ALLOWED_HOSTS = ['34.68.241.126']
 # ==========================================================
 
 # Application definition
@@ -91,43 +91,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'xlexapp.wsgi.application'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/home/marcosscfloripa/xlex03/logs/django_error.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-    'handlers': {
-    'file': {
-        'level': 'DEBUG',
-        'class': 'logging.FileHandler',
-        'filename': '/home/marcosscfloripa/xlex03/logs/django_error.log',
-    },
-    'console': {
-        'level': 'DEBUG',
-        'class': 'logging.StreamHandler',
-    },
-},
-'loggers': {
-    'django': {
-        'handlers': ['file', 'console'],
-        'level': 'DEBUG',
-        'propagate': True,
-    },
-},
-
-}
 
 
 
@@ -145,6 +108,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
 
 DATABASES = {
     'default': {
@@ -156,21 +120,11 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
+
 
 # Data Base Produção Real ============================================
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'data_xlex_prod_real_xlex03',
-        'USER': 'postgres',
-        'PASSWORD': 'rmmr713a17ur45m10pdfg56r',
-        'HOST': 'localhost',  
-        'PORT': '5432',
-    }
-}
 
 
 # End -  Data Base Produção Real ==========================================
