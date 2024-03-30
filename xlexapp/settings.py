@@ -110,6 +110,8 @@ DATABASES = {
     }
 }
 """
+
+#==========================================================================
 """
 # Database instancia teste
 DATABASES = {
@@ -125,6 +127,7 @@ DATABASES = {
 """
 
 # Data Base Produção Real ============================================
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -188,3 +191,7 @@ MEDIA_URL = 'media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
