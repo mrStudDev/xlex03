@@ -95,6 +95,10 @@ p {
     font-size: 14px; /* Tamanho do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
 }
+.h5-title {
+    text-align: end;
+    color: #a9a9a9;
+}
 
 /* Cards Configs */
 #card-link:hover {
