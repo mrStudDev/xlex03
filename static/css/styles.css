@@ -95,7 +95,7 @@ p {
     font-size: 14px; /* Tamanho do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
 }
-.titulo-pq-article h5 {
+.titulo-pq-article {
     text-align: end;
     color: #a9a9a9;
 }
