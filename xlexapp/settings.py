@@ -30,7 +30,7 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-ALLOWED_HOSTS = ['34.135.189.234']
+ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
 # ==========================================================
 
 
@@ -181,4 +181,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #SECURE_SSL_REDIRECT = True
 #SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True

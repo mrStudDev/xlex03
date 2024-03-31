@@ -83,26 +83,19 @@ p {
 }
 /* End Coração */
 
-/* Imagens do texto rico CKEditor */
-.image-sm-content-ck {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 300px; 
-    margin: auto; 
+.article-summary {
+    display: block; /* Torna o elemento <i> se comportar como um bloco para aplicar margens e paddings */
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
+    padding: 10px; /* Recuo interno em todas as direções */
+    background-color: #f9f9f9; /* Cor de fundo claro para destacar */
+    border-left: 5px solid #007bff; /* Uma borda à esquerda para destaque */
+    color: #333; /* Cor do texto */
+    font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
+    font-size: 16px; /* Tamanho do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
 }
-  
-.image-md-content-ck {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 450px;
-    margin: auto;
-}
-  
-.image-lg-content-ck {
-    width: 100%;
-}
+
 
 /* Container para imagem e texto */
 .container-imagem-texto {
