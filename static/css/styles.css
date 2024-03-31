@@ -96,12 +96,6 @@ p {
     line-height: 1.5; /* Espaçamento entre linhas */
 }
 
-.article-summary {
-    margin-left: 20%;
-    font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
-    font-size: 16px; /* Tamanho do texto */
-    text-align: justify;
-}
 /* Cards Configs */
 #card-link:hover {
     transform: translateY(-5px); 
