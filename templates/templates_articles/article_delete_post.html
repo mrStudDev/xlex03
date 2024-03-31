@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block 'title' %}Delete Article{% endblock 'title' %}
+
 {% block 'article_delete' %}
 
     {% if user.is_authenticated and user.is_staff %}

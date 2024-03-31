@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block 'title' %}Add Articles{% endblock 'title' %}
+
 {% block 'create_article' %}
 
     {% if user.is_authenticated and user.is_staff %}
@@ -30,7 +32,7 @@
                             <div id="editor-content">{{ form.content.value|safe }}</div>
                             <!-- Campo Oculto para Enviar o Conteúdo -->
                             <input type="hidden" name="content" id="hiddenContent">
-                    
+                            <br><br>
                             <button class="btn btn-success">Add Article Post</button>
                         </form>
                     </div>
