@@ -30,13 +30,10 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-#ALLOWED_HOSTS = ['34.135.189.234']
+ALLOWED_HOSTS = ['34.135.189.234']
 # ==========================================================
 
 
-# Allowed Produção Real ====================================
-ALLOWED_HOSTS = ['34.41.57.48']
-# ==========================================================
 
 # Application definition
 
@@ -112,7 +109,7 @@ DATABASES = {
 """
 
 #==========================================================================
-"""
+
 # Database instancia teste
 DATABASES = {
     'default': {
@@ -124,20 +121,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
+
 
 # Data Base Produção Real ============================================
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'data_xlex_prod_real_xlex03',
-        'USER': 'postgres',
-        'PASSWORD': 'rmmr713a17ur45m10pdfg56r',
-        'HOST': 'localhost',  
-        'PORT': '5432',
-    }
-}
 
 # End -  Data Base Produção Real ==========================================
 
