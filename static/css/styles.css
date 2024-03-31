@@ -86,7 +86,7 @@ p {
 .article-summary {
     display: block; /* Torna o elemento <i> se comportar como um bloco para aplicar margens e paddings */
     margin-top: 20px; /* Margem superior */
-    margin-left: 20px;
+    margin-left: 20%;
     margin-bottom: 20px; /* Margem inferior */
     padding: 10px; /* Recuo interno em todas as direções */
     background-color: #f9f9f9; /* Cor de fundo claro para destacar */
@@ -95,6 +95,7 @@ p {
     font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
     font-size: 16px; /* Tamanho do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
+    text-align: justify;
 }
 
 
