@@ -123,12 +123,6 @@ DATABASES = {
 }
 
 
-# Data Base Produção Real ============================================
-
-
-# End -  Data Base Produção Real ==========================================
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

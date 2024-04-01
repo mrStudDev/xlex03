@@ -21,10 +21,13 @@
                         |  | <a href="{% url 'app_articles:article-delete-post' slug=object.slug %}" style="color:red">Delete</a>
                     </span>
                 {% endif %}
-                <br>
-                <h5 class="titulo-pq-article">{{object.title}}</h5>
-                <i class="article-summary">{{object.summary}}</i>
-                <p>{{ object.content | safe }}</p>
+                
+                <div class="article-summary">
+                    <h5>{{object.title}}</h5>
+                    <i>{{object.summary}}</i>
+                </div>
+                <p>{{ object.content | safe }}</p>  
+
                 <br>
 
                 <div class="news-footer">

@@ -89,15 +89,11 @@ p {
     margin-bottom: 20px; /* Margem inferior */
     padding: 10px; /* Recuo interno em todas as direções */
     background-color: #f9f9f9; /* Cor de fundo claro para destacar */
-    border-left: 5px solid #007bff; /* Uma borda à esquerda para destaque */
+    border-left: 5px solid #03356b; /* Uma borda à esquerda para destaque */
     color: #333; /* Cor do texto */
     font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
     font-size: 14px; /* Tamanho do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
-}
-.titulo-pq-article {
-    text-align: end;
-    color: #a9a9a9;
 }
 
 /* Cards Configs */
@@ -375,7 +371,7 @@ tr:hover {background-color: #f5f5f5;}
 
 /* Links Externos */
 .links-externos {
-    border-left: 5px solid #007bff; /* Borda esquerda azul escuro para um toque elegante */
+    border-left: 5px solid #03356b;/* Borda esquerda azul escuro para um toque elegante */
     padding: 20px; /* Espaçamento interno para não ficar muito junto às bordas */
     margin-bottom: 20px; /* Margem na parte inferior para separar de outros conteúdos */
 }
