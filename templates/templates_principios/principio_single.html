@@ -14,7 +14,10 @@
             <small>Ramo do: </small>  | <span class="badge bg-dark">{{object.ramo_direito}}</span> 
             <hr>
             <br>
-            <h5>&#x1F4DC; {{object.principio_name}}</h5>  
+            <div class="article-summary">
+            <h5>&#x1F4DC; {{object.principio_name}}</h5>
+            <i>{{object.meta_description}}</i>
+            </div> 
             <p>{{object.content_principio | safe}}</p>
             <br>
             <div class="news-footer">
