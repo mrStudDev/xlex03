@@ -41,12 +41,11 @@ class XlexHomeView(ListView):
         # Obtém o objeto HomeSite
         home_site_object = HomeSite.objects.first()
         
-        # Se o objeto existir, incrementa as visualizações e adiciona a contagem ao contexto
         if home_site_object:
-            home_site_object.update_views()  # Certifique-se de que esta linha esteja aqui para atualizar as visualizações
-            context['views_count'] = home_site_object.views
+            home_site_object.update_views()   # Aumenta as visualizações diretamente
+            context['home_site'] = home_site_object  # Adiciona o objeto HomeSite ao contexto
         else:
-            context['views_count'] = 0
+            context['home_site'] = None
         
         # Adiciona outras variáveis ao contexto
         context["hide_navbar"] = True

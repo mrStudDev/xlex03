@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   {% load static %}
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ home_site.meta_description }}">
+    <meta name="keywords" content="{{ home_site.keyword }}">
+    <meta name="founder" content="{{ home_site.founder }}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +15,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>{% block 'title' %}Xlex Home{% endblock 'title' %}</title>
+    <title>{% block title %}{{ home_site.site_name }}{% endblock title %}</title>
 </head>
-<body
-
+<body>
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="welcome-container">
-            {% for site in object_list %}
-                <h1 class="site-title">{{ site.site_name }}</h1>
-                <div id="site-description">{{ site.site_description }}</div>
-            {% endfor %}
+            <h1 class="site-title">{{ home_site.site_name }}</h1>
+            <div id="site-description">{{ home_site.site_description }}</div>
             <!-- Efeito de digitação dinâmico JS -->
             <span><span id="typing-effect" class="highlighted-text"></span></span>
         </div>    
@@ -130,9 +130,10 @@
     <div class="footer-container">
         <!-- Título do Footer -->
         <h2 class="highlighted-text">XLEX, LOVE LEX!</h2>
-        {% if views_count %}
-        <p>Views: {{ views_count }}</p>
+        {% if home_site %}
+            <p>Views: {{ home_site.views }}</p>
         {% endif %}
+        
         <h6 style="color: white;">
             Agradecemos sua visita e o interesse pelo nosso conteúdo. Convidamos você a explorar outras 
             seções do site. Faça um tour!

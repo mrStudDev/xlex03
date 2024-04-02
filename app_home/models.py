@@ -26,9 +26,9 @@ class HomeSite(models.Model):
     def __str__(self):
         return f"{self.site_name} | {self.founder} | {self.views}"
     
-    def update_views(self, *args, **kwargs):
-         self.views = self.views + 1
-         super(HomeSite, self).save(*args, **kwargs)
+    def update_views(self):
+        self.views += 1
+        self.save()
 
 
 class ContactMessagesModel(models.Model):
