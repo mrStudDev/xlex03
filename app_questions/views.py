@@ -264,13 +264,14 @@ class CreateXlexQuestionView(StaffRequiredMixin, View):
 @method_decorator(csrf_exempt, name='dispatch')
 class CreateAnswerView(StaffRequiredMixin, View):
     def get(self, request, questao_x_id):
+        question = get_object_or_404(XlexQuestionModel, id=questao_x_id)
         form = CreateXlexAnswerForm(initial={'question': questao_x_id})
         question = XlexQuestionModel.objects.get(id=questao_x_id)
         question_ask = question.question_ask
 
         # Recupere as alternativas associadas a esta questão
         recent_answers = AlternativasModel.objects.filter(question=question)
-        return render(request, 'templates_questions/question_answer_create.html', {'form': form, 'questao_x_id': questao_x_id, 'question_ask': question_ask, 'recent_answers': recent_answers})
+        return render(request, 'templates_questions/question_answer_create.html', {'form': form, 'questao_x_id': questao_x_id, 'question_ask': question_ask, 'recent_answers': recent_answers, 'errors': form.errors})
 
     def post(self, request, questao_x_id):
         form = CreateXlexAnswerForm(request.POST)
