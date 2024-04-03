@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block 'title' %} {{jurisprucencia_STJ.title}} {% endblock 'title' %}
+{% block description %}{{jurisprucencia_STJ.meta_description}}{% endblock description %}
+{% block keywords %}{{jurisprucencia_STJ.keyword}}{% endblock keywords %}
 
 {% block 'juris_stj_single' %}
 

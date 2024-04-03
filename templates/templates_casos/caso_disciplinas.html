@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
+
 {% block 'title' %}{{disciplina.name}}{% endblock 'title' %}
+{% block description %}{{disciplina.meta_description}}{% endblock description %}
+{% block keywords %}Disciplina, Casos Concretos por disciplina{% endblock keywords %}
+
 
 {% block 'casos_disciplina' %}
 <br>

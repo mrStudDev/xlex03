@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block 'title' %}{{ category.name }}{% endblock 'title' %} 
+{% block description %}{{category.meta_descripton}}{% endblock description %}
+{% block keywords %}Xlex Educação, categorias, artigos, Direito, Constitucionalismo, Ambiental{% endblock keywords %}
+
 
 {% block 'categories_articles' %}
 <br>
@@ -37,7 +40,7 @@
                                     </a> 
                                 </small>
                                 <br> <br> 
-                                <p class="card-description">
+                                <p class="card-description" name="description">
                                     {{ article.meta_description | slice:":170" }}
                                 </p>
                             </div>

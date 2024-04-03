@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block 'title' %} {{ principios.principio_name }} {% endblock 'title' %} 
+{% block description %}{{principios.meta_description}}{% endblock description %}
+{% block keywords %}{{principios.keyword}}{% endblock keywords %}
 
 {% block 'principio_single' %}
 <br>

@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block 'title' %}Artigos{% endblock 'title' %}  
+{% block 'title' %}Artigos{% endblock 'title' %}
+{% block description %}Xlex Educação e Pesquisa Jurídica. Lista de Artigos abordando assuntos em várias esféras do Direito{% endblock description %}
+{% block keywords %}Xlex, atigos, social, democracia, processo, tributário{% endblock keywords %}
 
 {% block 'articles_list' %}
 
@@ -27,7 +29,7 @@
                                 <small class="card-category">Categoria:
                                     <a class="card-a-category" href="{% url 'app_articles:categories-articles' article.category.slug %}">{{ article.category.name }}</a>
                                 </small><br><br>
-                                <p class="card-description">{{ article.meta_description | slice:":200" }}</p>
+                                <p class="card-description" name="description">{{ article.meta_description | slice:":200" }}</p>
                             </div>
                             {% if article.slug %}
                             <div class="mt-auto">

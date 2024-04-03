@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
-{% block 'title' %}{{ questions.title }}{% endblock 'title' %}  
+{% block 'title' %} {{ object.title }} {% endblock 'title' %} 
+{% block description %}{{object.meta_description}}{% endblock description %}
+{% block keywords %}{{object.keyword}}{% endblock keywords %} 
 
 {% block 'question_single' %}
 <br>
