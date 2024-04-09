@@ -45,7 +45,8 @@ class ArticlesModel(models.Model):
     slug = models.SlugField(blank=True, unique=True)
     last_updated = models.DateTimeField(auto_now=True)
     code = models.PositiveIntegerField(unique=True, blank=True, null=True)
-    views = models.IntegerField(default=0)  
+    views = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
 
 
     def generate_unique_code(self):
