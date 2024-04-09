@@ -14,8 +14,8 @@ class CreateArticleForm(forms.ModelForm):
             'meta_description', 
             'keyword', 
             'tags',
-            'is_published', 
-            #'slug',
+            'is_published',
+            'image',
             ]
 
     def __init__(self, *args, **kwargs):
@@ -29,6 +29,8 @@ class CreateArticleForm(forms.ModelForm):
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição SEO'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord SEO'})
+        self.fields['image'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Images'})
+        
         # Lógica condicional para o campo is_published
         if isinstance(self.fields['is_published'].widget, forms.CheckboxInput):
             self.fields['is_published'].widget.attrs.update({'class': 'form-check-input'})
@@ -48,7 +50,8 @@ class UpdateArticleForm(forms.ModelForm):
             'meta_description', 
             'keyword', 
             'tags',
-            'is_published', 
+            'is_published',
+            'image',
             ]
 
     def __init__(self, *args, **kwargs):
@@ -61,4 +64,5 @@ class UpdateArticleForm(forms.ModelForm):
         self.fields['meta_description'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Meta Descrição SEO'})
         self.fields['tags'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tag'})
         self.fields['keyword'].widget.attrs.update({'class': 'form-control', 'placeholder': 'KeyWord SEO'})
+        self.fields['image'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Images'})
 

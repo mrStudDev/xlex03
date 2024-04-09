@@ -23,9 +23,9 @@
                         |  | <a href="{% url 'app_articles:article-delete-post' slug=object.slug %}" style="color:red">Delete</a>
                     </span>
                 {% endif %}
-                
+
                 {% if object.image %}
-                <img src="{{ object.image.url }}" alt="{{ object.title }}" style="max-width: 100%; height: auto;">
+                <img src="{{ object.image.url }}" alt="{{ object.title }}" class="article-image">
                 {% endif %}
 
                 <div class="article-summary">

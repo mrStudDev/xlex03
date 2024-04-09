@@ -177,6 +177,25 @@ p {
     font-size: 0.8em;
     color: #777;
 }
+.image-wrapper {
+    height: 200px; /* Defina a altura desejada */
+    width: 100%; /* Faz o wrapper ocupar a largura total do card */
+    overflow: hidden; /* Esconde o excesso de imagem que não cabe no wrapper */
+}
+
+.image-wrapper .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Faz a imagem cobrir o espaço disponível */
+}
+.article-image {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    transition: transform 0.3s ease; /* Suaviza a transição de transformações */
+}
+
 
 
 /* End Cards */
