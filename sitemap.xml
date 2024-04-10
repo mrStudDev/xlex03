@@ -1,45 +1,2512 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Página inicial -->
-    <url>
-        <loc>http://www.xlex.com.br/</loc>
-        <lastmod>2023-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-    <!-- Exemplo de página de artigo -->
-    <url>
-        <loc>https://xlex.com.br/artigos/post/</loc>
-        <lastmod>2023-04-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://xlex.com.br/artigos/post/constitucionalismo-um-fenomeno-social/</loc>
-        <lastmod>2023-04-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://xlex.com.br/jurisprudencias-stj/</loc>
-        <lastmod>2023-04-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://xlex.com.br/sumulas/</loc>
-        <lastmod>2023-04-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://xlex.com.br/principios/</loc>
-        <lastmod>2023-04-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
 
-    <!-- Adicione mais URLs de artigos aqui -->
-    <!-- Repita o bloco <url> para cada artigo, categoria ou página importante do seu site -->
+<url>
+  <loc>https://xlex.com.br/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/casos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/educacao-social/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/modelos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/principios/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sobre-nos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/contato/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/categorias/constituicao/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/post/constitucionalismo-um-fenomeno-social/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/17/fgv-exame-37-questao-11/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/banca/fgv/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/constitucionalidade/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/direito-constitucional/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/16/fgv-exame-37-questao-10/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/principio-imperativo-categorico/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/filosofia/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/15/fgv-exame-37-questao-09/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/moral/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/14/fgv-exame-37-questao-08/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/comissoes/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/etica-profissional/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/13/fgv-exame-37-questao-07/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/investigacao-criminal/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/12/fgv-exame-37-questao-06/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/sociedade-de-advogados/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/11/fgv-exame-37-questao-05/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/impedimentos-na-advogacia/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/10/fgv-exame-37-questao-04/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/contrato-de-honorarios/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/9/fgv-exame-37-questao-03/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/infracao-disciplinar/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/8/fgv-exame-37-questao-02/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/procuracao/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/7/fgv-exame-37-questao-01/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/processo-disciplinar-notificacoes/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/post/6/questao-direito-empresarial-ii-titulos-de-credito/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/banca/banca-examinadora/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/titulos-de-credito/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/direito-empresarial/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/searchs/sumula-search/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-235-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-234-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-233-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-232-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-231-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-230-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-229-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-228-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-227-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-226-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-225-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-224-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=2</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=20</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/principios/principio-single/principio-da-anterioridade-anual/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/principios/principio-ramos/direito-constitucional/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/principios/principio-single/principio-da-responsabilidade-fiscal/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/searchs/advanced/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/148529/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/171086/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/171084/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/100029/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/212585/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/173907/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/201236/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/218827/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/264915/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/264916/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=2</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19211</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/categorias/democracia/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/tags/impostos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/tags/social/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/tags/constitucionalismo/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/tags/direito-constitucional/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/artigos/tags/historia-do-constitucionalismo/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/disciplina/incompatibilidade-com-a-advocacia/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/direito-civil/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/ramo-direito/direito-penal/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/questoes-de-etica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/personalidade/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/titulos-de-credito/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/notificacoes/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/processo-disciplinar-oab/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/prazos/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/censura/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/advertencia/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/clausula-de-honorarios-adv/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/duplicata/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/servidor-publico/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/servicos-advocaticios/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/colaboracao-premiada/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/atuacao-de-advogados/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/positivismo-juridico/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/kant/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/universal/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/adpf/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/adi/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/ado/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/questions/tags/adc/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-223-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-222-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-221-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-220-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-219-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-218-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-217-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-216-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-215-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-214-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-213-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-212-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=1</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=3</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-07-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-06-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-05-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-04-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-03-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-02-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-01-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=19</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/principios/principio-ramos/direito-tributario/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/255545/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/141214/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/245651/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/142212/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/181691/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/266314/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/92161/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162070/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162062/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162069/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=1</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=3</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/252330/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251934/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251933/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251942/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251937/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251936/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251938/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251939/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251940/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19210</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-211-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-210-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-209-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-208-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-207-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-206-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-205-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-204-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-203-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-202-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-201-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-200-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=4</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-19-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-18-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-17-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-16-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-15-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-14-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-13-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-12-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-11-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-10-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-09-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-08-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=18</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162065/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162060/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162071/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162050/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162067/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162063/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162066/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162064/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162068/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162061/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=4</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251967/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251966/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251927/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251928/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251929/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251932/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251931/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251899/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251930/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251898/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19209</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-199-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-198-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-197-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-196-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-195-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-194-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-193-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-192-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-191-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-190-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-189-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-188-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=5</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-31-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-30-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-29-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-28-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-27-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-26-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-25-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-24-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-23-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-22-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-21-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-20-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=17</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/162073/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/139313/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/154302/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/91954/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/271185/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/259905/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/258025/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/99024/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/265960/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=5</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251975/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251976/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251935/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251977/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251979/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251978/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251968/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251980/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251981/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251965/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19208</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-187-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-186-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-185-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-184-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-183-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-182-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-181-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-180-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-179-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-178-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-177-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-176-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=6</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-43-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-42-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-41-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-40-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-39-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-38-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-37-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-36-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-35-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-34-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-33-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-32-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=16</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/109403/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/158729/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/159023/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/242418/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/266705/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116835/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116954/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116874/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116873/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116932/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=6</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251926/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251982/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251983/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251949/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251969/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251970/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251971/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251972/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251973/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251974/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19207</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-175-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-174-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-173-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-172-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-171-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-170-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-169-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-168-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-167-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-166-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-165-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-164-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=7</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-55-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-54-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-53-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-52-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-51-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-50-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-49-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-48-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-47-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-46-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-45-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-44-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=15</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116946/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116957/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/256103/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/256102/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/256104/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/256101/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/256108/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116955/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116936/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=7</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263991/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263917/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263920/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263919/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263918/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263921/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263922/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263923/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251864/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/251900/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19206</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-163-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-162-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-161-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-160-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-159-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-158-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-157-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-156-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-155-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-154-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-153-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-152-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=8</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-67-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-66-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-65-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-64-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-63-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-62-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-61-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-60-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-59-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-58-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-57-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-56-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=14</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116931/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116947/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116926/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=8</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263900/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263916/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263915/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263899/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263898/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263914/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263901/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263902/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263990/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19205</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-151-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-150-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-149-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-148-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-147-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-146-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-145-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-144-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-143-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-142-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-141-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-140-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=9</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-79-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-78-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-77-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-76-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-75-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-74-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-73-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-72-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-71-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-70-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-69-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-68-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=13</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116989/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116826/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116871/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=9</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280941/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280983/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/281041/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280964/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280938/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263952/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263897/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280981/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280982/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/263896/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19204</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-139-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-138-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-137-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-136-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-135-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-134-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-133-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-132-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-131-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-130-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-129-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-128-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=10</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-91-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-90-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-89-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-88-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-87-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-86-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-85-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-84-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-83-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-82-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-81-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-80-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=12</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116967/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/117041/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116972/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116988/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/241725/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116982/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116975/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116979/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116974/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=10</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/249022/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/248989/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/248994/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/249018/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/249019/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/248995/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/249021/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/248988/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280939/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/280940/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/?page=19203</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-127-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-126-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-125-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-124-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-123-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-122-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-121-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-120-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-119-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-118-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-117-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-116-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/?page=11</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-103-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-102-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-101-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-100-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-99-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-98-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-97-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-96-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-95-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-94-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-93-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/sumulas/sumula-singular/sumula-92-do-superior-tribunal-de-justica/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/117039/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116964/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116965/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116963/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116973/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116927/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://xlex.com.br/jurisprudencias-stj/juris-single/116925/</loc>
+  <lastmod>2024-04-10T21:28:33+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+
+
 </urlset>
