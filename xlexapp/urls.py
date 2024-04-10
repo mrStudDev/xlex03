@@ -19,6 +19,9 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +36,9 @@ urlpatterns = [
     path('modelos/', include('app_modelos.urls')),
     path('artigos/', include('app_articles.urls')),
     path('educacao-social/', include('app_edu_social.urls')),
+    path("robots.txt", RedirectView.as_view(url=staticfiles_storage.url("seo/robots.txt")), name="robots_file"),
+    path("sitemap.xml", RedirectView.as_view(url=staticfiles_storage.url("seo/sitemap.xml")), name="sitemap_file"),
+
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
