@@ -1,7 +1,7 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
-User-agwent: *
-allow: /
+User-agent: *
+Allow: /
 
-SiteMap: https://xlex.com.br/sitemap.xml
+Sitemap: https://xlex.com.br/sitemap.xml
