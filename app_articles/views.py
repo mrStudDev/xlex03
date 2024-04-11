@@ -44,6 +44,7 @@ class ArticlesListView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = ArticlesModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('articles-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -90,6 +91,7 @@ class ArticleSingleView(DetailView):
         articles = self.get_object()
         context['tags'] = articles.tags.all()
         context['current_app'] = 'app_articles'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('article-single', kwargs={'slug': self.object.slug}))
         return context
 
 class CategoryListView(ListView):
