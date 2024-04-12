@@ -88,7 +88,9 @@ class PrincipiosSingleView(DeleteView):
         context = super().get_context_data(**kwargs)
         context['ramos'] = RamoDireitoModel.objects.all()
         context['current_app'] = 'app_principios'
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_principios:principio-single'))
+        context['canonical_url'] = self.request.build_absolute_uri(
+            reverse('app_principios:principio-single', kwargs={'slug': slug.slug})
+        )
         return context
     
 class RamoDireitoListView(ListView):

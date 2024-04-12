@@ -97,7 +97,7 @@ class DocumentSingleView(DetailView):
         context['current_app'] = 'app_modelos'
         modelos = self.get_object()
         context['canonical_url'] = self.request.build_absolute_uri(
-            reverse('app_modelos:modelo-single', kwargs={'slug': modelos.slug})
+            reverse('app_modelos:modelo-single', kwargs={'slug': slug.slug})
         )
         return context
 
