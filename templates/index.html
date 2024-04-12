@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ home_site.site_name }}{% endblock title %}</title>    
     <meta name="description" content="{{ home_site.meta_description }}">
     <meta name="keywords" content="{{ home_site.keyword }}">
     <meta name="founder" content="{{ home_site.founder }}">
@@ -16,7 +17,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>{% block title %}{{ home_site.site_name }}{% endblock title %}</title>
+    {% if home_site.indexable %}
+    <meta name="robots" content="index, follow">
+    {% else %}
+    <meta name="robots" content="noindex, follow">
+    {% endif %}
+
 </head>
 <body>
     <!-- Hero Section -->
