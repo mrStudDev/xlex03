@@ -84,7 +84,7 @@ class SumulaSingularView(DetailView):
         sumulas = self.get_object()
         context['current_app'] = 'app_sumulas'
         context['canonical_url'] = self.request.build_absolute_uri(
-            reverse('app_sumulas:sumula-single', kwargs={'slug': sumula.slug})
+            reverse('app_sumulas:sumula-single', kwargs={'slug': sumulas.slug})
         )
         return context
     
