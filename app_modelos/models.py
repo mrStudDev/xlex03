@@ -41,7 +41,6 @@ class TagDocumentsModel(models.Model):
 
 class DocumentsModel(models.Model):
     title = models.CharField(max_length=255)
-    document = models.FileField(upload_to='modelos_docs/', blank=True, null=True)
     author = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     ramo_direito = models.ForeignKey(RamoDireitoDocModel, default="None", on_delete=models.CASCADE)
     tipo_doc = models.ForeignKey(TipoDocumentModel, default='None', on_delete=models.CASCADE)

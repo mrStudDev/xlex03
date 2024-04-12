@@ -6,7 +6,6 @@ class CreateDocucumentForm(forms.ModelForm):
         model = DocumentsModel
         fields = [
             'title',
-            'document',
             'author',
             'ramo_direito',
             'tipo_doc',
@@ -19,7 +18,6 @@ class CreateDocucumentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
-        self.fields['document'].widget.attrs.update({'class': 'form-control', 'placeholder': 'DOcumento'})
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
         self.fields['ramo_direito'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Ramo Direito'})
         self.fields['tipo_doc'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tipo Doc'})
@@ -40,7 +38,6 @@ class UpdateDocumentForm(forms.ModelForm):
         model = DocumentsModel
         fields = [
             'title',
-            'document',
             'author',
             'ramo_direito',
             'tipo_doc',
@@ -52,8 +49,7 @@ class UpdateDocumentForm(forms.ModelForm):
         ]
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
-        self.fields['document'].widget.attrs.update({'class': 'form-control', 'placeholder': 'DOcumento'})
+        self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})        
         self.fields['author'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Author'})
         self.fields['ramo_direito'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Ramo Direito'})
         self.fields['tipo_doc'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Tipo Doc'})
