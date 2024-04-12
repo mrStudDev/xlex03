@@ -42,6 +42,7 @@ class SumulaModel(models.Model):
 
     def get_absolute_url(self):
         return reverse('app_sumulas:sumula-single', kwargs={'sumula_slug': self.slug})
+
     
     def update_views(self, *args, **kwargs):
          self.views = self.views + 1
