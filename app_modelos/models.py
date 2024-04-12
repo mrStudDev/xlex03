@@ -42,8 +42,8 @@ class TagDocumentsModel(models.Model):
 class DocumentsModel(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
-    ramo_direito = models.ForeignKey(RamoDireitoDocModel, default="None", on_delete=models.CASCADE)
-    tipo_doc = models.ForeignKey(TipoDocumentModel, default='None', on_delete=models.CASCADE)
+    ramo_direito = models.ForeignKey(RamoDireitoDocModel, null=True, on_delete=models.CASCADE)
+    tipo_doc = models.ForeignKey(TipoDocumentModel, null=True, on_delete=models.CASCADE)
     content_doc = models.TextField(blank=True, null=True)
     meta_description = models.TextField(max_length=170)
     keyword = models.CharField(max_length=255)
