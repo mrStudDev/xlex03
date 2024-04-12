@@ -46,6 +46,7 @@ class CasoConcretoView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = CasoConcretoModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_casos:casos-list'))
         return context
     
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -93,7 +94,8 @@ class CasoSingularView(DetailView):
         context['tagsx'] = TagCasoModel.objects.all()
         caso = self.get_object()
         context['tags'] = caso.tags.all()
-        context['current_app'] = 'app_casos'  
+        context['current_app'] = 'app_casos'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_casos:caso-single'))
         return context
 
 

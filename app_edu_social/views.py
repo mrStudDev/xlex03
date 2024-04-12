@@ -42,6 +42,7 @@ class ArticlesSocialListView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = ArticlesSocialModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_edu_social:articles-social-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -88,6 +89,7 @@ class ArticleSocialSingleView(DetailView):
         social = self.get_object()
         context['tags'] = social.tags.all()
         context['current_app'] = 'app_edu_social'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_edu_social:article-social-single'))
         return context
 
 class CategorySocialListView(ListView):

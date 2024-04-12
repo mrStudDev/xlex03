@@ -25,6 +25,7 @@ class STJjurisprudenciaView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = STJjurisprudenciaModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -67,6 +68,7 @@ class STJjurisprudenciaSingularView(DetailView):
         context = super().get_context_data(**kwargs)
         context["hide_sidebar"] = True
         context['current_app'] = 'app_juris_stj'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-single'))
         return context
 
 

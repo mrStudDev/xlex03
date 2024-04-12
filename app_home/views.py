@@ -49,7 +49,7 @@ class XlexHomeView(ListView):
         
         # Adiciona outras variáveis ao contexto
         context["hide_navbar"] = True
-        
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_home:home-view'))
         return context
 
 # Páginas do Site (sobre, contato, paginas de listas, etc)
