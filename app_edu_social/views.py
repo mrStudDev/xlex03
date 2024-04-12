@@ -89,7 +89,9 @@ class ArticleSocialSingleView(DetailView):
         social = self.get_object()
         context['tags'] = social.tags.all()
         context['current_app'] = 'app_edu_social'
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_edu_social:article-social-single'))
+        context['canonical_url'] = self.request.build_absolute_uri(
+            reverse('app_edu_social:article-social-single', kwargs={'slug': self.object.slug})
+        )
         return context
 
 class CategorySocialListView(ListView):
