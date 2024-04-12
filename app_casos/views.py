@@ -95,7 +95,9 @@ class CasoSingularView(DetailView):
         caso = self.get_object()
         context['tags'] = caso.tags.all()
         context['current_app'] = 'app_casos'
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_casos:caso-single'))
+        context['canonical_url'] = self.request.build_absolute_uri(
+            reverse('app_casos:caso-single', kwargs={'slug': caso.slug})
+        )
         return context
 
 
