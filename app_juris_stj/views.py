@@ -70,7 +70,7 @@ class STJjurisprudenciaSingularView(DetailView):
         context = super().get_context_data(**kwargs)
         context["hide_sidebar"] = True
         context['current_app'] = 'app_juris_stj'
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-single'))
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-single', kwargs={'pk': self.object.pk}))
         return context
 
 
