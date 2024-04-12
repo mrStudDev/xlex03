@@ -47,6 +47,7 @@ class DocumentListView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = DocumentsModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_modelos:modelos-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -94,6 +95,7 @@ class DocumentSingleView(DetailView):
         context['tagsx'] = TagDocumentsModel.objects.all()
         context['tipos'] = TipoDocumentModel.objects.all()
         context['current_app'] = 'app_modelos'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_modelos:modelo-single'))
         return context
 
 

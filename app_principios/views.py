@@ -45,6 +45,7 @@ class PrincipiosListView(ListView):
         context = super().get_context_data(**kwargs)
         context['publicacoes_count'] = PrincipiosModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_principios:principios-list'))
         return context
     
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -87,6 +88,7 @@ class PrincipiosSingleView(DeleteView):
         context = super().get_context_data(**kwargs)
         context['ramos'] = RamoDireitoModel.objects.all()
         context['current_app'] = 'app_principios'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_principios:principio-single'))
         return context
     
 class RamoDireitoListView(ListView):

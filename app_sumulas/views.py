@@ -39,6 +39,7 @@ class SumulasListView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = SumulaModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_sumulas:sumulas-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -82,7 +83,10 @@ class SumulaSingularView(DetailView):
         context["hide_sidebar"] = True
         sumulas = self.get_object()
         context['current_app'] = 'app_sumulas'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_sumulas:sumula-single'))
         return context
+    
+    
 class TribNameSumulaView(ListView):
     model = TribNameSumulaModel
     template_name = 'templates_sumulas/sumulas_trib_names.html'

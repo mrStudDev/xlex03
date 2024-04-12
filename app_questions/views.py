@@ -51,6 +51,7 @@ class XlexQuestionView(ListView):
         context = super().get_context_data(**kwargs)
         context["publicacoes_count"] = XlexQuestionModel.objects.all().count()
         context["hide_sidebar"] = True
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_questions:questions-list'))
         return context
 
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
@@ -98,6 +99,7 @@ class QuestionSingularView(DetailView):
         question = self.get_object()
         context['tags'] = question.tags.all()
         context['current_app'] = 'app_questions'
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_questions:question-single'))
         return context
 
 
