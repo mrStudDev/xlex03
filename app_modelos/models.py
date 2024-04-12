@@ -63,11 +63,15 @@ class DocumentsModel(models.Model):
         return code
 
     def save(self, *args, **kwargs):
-        if not self.code:
-            self.code = self.generate_unique_code()  # Geração do código se não existir
-        if not self.slug:  # Geração de slug se não existir
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs) 
+        try:
+            if not self.code:
+                self.code = self.generate_unique_code()
+            if not self.slug:
+                self.slug = slugify(self.title)
+            super().save(*args, **kwargs)
+        except Exception as e:
+            print(f"Error saving document: {e}")
+            # Handle or log the exception as needed
 
 
     def __str__(self):
