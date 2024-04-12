@@ -41,7 +41,7 @@ class SumulaModel(models.Model):
         return f"Súmula {self.title} - {self.numero_sumula} - {self.sigla_tribunal} - {self.tema_juridico} - {self.enunciado}"
 
     def get_absolute_url(self):
-        return reverse('app_sumulas:sumula-single', kwargs={'slug': self.slug})
+        return reverse('app_sumulas:sumula-single', kwargs={'sumula_slug': self.slug})
     
     def update_views(self, *args, **kwargs):
          self.views = self.views + 1
