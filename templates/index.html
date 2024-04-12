@@ -9,8 +9,10 @@
     <meta name="keywords" content="{{ home_site.keyword }}">
     <meta name="founder" content="{{ home_site.founder }}">
     <link rel="canonical" href="http://www.xlex.com.br/">
+    <link rel="icon" sizes="32x32" type="image/png" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" sizes="48x48" type="image/png" href="{% static 'images/favicon-48x48.png' %}">
+    <link rel="icon" sizes="180x180" type="image/png" href="{% static 'images/favicon-180x180.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles_home.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -146,7 +148,7 @@
             seções do site. Faça um tour!
         </h6>
         <br>
-        
+        <h6>{{home_site.meta_title}}</h6>
         <!-- Informações da Marca -->
         <div class="footer-brand-info">
             <p class="footer-brand-info">&copy; 2023 Xlex Educação Pesquisa Jurídica e Desenvolvimento Social. Todos os direitos reservados.</p>
