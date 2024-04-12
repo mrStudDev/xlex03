@@ -18,6 +18,7 @@ from app_manager .models import PageView
 from django.views.generic import (
     ListView,
     DateDetailView,
+    DetailView,
     CreateView,
     UpdateView,
     DeleteView,
@@ -60,7 +61,7 @@ class PrincipiosListView(ListView):
 
         return super().get(request, *args, **kwargs)
 
-class PrincipiosSingleView(DeleteView):
+class PrincipiosSingleView(DetailView):
     model = PrincipiosModel
     template_name = 'templates_principios/principio_single.html'
     slug_field = 'slug'
@@ -89,8 +90,9 @@ class PrincipiosSingleView(DeleteView):
         context['ramos'] = RamoDireitoModel.objects.all()
         context['current_app'] = 'app_principios'
         context['canonical_url'] = self.request.build_absolute_uri(
-            reverse('app_principios:principio-single', kwargs={'slug': slug.slug})
+            reverse('app_principios:principio-single', kwargs={'slug': self.object.slug})
         )
+        return context
         return context
     
 class RamoDireitoListView(ListView):
