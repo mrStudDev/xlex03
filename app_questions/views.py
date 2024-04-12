@@ -100,7 +100,13 @@ class QuestionSingularView(DetailView):
         question = self.get_object()
         context['tags'] = question.tags.all()
         context['current_app'] = 'app_questions'
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_questions:question-single'))
+        if self.object:  # Certifique-se de que o objeto foi carregado corretamente
+            context['canonical_url'] = self.request.build_absolute_uri(
+                reverse('app_questions:question-single', kwargs={
+                    'id': self.object.id,
+                    'slug': self.object.slug
+                })
+            )
         return context
 
 
