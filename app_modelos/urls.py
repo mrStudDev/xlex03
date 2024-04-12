@@ -1,4 +1,5 @@
 from django.urls import path
+from . import views
 from . views import (
     DocumentListView,
     DocumentSingleView,
@@ -10,7 +11,6 @@ from . views import (
     DeleteModeloView,
     
     )
-from . import views
 
 app_name = 'app_modelos'
 

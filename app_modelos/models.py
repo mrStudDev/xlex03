@@ -64,8 +64,10 @@ class DocumentsModel(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.code:
-            self.code = self.generate_unique_code()
-        super().save(*args, **kwargs)
+            self.code = self.generate_unique_code()  # Geração do código se não existir
+        if not self.slug:  # Geração de slug se não existir
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs) 
 
 
     def __str__(self):
