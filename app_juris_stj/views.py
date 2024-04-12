@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from .forms import STJJurisprudenciaUploadForm
 from .models import STJjurisprudenciaModel
 from django.views.generic import ListView, DetailView
