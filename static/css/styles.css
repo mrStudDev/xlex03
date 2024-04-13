@@ -127,7 +127,7 @@ p {
     margin-top: 2px;
 }
 .card-description {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     text-align: left;
 }
 
@@ -177,25 +177,7 @@ p {
     font-size: 0.8em;
     color: #777;
 }
-.image-wrapper {
-    position: relative;
-    width: 100%; /* Largura completa do card */
-    height: 200px; /* Altura fixa para todas as imagens */
-    overflow: hidden; /* Esconde qualquer excesso de imagem que ultrapasse o container */
-}
 
-.card-img {
-    width: 100%; /* Faz a imagem preencher a largura do container */
-    height: 100%; /* Faz a imagem preencher a altura do container */
-    object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
-    display: block; /* Remove espaços extras abaixo da imagem */
-    position: absolute; /* Posiciona a imagem de forma absoluta dentro de seu container */
-    top: 0; /* Alinha a imagem ao topo do container */
-}
-
-.card-img {
-    border-radius: 10px; /* Bordas arredondadas para a imagem */
-}
 .card-img:hover {
     transform: scale(1.05); /* Zoom leve na imagem */
     transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de zoom */
