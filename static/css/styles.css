@@ -104,7 +104,7 @@ p {
 
 .card-body {
     padding: 20px;
-    min-height: 412px;
+    height: auto;
 }
 
 .card-title a {
@@ -146,11 +146,6 @@ p {
     width: 100%; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
-.card-img-top {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; /* Mantém a proporção das imagens */
-}
 
 #bolinha-educacao::before {
     content: ""; /* Isso é necessário para que o pseudo-elemento seja exibido */
@@ -179,10 +174,6 @@ p {
     color: #777;
 }
 
-.card-img:hover {
-    transform: scale(1.05); /* Zoom leve na imagem */
-    transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de zoom */
-}
 .article-image {
     max-width: 100%; /* Faz com que a imagem não seja maior que o container */
     height: auto; /* Mantém a proporção da imagem */
@@ -549,6 +540,9 @@ details[open] > summary::before {
     .upper-destaque {
         font-size: 16px;
     }
+    .card-body {
+        min-height: 437px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -575,6 +569,9 @@ details[open] > summary::before {
         font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
         font-size: 15px; /* Tamanho do texto */
         text-align: justify;
+    }
+    .card-body {
+        min-height: 442px;
     }
 }
 
@@ -606,6 +603,9 @@ details[open] > summary::before {
         font-size: 16px; /* Tamanho do texto */
         text-align: justify;
     }
+    .card-body {
+        min-height: 462px;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -633,7 +633,9 @@ details[open] > summary::before {
         font-size: 16px; /* Tamanho do texto */
         text-align: justify;
     }
-
+    .card-body {
+        min-height: 402px;
+    }
 }
 
 /* meu monitor ???*/
@@ -668,6 +670,9 @@ details[open] > summary::before {
         font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
         font-size: 16px; /* Tamanho do texto */
         text-align: justify;
+    }
+    .card-body {
+        min-height: 392px;
     }
 }
 
@@ -704,6 +709,9 @@ details[open] > summary::before {
         font-size: 16px; /* Tamanho do texto */
         text-align: justify;
     }
+    .card-body {
+        min-height: 392px;
+    }
 }
 
 @media (min-width: 2560px) {
@@ -733,5 +741,8 @@ details[open] > summary::before {
         font-style: normal; /* Como estamos usando <i>, isso anula o itálico */
         font-size: 16px; /* Tamanho do texto */
         text-align: justify;
+    }    
+    .card-body {
+        min-height: 392px;
     }
 }

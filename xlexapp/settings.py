@@ -24,13 +24,13 @@ SECRET_KEY = 'django-insecure-a4ovc8i3cb3z&5mu#hs=zc2&-nb=h_8esk8jqidfou+qza$ngs
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
+#ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
 # ==========================================================
 
 
@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-"""
+
 
 # Database localhost
 DATABASES = {
@@ -124,7 +124,7 @@ DATABASES = {
     }
 }
 
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

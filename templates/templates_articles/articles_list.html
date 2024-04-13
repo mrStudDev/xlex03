@@ -29,7 +29,7 @@
                             <small class="card-category">Categoria:
                                 <a class="card-a-category" href="{% url 'app_articles:categories-articles' article.category.slug %}">{{ article.category.name }}</a>
                             </small><br>
-                            <p class="card-description" name="description">{{ article.meta_description | slice:":240" }}</p>
+                            <p class="card-description" name="description">{{ article.meta_description | slice:":237" }}... </p>
                         </div>
                         {% if article.slug %}
                         <div class="mt-auto">
