@@ -96,6 +96,7 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 
 
 """
+
 # Database localhost
 DATABASES = {
     'default': {
@@ -109,7 +110,6 @@ DATABASES = {
 }
 
 """
-
 #==========================================================================
 
 # Database instancia teste
