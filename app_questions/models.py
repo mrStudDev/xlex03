@@ -78,7 +78,11 @@ class XlexQuestionModel(models.Model):
     code = models.PositiveIntegerField(unique=True, blank=True)
     slug = models.SlugField(blank=True, unique=True)
     last_updated = models.DateTimeField(auto_now=True)
-    views = models.IntegerField(default=0) 
+    views = models.IntegerField(default=0)
+    indexable = models.BooleanField(default=True)
+
+    def is_indexable(self):
+        return self.indexable
 
     def clean(self):
         # Validação para garantir que o título não esteja vazio

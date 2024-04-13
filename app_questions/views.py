@@ -90,24 +90,33 @@ class QuestionSingularView(DetailView):
         context = self.get_context_data(object=self.object)
         return self.render_to_response(context)
 
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context['bancas'] = BancaQuestionModel.objects.all()
-        context['disciplinas'] = DisciplinaQuestionModel.objects.all()
-        context['ramos'] = RamoDireitoQuestionModel.objects.all()
-        context['tagsx'] = TagQuestionModel.objects.all()
-        # Pega a questão atual - Tags
-        question = self.get_object()
-        context['tags'] = question.tags.all()
-        context['current_app'] = 'app_questions'
-        if self.object:  # Certifique-se de que o objeto foi carregado corretamente
-            context['canonical_url'] = self.request.build_absolute_uri(
-                reverse('app_questions:question-single', kwargs={
-                    'id': self.object.id,
-                    'slug': self.object.slug
-                })
-            )
-        return context
+def get_context_data(self, **kwargs) -> dict[str, Any]:
+    context = super().get_context_data(**kwargs)
+
+    # Carregar dados relacionados de outros modelos
+    context['bancas'] = BancaQuestionModel.objects.all()
+    context['disciplinas'] = DisciplinaQuestionModel.objects.all()
+    context['ramos'] = RamoDireitoQuestionModel.objects.all()
+    context['tagsx'] = TagQuestionModel.objects.all()
+
+    # Pega a questão atual e configurações relacionadas
+    question = self.get_object()
+    context['tags'] = question.tags.all()
+    context['indexable'] = question.is_indexable()
+
+    # Configurar a URL canônica com os parâmetros necessários
+    context['canonical_url'] = self.request.build_absolute_uri(
+        reverse('app_questions:question-single', kwargs={
+            'id': question.id,
+            'slug': question.slug
+        })
+    )
+
+    context['current_app'] = 'app_questions'
+
+    return context
+
+
 
 
 class BancaQuestionView(ListView):
