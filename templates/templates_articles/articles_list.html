@@ -16,20 +16,20 @@
             {% for article in object_list %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <div class="card-body d-flex flex-column" style="height: 500px;">                       
-                        <div style="flex-grow: 1;">                      
-                                                        
+                    <div class="card-body d-flex flex-column" id="bolinha-educacao" style="height: 100%;">
+                        <div style="flex-grow: 1;">
+                            <code class="card-code">{{article.code}}</code>
+                            <br>
+                            <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
+                            </p>                                               
                             <hr>
                             <small class="card-category">Categoria:
                                 <a class="card-a-category" href="{% url 'app_articles:categories-articles' article.category.slug %}">{{ article.category.name }}</a>
-                            </small><br>                            
-                            <p class="card-date">Pub: {{ article.date_created|date:"d M Y" }}
-                            </p>
+                            </small><br>
 
                             <span class="card-title"><a href="{% url 'app_articles:article-single' article.slug %}">
                                 {{ article.title | slice:":47"  }}
                             </a></span><br>
-
                                 <p class="card-description" name="description">{{ article.meta_description | slice:":150" }}</p>
                             </div>
                             {% if article.slug %}
