@@ -657,6 +657,11 @@ License: MIT License
 <footer>
   <div class="footer-container">
         <!-- Título do Footer -->
+        <div class="logo-section">
+            <a href="/">
+                <img src="{% static 'images/logo_footer.png' %}" alt="Logo da Xlex Educação e Pesquisa Jurídica" width="76px">
+            </a>        
+        </div>
         <h2 class="highlighted-text">XLEX, LOVE LEX!</h2>
         {% if views_count %}
         <p>Views: {{ views_count }}</p>
@@ -665,7 +670,6 @@ License: MIT License
             Agradecemos sua visita e o interesse pelo nosso conteúdo. Convidamos você a explorar outras 
             seções do site. Faça um tour!
         </h6>
-      <br>
       <!-- Informações da Marca -->
       <div class="footer-brand-info">
           <p class="footer-brand-info">&copy; 2023 Xlex Educação Pesquisa Jurídica e Desenvolvimento Social. Todos os direitos reservados.</p>

@@ -30,6 +30,9 @@ p {
     background: linear-gradient(to bottom right, #000a19, #000000);
     font-family: 'Merriweather', serif;
     color: white;
+    position: relative; /* Contexto de posicionamento */
+    text-align: center;
+    padding-bottom: 18px; /* Metade da altura da imagem da logo */
 }
 .site-title {
     font-size: 1.2rem;
@@ -53,6 +56,31 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.logo-section {
+    position: relative; /* Permite um posicionamento mais controlado da logo */
+    text-align: center;
+    height: 0; /* Reduz a altura da seção para zero, permitindo sobreposição */
+    overflow: visible; /* Permite que o conteúdo se estenda fora da seção */
+}
+
+.logo-section a {
+    display: inline-block;
+    position: relative;
+    top: -33px; /* Posiciona a logo para cima, sobrepondo as seções */
+}
+
+.logo-section img {
+    width: 62px; /* Largura da logo */
+    height: auto; /* Mantém a proporção */
+}
+
+.container.mt-5 {
+    padding-top: 68px; /* Espaço extra na parte superior para acomodar a parte inferior da logo */
+}
+
+
+
+
 
 /* Coração */
 .coracao {
