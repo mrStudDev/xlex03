@@ -178,11 +178,12 @@ p {
     color: #777;
 }
 .image-wrapper {
-    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
-    overflow: hidden; /* Esconde qualquer parte da imagem que exceda o tamanho do container */
-    position: relative; /* Permite o posicionamento absoluto da imagem dentro deste container */
-    height: 200px; /* Define uma altura fixa para o container da imagem */
+    position: relative;
+    width: 100%; /* Largura completa do card */
+    height: 200px; /* Altura fixa para todas as imagens */
+    overflow: hidden; /* Esconde qualquer excesso de imagem que ultrapasse o container */
 }
+
 
 .card-img {
     width: 100%; /* Faz a imagem preencher a largura do container */
@@ -190,7 +191,9 @@ p {
     object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
     display: block; /* Remove espaços extras abaixo da imagem */
     position: absolute; /* Posiciona a imagem de forma absoluta dentro de seu container */
-    top: 0; /* Alinha a imagem no topo do container */
+    top: 0; /* Alinha a imagem ao topo do container */
+}
+
 }
 .card-img {
     border-radius: 10px; /* Bordas arredondadas para a imagem */
@@ -205,7 +208,6 @@ p {
     display: block; /* Remove espaços extras abaixo da imagem */
     margin: 0 auto; /* Centraliza a imagem no container */
 }
-
 
 /* End Cards */
 
