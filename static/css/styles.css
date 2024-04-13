@@ -129,6 +129,7 @@ p {
 .card-description {
     font-size: 0.8rem;
     text-align: left;
+    margin-top: 10px;
 }
 
 .card-a-category {
@@ -187,6 +188,7 @@ p {
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove espaços extras abaixo da imagem */
     margin: 0 auto; /* Centraliza a imagem no container */
+    border-radius: 10px;
 }
 
 /* End Cards */
