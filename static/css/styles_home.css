@@ -97,7 +97,13 @@ p {
     overflow: hidden;
 }
 /* End Java Texto Phrase  */
-
+.img-fluid {
+    border-radius: 10px;
+}
+.img-fluid:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+}
 /* Cards Groups */
 
 /* Configs Generics */
@@ -114,7 +120,13 @@ p {
     color: #090909; 
     text-decoration: none; 
 }
-
+.card-text {
+    font-family: 'Merriweather', serif;
+    color: #555;
+    font-size: 14px;
+    margin-top: 2px;
+    text-align: left;
+}
 .card-title a:hover {
     text-decoration: none;
     color:rgb(85, 85, 251);
@@ -223,6 +235,10 @@ p {
 }
 
 @media (min-width: 768px) {
+    p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 50px;
     }
@@ -242,6 +258,10 @@ p {
 }
 
 @media (min-width: 992px) {
+    p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 50px;
     }
@@ -261,6 +281,10 @@ p {
 }
 
 @media (min-width: 1280px) {
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 50px;
     }
@@ -280,6 +304,10 @@ p {
 }
 
 @media (min-width: 1440px) {
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 50px;
     }
@@ -298,6 +326,10 @@ p {
     }
 }
 @media (min-width: 1880px) {
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 60px;
     }
@@ -316,6 +348,10 @@ p {
     }
 }
  @media (min-width: 2560px) {
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
     .welcome-container {
         padding: 70px;
     }

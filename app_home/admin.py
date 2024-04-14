@@ -3,7 +3,10 @@ from .models import HomeSite, TagSiteModel, ContactMessagesModel
 
 
 class SiteAdmin(admin.ModelAdmin):
-    list_display = ["__str__", "site_name"]
+    list_display = ('site_name', 'indexable', '__str__')  # Adiciona indexable e mantém __str__
+    list_editable = ('indexable',)  # Permite que indexable seja editável diretamente na lista
+    list_filter = ('indexable',)  # Adiciona indexable aos filtros
+    search_fields = ('site_name',)
     prepopulated_fields = {"slug": ("site_name",)}
 
     class Meta:
