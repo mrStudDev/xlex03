@@ -3,7 +3,7 @@
 {% block 'title' %} {{ object.title }} {% endblock 'title' %} 
 {% block description %}{{object.meta_description}}{% endblock description %}
 {% block keywords %}{{object.keyword}}{% endblock keywords %} 
-
+<img src="{% static 'images/destaque_questions.jpg' %}" alt="Questões da OAB - FGV" class="article-image">
 {% block 'question_single' %}
 <br>
 <div class="container">
@@ -16,7 +16,6 @@
             Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
             Última revisão: <small>{{object.last_updated}}</small> 
             <hr>
-            <img src="{% static 'images/destaque_questions.jpg' %}" alt="Questões da OAB - FGV" class="article-image">
             <br>
             <h5>{{object.title}}</h5>
             <p>{{object.question_ask | safe}}</p>
