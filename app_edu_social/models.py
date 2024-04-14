@@ -34,7 +34,7 @@ class ArticlesSocialModel(models.Model):
     key_words = models.CharField(max_length=255, default="Artigos")
     category = models.ForeignKey(CategorySocialModel, null=True, blank=True, on_delete=models.SET_NULL)
     content_social = models.TextField(blank=True, null=True)
-    meta_description = models.TextField(max_length=250)
+    meta_description = models.TextField(max_length=160)
     keyword = models.CharField(max_length=255)
     tags = models.ManyToManyField('TagSocialModel', blank=True)
     date_created = models.DateTimeField(auto_now_add=True)

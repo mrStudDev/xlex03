@@ -47,7 +47,7 @@ class CasoConcretoModel(models.Model):
     pergunta_caso = models.TextField()
     resposta_caso = models.TextField()
     fundamentacao = models.TextField(blank=True, null=True, default='Fundamentação')
-    meta_description = models.TextField(max_length=255)  # Corrigido para TextField
+    meta_description = models.TextField(max_length=160)  # Corrigido para TextField
     keyword = models.CharField(blank=True)
     tags = models.ManyToManyField('TagCasoModel', blank=True)
     is_published = models.BooleanField(default=True)

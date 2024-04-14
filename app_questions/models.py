@@ -71,7 +71,7 @@ class XlexQuestionModel(models.Model):
     fundaments = models.TextField(blank=True, null=True)
     date_created = models.DateTimeField(auto_now=False, auto_now_add=True)
     tags = models.ManyToManyField('TagQuestionModel', blank=True)
-    meta_description = models.TextField(max_length=250)
+    meta_description = models.TextField(max_length=160)
     keyword = models.CharField(max_length=250)
     is_published = models.BooleanField(default=True)
     old_url = models.SlugField(blank=True, null=True)

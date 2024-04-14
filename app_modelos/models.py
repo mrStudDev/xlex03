@@ -45,7 +45,7 @@ class DocumentsModel(models.Model):
     ramo_direito = models.ForeignKey(RamoDireitoDocModel, null=True, on_delete=models.CASCADE)
     tipo_doc = models.ForeignKey(TipoDocumentModel, null=True, on_delete=models.CASCADE)
     content_doc = models.TextField(blank=True, null=True)
-    meta_description = models.TextField(max_length=170)
+    meta_description = models.TextField(max_length=160)
     keyword = models.CharField(max_length=255)
     tags = models.ManyToManyField('TagDocumentsModel', blank=True)
     date_created = models.DateField(auto_now=False, auto_now_add=True)
