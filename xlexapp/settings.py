@@ -30,7 +30,7 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
+LOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
 # ==========================================================
 
 
@@ -95,9 +95,8 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-
-
 """
+
 # Database localhost
 DATABASES = {
     'default': {
@@ -109,8 +108,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 """
+
 #==========================================================================
 
 # Database instancia teste
@@ -124,6 +123,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation

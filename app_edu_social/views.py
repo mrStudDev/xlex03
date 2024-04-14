@@ -136,6 +136,8 @@ class TagArticlesSocialView(ListView):
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
+        articles_edu = self.get_object()
+        context['indexable'] = articles_edu.is_indexable()
         context.update({
             'tag': self.tag,
             'categories': CategorySocialModel.objects.all(),

@@ -88,6 +88,8 @@ class PrincipiosSingleView(DetailView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
         context['ramos'] = RamoDireitoModel.objects.all()
+        principios = self.get_object()
+        context['indexable'] = principios.is_indexable()
         context['current_app'] = 'app_principios'
         context['canonical_url'] = self.request.build_absolute_uri(
             reverse('app_principios:principio-single', kwargs={'slug': self.object.slug})

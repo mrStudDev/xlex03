@@ -44,6 +44,10 @@ class ArticlesSocialModel(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
     code = models.PositiveIntegerField(unique=True, blank=True, null=True)
     views = models.IntegerField(default=0)
+    indexable = models.BooleanField(default=True)  # Novo campo para SEO
+
+    def is_indexable(self):
+        return self.indexable    
 
 
     def generate_unique_code(self):

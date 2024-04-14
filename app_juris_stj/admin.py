@@ -10,12 +10,14 @@ class STJUploadAdmin(admin.ModelAdmin):
 
 
 class STJJurisAdmin(admin.ModelAdmin):
-    list_display = ["__str__", ""]
-    list_filter = [""]
+    list_display = ('numeroProcesso', 'indexable', '__str__')  # Adiciona indexable e mantém __str__
+    list_editable = ('indexable',)  # Permite que indexable seja editável diretamente na lista
+    list_filter = ('indexable',)  # Adiciona indexable aos filtros    list_display = ["__str__", ""]
+    list_filter = ["numeroProcesso"]
     search_fields = [""]
 
 
 admin.site.register(STJJurisprudenciaUpload, STJUploadAdmin)
-admin.site.register(STJjurisprudenciaModel, )
+admin.site.register(STJjurisprudenciaModel, STJJurisAdmin)
 
 

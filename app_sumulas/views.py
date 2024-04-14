@@ -82,6 +82,7 @@ class SumulaSingularView(DetailView):
         context = super().get_context_data(**kwargs)
         context["hide_sidebar"] = True
         sumulas = self.get_object()
+        context['indexable'] = sumulas.is_indexable()
         context['current_app'] = 'app_sumulas'
         context['canonical_url'] = self.request.build_absolute_uri(
             reverse('app_sumulas:sumula-single', kwargs={'sumula_slug': sumulas.slug})

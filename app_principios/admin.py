@@ -6,7 +6,9 @@ from .models import (
 )
 
 class PrincipioAdmin(admin.ModelAdmin):
-    list_display = ["__str__", "date_created"]
+    list_display = ('date_created', 'indexable', '__str__')  # Adiciona indexable e mantém __str__
+    list_editable = ('indexable',)  # Permite que indexable seja editável diretamente na lista
+    list_filter = ('indexable',)  # Adiciona indexable aos filtros
     list_filter = ["date_created"]
     search_fields = ["principio_name"]
     prepopulated_fields = {"slug": ("principio_name",)}

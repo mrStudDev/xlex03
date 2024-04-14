@@ -8,7 +8,9 @@ from .models import (
     )
 
 class CasosAdmin(admin.ModelAdmin):
-    list_display = ["__str__", "date_created"]
+    list_display = ('date_created', 'indexable', '__str__')  # Adiciona indexable e mantém __str__
+    list_editable = ('indexable',)  # Permite que indexable seja editável diretamente na lista
+    list_filter = ('indexable',)  # Adiciona indexable aos filtros
     list_filter = ["date_created"]
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}

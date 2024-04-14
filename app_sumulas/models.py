@@ -35,7 +35,11 @@ class SumulaModel(models.Model):
     old_url = models.SlugField(blank=True, null=True)
     slug = models.SlugField(blank=True, unique=True)
     last_updated = models.DateTimeField(auto_now=True)
-    views = models.IntegerField(default=0) 
+    views = models.IntegerField(default=0)
+    indexable = models.BooleanField(default=True)  # Novo campo para SEO
+
+    def is_indexable(self):
+        return self.indexable    
 
     def __str__(self):
         return f"Súmula {self.title} - {self.numero_sumula} - {self.sigla_tribunal} - {self.tema_juridico} - {self.enunciado}"
