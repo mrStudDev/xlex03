@@ -41,6 +41,10 @@ class STJjurisprudenciaModel(models.Model):
     keyword = models.CharField(max_length=200, blank=True, null=True, default="Campo s/ Key") 
     slug = models.SlugField(max_length=255, blank=True)
     views = models.IntegerField(default=0)
+    indexable = models.BooleanField(default=True)  # Novo campo para SEO
+
+    def is_indexable(self):
+        return self.indexable
 
 
     def __str__(self):

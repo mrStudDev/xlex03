@@ -47,8 +47,11 @@ class ArticlesModel(models.Model):
     code = models.PositiveIntegerField(unique=True, blank=True, null=True)
     views = models.IntegerField(default=0)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
+    indexable = models.BooleanField(default=True)  # Novo campo para SEO
 
-
+    def is_indexable(self):
+        return self.indexable
+    
     def generate_unique_code(self):
         code = random.randint(100000, 999999)
         while ArticlesModel.objects.filter(code=code).exists():

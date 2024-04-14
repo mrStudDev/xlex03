@@ -26,6 +26,9 @@ class HomeSite(models.Model):
     views = models.IntegerField(default=0)
     indexable = models.BooleanField(default=True)  # Novo campo para SEO
 
+    def is_indexable(self):
+        return self.indexable
+    
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.site_name)

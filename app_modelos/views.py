@@ -96,6 +96,7 @@ class DocumentSingleView(DetailView):
         context['tipos'] = TipoDocumentModel.objects.all()
         context['current_app'] = 'app_modelos'
         modelos = self.get_object()
+        context['indexable'] = modelos.is_indexable()
         context['canonical_url'] = self.request.build_absolute_uri(
             reverse('app_modelos:modelo-single', kwargs={'slug': self.object.slug})
         )

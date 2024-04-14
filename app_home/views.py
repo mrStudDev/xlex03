@@ -5,6 +5,7 @@ from django.views.generic import ListView
 from django.shortcuts import render, redirect
 from typing import Any
 from .models import HomeSite
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
@@ -33,24 +34,25 @@ class XlexHomeView(ListView):
         # Chama a implementação base para continuar com o fluxo normal da view
         return super().get(request, *args, **kwargs)
     
-    
     def get_context_data(self, **kwargs):
         # Chama a implementação base primeiro para obter um contexto
         context = super().get_context_data(**kwargs)
         
-        # Obtém o objeto HomeSite
+        # Obtém o primeiro objeto HomeSite (supondo que existe apenas um)
         home_site_object = HomeSite.objects.first()
         
         if home_site_object:
-            home_site_object.update_views()   # Aumenta as visualizações diretamente
+            home_site_object.update_views()  # Aumenta as visualizações diretamente
             context['home_site'] = home_site_object  # Adiciona o objeto HomeSite ao contexto
+            context['indexable'] = home_site_object.is_indexable()  # Supondo que `is_indexable()` é um método em HomeSite
+            context["hide_navbar"] = True
+            context['canonical_url'] = self.request.build_absolute_uri()
         else:
             context['home_site'] = None
+            context['indexable'] = False
         
-        # Adiciona outras variáveis ao contexto
-        context["hide_navbar"] = True
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_home:home-view'))
         return context
+
 
 # Páginas do Site (sobre, contato, paginas de listas, etc)
 
