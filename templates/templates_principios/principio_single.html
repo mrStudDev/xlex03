@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block 'title' %} {{ principios.principio_name }} {% endblock 'title' %} 
 {% block description %}{{principios.meta_description}}{% endblock description %}
 {% block keywords %}{{principios.keyword}}{% endblock keywords %}
@@ -15,6 +15,7 @@
             <small>Principio: {{object.principio_name}}</small><br>
             <small>Ramo do: </small>  | <span class="badge bg-dark">{{object.ramo_direito}}</span> 
             <hr>
+            <img src="{% static 'images/destaque_modelos.jpg' %}" alt="Princípios do Direito" class="article-image">
             <div class="article-summary">
             <h5>&#x1F4DC; {{object.principio_name}}</h5>
             <i>{{object.meta_description}}</i>

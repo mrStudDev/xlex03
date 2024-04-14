@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'title' %}{{object.title}}{% endblock 'title' %}
 {% block description %}{{object.meta_description}}{% endblock description %}
 {% block keywords %}{{object.keyword}}{% endblock keywords %}
@@ -24,7 +24,11 @@
             {% endif %}
             <hr>
             <br>
-            <h5>{{object.title}}</h5>
+            <img src="{% static 'images/destaque_casos.jpg' %}" alt="Casos Concretos" class="article-image">
+            <div class="article-summary">
+                <h5>{{object.title}}</h5>
+                <i>{{object.meta_description}}</i>
+            </div>
             <p>{{object.pergunta_caso | safe}}</p>
             <br>
             <details>

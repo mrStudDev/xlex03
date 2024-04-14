@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'title' %} {{jurisprucencia_STJ.title}} {% endblock 'title' %}
 {% block description %}{{jurisprucencia_STJ.meta_description}}{% endblock description %}
 {% block keywords %}{{jurisprucencia_STJ.keyword}}{% endblock keywords %}
@@ -7,6 +7,7 @@
 {% block 'juris_stj_single' %}
 
 <div class="content-container">
+    <img src="{% static 'images/destaque_juris_stj.jpg' %}" alt="Jurisprudências do STJ" class="article-image">
     <!-- Bloco 1: Informações gerais -->
     <div class="info-general">
         <h4 class="upper-destaque" style="text-transform: uppercase;">Dados gerais da Jurisprudência:</h4>

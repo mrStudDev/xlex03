@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'title' %} {{ sumulas.title }} {% endblock 'title' %} 
 {% block description %}{{sumulas.meta_description}}{% endblock description %}
 {% block keywords %}{{sumulas.keyword}}{% endblock keywords %}
 
 {% block 'sumula_single' %}
     <div class="content-container">
+        <img src="{% static 'images/destaque_sumulas.jpg' %}" alt="Súmulas Trib. Superiores" class="article-image">
         <!-- Bloco 1: Informações gerais -->
         <div class="info-general">
             <h4 class="upper-destaque" style="text-transform: uppercase;">{{ object.title }}</h4>

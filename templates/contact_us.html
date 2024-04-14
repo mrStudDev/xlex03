@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block 'title' %}Contate-nos{% endblock 'title' %}
 {% block description %}Xlex Educação e Pesquisa Jurídica. Página de Contato{% endblock description %}
 {% block keywords %}Xlex Educação Contato{% endblock keywords %}
@@ -7,7 +7,12 @@
 {% block 'contact_us' %}
 
 <div class="content-container">
-    <h2>Contate-nos</h2>
+    <img src="{% static 'images/destaque_contato.jpg' %}" alt="Página de Contato Xlex" class="article-image">
+    <div class="article-summary">
+        <h5>Contate-nos</h5>
+        <i>Ficaremos feliz em receber sua mensagem!</i><br>
+        <i>Xlex Educação e Pesquisa Jurídica e Desenvolvimento Social</i>
+    </div>
     {% if success %}
     <br>
     <div class="alert alert-success" role="alert">

@@ -1,12 +1,17 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block 'title' %}Sobre nós{% endblock 'title' %}
 {% block description %}Xlex Educação e Pesquisa Jurídica. Sobre Nós{% endblock description %}
 {% block keywords %}Xlex Educação Sobre Nós{% endblock keywords %}
 
 {% block 'sobre_nos' %}
 <div class="content-container">
-    <h1>Sobre Nós</h1>
+    <img src="{% static 'images/destaque_sobrenos.jpg' %}" alt="Página Sobre Nós" class="article-image">
+    <div class="article-summary">
+        <h5>Sobre Nós</h5>
+        <i>Sejam muito bem vindos(as) ao nosso site!</i><br>
+        <i>Xlex Educação e Pesquisa Jurídica e Desenvolvimento Social</i>
+    </div>
     <h4>O que é o Xlex?</h4>
     <p>O nome Xlex tem origem no latim, mais especificamente da palavra "lex", 
         que significa "lei". A escolha desse nome foi feita por sua conexão direta 
