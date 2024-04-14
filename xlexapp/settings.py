@@ -30,7 +30,7 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-ALOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
+ALLOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
 # ==========================================================
 
 
