@@ -36,7 +36,7 @@ class ArticlesModel(models.Model):
     key_words = models.CharField(max_length=255, default="Artigos")
     category = models.ForeignKey(CategoryArticlesModel, null=True, blank=True, on_delete=models.SET_NULL)
     content = models.TextField(blank=True, null=True)
-    meta_description = models.TextField(max_length=250)
+    meta_description = models.TextField(max_length=150)
     keyword = models.CharField(max_length=255)
     tags = models.ManyToManyField('TagArticlesModel', blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
