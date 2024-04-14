@@ -30,7 +30,7 @@ DEBUG = False
 #ALLOWED_HOSTS = []
 
 # Allowed Instância TESTE ====================================
-LOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
+ALOWED_HOSTS = ['www.xlex.com.br', 'xlex.com.br', '34.69.36.90']
 # ==========================================================
 
 
@@ -95,8 +95,8 @@ WSGI_APPLICATION = 'xlexapp.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-"""
 
+"""
 # Database localhost
 DATABASES = {
     'default': {
