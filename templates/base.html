@@ -44,7 +44,7 @@ License: MIT License
 <!--NAV BACKEND -->
 {% if user.is_authenticated and user.is_staff %}
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 30px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to bottom right, #000a19, #000000);">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -114,22 +114,21 @@ License: MIT License
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'app_articles:articles-list' %}">Artigos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'app_questions:questions-list' %}">Questões</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'app_casos:casos-list' %}">Casos Concretos</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_sumulas:sumulas-list' %}">Súmulas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app_modelos:modelos-list' %}">Modelos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'app_principios:principios-list' %}">Principios</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Estudo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'app_articles:articles-list' %}">Artigos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_questions:questions-list' %}">Questões</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_casos:casos-list' %}">Casos Concretos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'app_principios:principios-list' %}">Principios</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

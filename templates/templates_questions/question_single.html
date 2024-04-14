@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'title' %} {{ object.title }} {% endblock 'title' %} 
 {% block description %}{{object.meta_description}}{% endblock description %}
 {% block keywords %}{{object.keyword}}{% endblock keywords %} 
@@ -11,13 +11,17 @@
         <div class="col-md-8" id="main-content">
             <br>
             <h1 id="title-post-h1" style="text-transform: uppercase;">{{object.title}}</h1>
-            Banca: <span class="badge bg-dark">{{object.banca}}</span> <br>
+            Banca: <span class="badge bg-dark">{{object.banca}}</span><br>
             Disciplina: <span><strong>{{object.disciplina}}</strong></span> -
             Ramo do Direito: <span><strong>{{object.ramo_direito}}</strong></span><br>
             Última revisão: <small>{{object.last_updated}}</small> 
             <hr>
+            <img src="{% static 'images/destaque_questions.jpg' %}" alt="Questões da OAB - FGV" class="article-image">
             <br>
-            <h5>{{object.title}}</h5>
+            <div class="article-summary">
+                <h5>{{object.title}}</h5>
+                <i>{{object.meta_description}}</i>
+            </div>
             <p>{{object.question_ask | safe}}</p>
             <br>
 
