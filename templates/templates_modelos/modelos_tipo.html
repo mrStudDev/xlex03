@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block 'title' %} {{tipo_doc.name}} {% endblock 'title' %}
+{% block description %}Modelos de Peças conforme o tipo ou natureza de documento{% endblock description %}
+{% block keywords %}Direito, Constitucionalismo, Ambiental{% endblock keywords %}
 
 {% block 'modelos_tipo' %}
 <br>
@@ -12,7 +14,7 @@
             <div class="col-md-12 px-0">
                 <h1>Modelos | Tipo: {{ tipo_doc.name }}</h1>
                 <p>
-                    Nesta página, estão listados o casos concretos conforme o <strong>ramo do direito</strong> selecionado.
+                    Nesta página, estão listados o modelos conforme o <strong>tipo</strong> de documento selecionado.
                 </p>
             </div>
 

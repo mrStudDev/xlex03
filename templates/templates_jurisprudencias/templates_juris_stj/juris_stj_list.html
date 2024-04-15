@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block 'title' %} Jurisprudências STJ {% endblock 'title' %}
-{% block description %}Xlex Educação e Pesquisa Jurídica. Lista de Jusrisprudências do Superior Tribunal de Justiça STJ{% endblock description %}
-{% block keywords %}Xlex, jurisprudências, STJ, Pesquisa, Decisões{% endblock keywords %}
+{% block description %}Jusrisprudências do Superior Tribunal de Justiça - Acórdãos do STJ{% endblock description %}
+{% block keywords %}Jurisprudências, STJ, Pesquisa, Decisões{% endblock keywords %}
 
 {% block 'juris_stj_list' %}
 <div class="container mt-5">
@@ -12,7 +12,7 @@
         <a class="btn bg-dark btn-sm text-white" href="{% url 'app_searchs:advanced-searchs-view' %}">Ir para busca avancada</a>
                       
     </center><br>
-    <h5>Jurisprudências do Superior Tribunal de Justiça - STJ</h5>
+    <h1 id="title-post-h1" style="text-transform: uppercase;">Jurisprudências do Superior Tribunal de Justiça - STJ</h1>
     <div>
         <p>Quantidade de Publicações: <strong>{{ publicacoes_count }}</strong> </p>
     </div>
