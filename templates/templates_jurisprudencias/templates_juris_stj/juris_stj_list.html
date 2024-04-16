@@ -22,7 +22,10 @@
 
         <div class="card shadow-md py-3 px-3 card-spacing">
             <h5 class="card-title-juris">
-                <a class="card-a-title" href="{% url 'app_juris_stj:juris-stj-single' juris_stj.pk %}">{{juris_stj.descricaoClasse}}</a>
+                <a class="card-a-title" href="{% url 'app_juris_stj:juris-stj-single' id=juris_stj.pk slug=juris_stj.slug %}">
+                    {{ juris_stj.descricaoClasse }}
+                </a>
+                
             </h5>
             <div class="juris-info">
                 <small class="small-info"><strong>Id_herdado:</strong> {{juris_stj.id_herdadoSTJ}}</small>
@@ -38,7 +41,7 @@
                 <!--a data_formatada para exibição, no singular, a data APRESENTADA É A dataPublicacao-->  
                 <br><p class="ementa"><strong>EMENTA:</strong> <br> {{juris_stj.ementa | slice:"700"}}...</p>
                 <p class="p-link">
-                    <a class="a-link" href="{% url 'app_juris_stj:juris-stj-single' juris_stj.pk %}">Ler jurisprudência...</a> 
+                    <a class="card-a-title" href="{% url 'app_juris_stj:juris-stj-single' id=juris_stj.pk slug=juris_stj.slug %}">Ler jurisprudência...</a> 
                 </p>
             </div>
         </div>

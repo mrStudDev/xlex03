@@ -12,6 +12,7 @@ from datetime import datetime
 from django.http import HttpRequest, HttpResponse
 from django.utils import timezone
 from app_manager .models import PageView
+from django.shortcuts import get_object_or_404
 import json
 
 
@@ -42,12 +43,17 @@ class STJjurisprudenciaView(ListView):
 
         return super().get(request, *args, **kwargs)
 
-
 class STJjurisprudenciaSingularView(DetailView):
     model = STJjurisprudenciaModel
     template_name = 'templates_jurisprudencias/templates_juris_stj/juris_stj_single.html'
-    context_object_name = 'jurisprucencia_STJ'
-    
+    context_object_name = 'jurisprudencia_STJ'
+
+    def get_object(self):
+        # Utiliza ID e slug para buscar o objeto
+        id_ = self.kwargs.get('id')
+        slug_ = self.kwargs.get('slug')
+        return get_object_or_404(STJjurisprudenciaModel, id=id_, slug=slug_)
+
     def get(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
         self.object = self.get_object()
         juri_stj_name = self.object.title        
@@ -59,22 +65,20 @@ class STJjurisprudenciaSingularView(DetailView):
         )
         if not created:
             page.view_count += 1
-            page.last_accessed
+            page.last_accessed = timezone.now()
             page.save()
         
         context = self.get_context_data(object=self.object)
-        return self.render_to_response(context)    
-    
-    
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
+        return self.render_to_response(context)
+
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["hide_sidebar"] = True
         context['current_app'] = 'app_juris_stj'
         juris_stj = self.get_object()
         context['indexable'] = juris_stj.is_indexable()
-        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-single', kwargs={'pk': self.object.pk}))
+        context['canonical_url'] = self.request.build_absolute_uri(reverse('app_juris_stj:juris-stj-single', args=[self.object.id, self.object.slug]))
         return context
-
 
 def upload_jurisprudencia_view(request):
     if request.method == 'POST':

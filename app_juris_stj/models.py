@@ -50,8 +50,13 @@ class STJjurisprudenciaModel(models.Model):
     def __str__(self):
         return f"{self.numeroProcesso} | {self.ementa} | {self.data_formatada} | {self.title} | {self.views}"
 
+    def save(self, *args, **kwargs):
+        if not self.slug:  # Assegura que o slug seja gerado
+            self.slug = slugify(self.title)
+        super(JurisSTJ, self).save(*args, **kwargs)
+        
     def get_absolute_url(self):
-        return reverse('app_juris_stj:juris-stj-single', args=[str(self.id)])
+        return reverse('app_juris_stj:juris-stj-single', args=[self.id, self.slug])
     
     def update_views(self, *args, **kwargs):
         self.views = self.views + 1
