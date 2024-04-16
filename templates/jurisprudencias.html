@@ -17,10 +17,24 @@
     <title>{% block 'title' %} Tribunais | Jurisprudências{% endblock 'title' %}</title>
 </head>
 <body>
-    
+    <div class="hero-section">
+        <div class="welcome-container">
+            <h1 class="site-title">Tribunais</h1>
+            <div id="site-description">Escolha qual tribunal deseja pesquisar sua jurisprudência</div>
+            <br>
+            <!-- Efeito de digitação dinâmico JS -->
+            <span><span id="typing-effect" class="highlighted-text"></span></span>
+            <br>
+        </div>
+    </div>
+    <div class="logo-section">
+    <a href="/">
+        <img src="{% static 'images/logo.png' %}" alt="Logo Xlex Educação e Pesquisa Jurídica" width="62px">
+    </a>        
+    </div>
     <!-- Container para os cards -->
     <div class="container mt-5">
-        <a class="navbar-brand" href="/" id="highlighted-text">Xlex</a>
+        <a class="btn bg-dark text-light btn-sm" href="/" id="highlighted-text">Voltar p/ Home</a>
         <h1 id="title-post-h1" style="text-transform: uppercase;">Pesquisa de Jurisprudências - Tribunais</h1>
         <small>Estamos trabalhando para completar o nosso quadro. Em breve, você poderá consultar jurisprudências do Supremo Tribunal Federal, TRF's, TRT's, TJ's...</small>
         <hr>
@@ -242,4 +256,5 @@
         </div>
     </div>
 </body>
+<script src="{% static 'js/phrase.js' %}"></script>
 </html>
